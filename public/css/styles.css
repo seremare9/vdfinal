@@ -12,6 +12,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* main {
+  background-color: black;
+} */
 
 body {
   background-color: white;
@@ -78,5 +81,77 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 200px;
+  background-color:aqua;
+  /* color: black; */
+  width: 100vw; /* Set the width to 100% of the viewport width */
+  height: 100vh; /* Set the height to 100% of the viewport height */
+}
+
+.image {
+  width: 300px;
+  height: auto;
+  visibility: hidden; /* Hide the image initially */
+  animation: showImage 0s forwards;
+  position: absolute;
+}
+
+.image:nth-child(1) {
+  animation-delay: 0.5s;
+  align-items: center;
+}
+
+.image:nth-child(2) {
+  animation-delay: 1s;
+  align-items: center;
+  right: 600px;
+  top: 750px;
+}
+
+.image:nth-child(3) {
+  animation-delay: 1.5s;
+  align-items: center;
+  right: 800px;
+  top: 800px;
+}
+
+.image:nth-child(4) {
+  animation-delay: 2s;
+  align-items: center;
+  right: 900px;
+  top: 790px;
+}
+
+.image:nth-child(5) {
+  animation-delay: 2.5s;
+  align-items: center;
+  right: 550px;
+  top: 950px;
+}
+
+.image:nth-child(6) {
+  animation-delay: 3s;
+  align-items: center;
+  right: 750px;
+  top: 800px;
+}
+
+.image:nth-child(7) {
+  animation-delay: 3.5s;
+  align-items: center;
+  right: 850px;
+  top: 900px;
+
+}
+
+@keyframes showImage {
+  to {
+    visibility: visible;
   }
 }
