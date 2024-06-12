@@ -1,19 +1,41 @@
-// Get the text of the h1 element
-var text = document.getElementById('typewriter').textContent.trim();
+// Function to simulate typing effect for the main title
+function typeMainTitle(i) {
+    var text = document.getElementById('typewriter').textContent.trim();
+    document.getElementById('typewriter').textContent = '';
 
-// Empty the h1 element to prepare for the typing effect
-document.getElementById('typewriter').textContent = '';
-
-// Function to simulate typing effect
-function typeEffect(i) {
-    if (i < text.length) {
-        // Add a character to the h1 element
-        document.getElementById('typewriter').textContent += text.charAt(i);
-        setTimeout(function() {
-            typeEffect(i + 1);
-        }, 100);
+    function typeEffect(i) {
+        if (i < text.length) {
+            document.getElementById('typewriter').textContent += text.charAt(i);
+            setTimeout(function() {
+                typeEffect(i + 1);
+            }, 100);
+        } else {
+            // Show the subtitle once the main title typing animation completes
+            document.getElementById('subtitle').style.visibility = 'visible';
+            // Call the function to start subtitle typing
+            typeSubtitle();
+        }
     }
+
+    typeEffect(0);
 }
 
-// Call the typing effect function
-typeEffect(0);
+// Function to simulate typing effect for the subtitle
+function typeSubtitle() {
+    var text = document.getElementById('subtitle').textContent.trim();
+    document.getElementById('subtitle').textContent = '';
+
+    function typeEffect(i) {
+        if (i < text.length) {
+            document.getElementById('subtitle').textContent += text.charAt(i);
+            setTimeout(function() {
+                typeEffect(i + 1);
+            }, 100);
+        }
+    }
+
+    typeEffect(0);
+}
+
+// Call the function to start main title typing
+typeMainTitle(0);

@@ -90,8 +90,16 @@ button:focus-visible {
   border-right: .15em solid; /* Add a vertical border to simulate cursor */
   white-space: nowrap; /* Prevent text from wrapping */
   animation: typing 1s steps(40) ; /* Call the typing animation */
-  font-size: 50px;
+  font-size: 70px;
+  align-self: center;
 }
+
+#subtitle {
+  visibility: hidden; /* Initially hide the subtitle */
+  font-size: 50px;
+  align-self: center;
+}
+
 
 @keyframes typing {
   from {

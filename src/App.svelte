@@ -73,7 +73,7 @@
     <h1 id="typewriter" class="headline">
       <b>Entre la Realidad y la IA Generativa</b>
     </h1>
-    <h3 id="typewriter" class="subtitulo">
+    <h3 id="subtitle" style="visibility: hidden;" class="subtitulo">
       <b> Un Viaje por las Imágenes Digitales</b>
     </h3>
     <script src="typewriter.js"></script>
@@ -221,7 +221,7 @@
     flex-direction: column;
     margin-top: 50px;
     margin-bottom: 80px;
-    background-color: black;
+    background-color:brown;
 
   }
   .headline {
@@ -263,7 +263,8 @@
     background-color: black;
     color: white;
     font-family: 'IBM Plex Mono';
-    font-size: large;
+    font-size:larger;
+    text-align: justify;
     
 
   }
