@@ -39,3 +39,9 @@ function typeSubtitle() {
 
 // Call the function to start main title typing
 typeMainTitle(0);
+
+// Efecto botón de scroll
+document.getElementById('scrollButton').addEventListener('click', function() {
+    // Scroll to the target section
+    document.getElementById('targetSection').scrollIntoView({ behavior: 'smooth' });
+  });

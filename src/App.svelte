@@ -78,11 +78,14 @@
     </h3>
     <script src="typewriter.js"></script>
     <p class="bajada">Por <a href="https://www.linkedin.com/in/serena-marelli/">SERENA MARELLI</a> y <a href="https://www.linkedin.com/in/josefina-jahde/">JOSEFINA JAHDE</a></p>
-
+    <button id="scrollButton">Scroll Down</button>
+    <!-- <div id="targetSection" class="target-section">
+      <p>This is the target section.</p>
+    </div> -->
   </div> <!-- Fin de header -->
 
     <!-- Acá irían apareciendo las imagenes q hicimos con IA -->
-  <div class="intro">
+  <div id="targetSection" class="intro target-section">
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

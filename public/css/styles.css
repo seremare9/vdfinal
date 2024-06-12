@@ -16,6 +16,14 @@
 /* main {
   background-color: black;
 } */
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-color: cornflowerblue;
+}
 
 body {
   background-color: black;
@@ -138,32 +146,32 @@ button:focus-visible {
 
 .image:nth-child(2) {
   animation-delay: 1s;
-  right: 600px;
+  right: 650px;
   margin-top: 50px;
 }
 
 .image:nth-child(3) {
   animation-delay: 1.5s;
   margin-top: 200px;
-  left: 750px;
+  left: 680px;
 }
 
 .image:nth-child(4) {
-  animation-delay: 2s;
+  animation-delay: 2.5s;
   right: 610px;
   margin-top: 300px;
 }
 
 .image:nth-child(5) {
-  animation-delay: 2.5s;
-  left: 600px;
+  animation-delay: 3s;
+  left: 630px;
   margin-top: 80px;
 }
 
 .image:nth-child(6) {
-  animation-delay: 3s;
+  animation-delay: 2s;
   margin-top: 270px;
-  left: 650px;
+  right: 900px;
 }
 
 .image:nth-child(7) {
@@ -191,7 +199,7 @@ button:focus-visible {
 
 .image:nth-child(11) {
   animation-delay: 5.5s;
-  left: 510px;
+  left: 330px;
   margin-top: 10px;
 }
 
