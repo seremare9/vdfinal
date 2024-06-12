@@ -70,12 +70,13 @@
 <main>
   <div class="header">
     <!-- <img src="/images/olympics-logo.png" width="100" alt="anillos" /> -->
-    <h1 class="headline">
+    <h1 id="typewriter" class="headline">
       <b>Entre la Realidad y la IA Generativa</b>
     </h1>
-    <h3 class="subtitulo">
+    <h3 id="typewriter" class="subtitulo">
       <b> Un Viaje por las Imágenes Digitales</b>
     </h3>
+    <script src="typewriter.js"></script>
     <p class="bajada">Por <a href="https://www.linkedin.com/in/serena-marelli/">SERENA MARELLI</a> y <a href="https://www.linkedin.com/in/josefina-jahde/">JOSEFINA JAHDE</a></p>
 
     <!-- Efecto: Scrolleas para abajo y aparecen todas las imagenes -->
@@ -101,8 +102,10 @@
       </body>
       <!-- </html> -->
 
-    <div class="lorem_ipsum">
-      <Loremipsum />
+    <div class="introduccion">
+      <!-- <body> -->
+        <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico en los últimos años. Estas imágenes han alcanzado niveles de realismo y creatividad que antes eran impensables. La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle no solo ha democratizado la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido impactante, sino que también ha planteado desafíos significativos en cuanto a la autenticidad y la percepción de la realidad.</p>
+    <!-- </body> -->
     </div>
     <!-- <div class="introduction">
       <p> introduccion del tema </p>
@@ -208,9 +211,9 @@
  
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-  .main {
+  /* .main {
     background-color: black;
-  }
+  } */
   .header {
     display: flex;
     justify-content: center;
@@ -249,12 +252,20 @@
     font-family:'IBM Plex Mono';
     font-weight: bold;
     text-decoration: underline;
-
   }
 
   .headline b {
     display: block;
     font-size: 70px;
+  }
+
+  .introduccion {
+    background-color: black;
+    color: white;
+    font-family: 'IBM Plex Mono';
+    font-size: large;
+    
+
   }
 
   /* Estilos para el scroller */
