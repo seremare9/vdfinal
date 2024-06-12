@@ -90,7 +90,7 @@ button:focus-visible {
   border-right: .15em solid; /* Add a vertical border to simulate cursor */
   white-space: nowrap; /* Prevent text from wrapping */
   animation: typing 1s steps(40) ; /* Call the typing animation */
-  font-size: 70px;
+  font-size: 59px;
   align-self: center;
 }
 
@@ -115,12 +115,13 @@ button:focus-visible {
 .image-container {
   display: flex;
   justify-content: space-around;
-  margin-top: 200px;
+  margin-top: 80px;
   margin-bottom: 0%;
+  /* background-color:aqua; */
   background-color:black;
   /* color: black; */
   width: 100vw; /* Set the width to 100% of the viewport width */
-  height: 60vh; /* Set the height to 100% of the viewport height */
+  height: 60vh; /* Set the height to 60% of the viewport height */
 }
 
 .image {
@@ -133,50 +134,65 @@ button:focus-visible {
 
 .image:nth-child(1) {
   animation-delay: 0.5s;
-  align-items: center;
 }
 
 .image:nth-child(2) {
   animation-delay: 1s;
-  align-items: center;
   right: 600px;
-  top: 750px;
+  margin-top: 50px;
 }
 
 .image:nth-child(3) {
   animation-delay: 1.5s;
-  align-items: center;
-  right: 800px;
-  top: 800px;
+  margin-top: 200px;
+  left: 750px;
 }
 
 .image:nth-child(4) {
   animation-delay: 2s;
-  align-items: center;
-  right: 900px;
-  top: 790px;
+  right: 610px;
+  margin-top: 300px;
 }
 
 .image:nth-child(5) {
   animation-delay: 2.5s;
-  align-items: center;
-  right: 550px;
-  top: 950px;
+  left: 600px;
+  margin-top: 80px;
 }
 
 .image:nth-child(6) {
   animation-delay: 3s;
-  align-items: center;
-  right: 750px;
-  top: 800px;
+  margin-top: 270px;
+  left: 650px;
 }
 
 .image:nth-child(7) {
   animation-delay: 3.5s;
-  align-items: center;
-  right: 850px;
-  top: 900px;
+  left: 450px;
+  margin-top: 150px;
+}
 
+.image:nth-child(8) {
+  animation-delay: 4s;
+  right: 390px;
+}
+
+.image:nth-child(9) {
+  animation-delay: 4.5s;
+  left: 400px;
+  margin-top: 400px;
+}
+
+.image:nth-child(10) {
+  animation-delay: 5s;
+  right: 320px;
+  margin-top: 350px;
+}
+
+.image:nth-child(11) {
+  animation-delay: 5.5s;
+  left: 510px;
+  margin-top: 10px;
 }
 
 @keyframes showImage {

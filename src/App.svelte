@@ -79,38 +79,36 @@
     <script src="typewriter.js"></script>
     <p class="bajada">Por <a href="https://www.linkedin.com/in/serena-marelli/">SERENA MARELLI</a> y <a href="https://www.linkedin.com/in/josefina-jahde/">JOSEFINA JAHDE</a></p>
 
-    <!-- Efecto: Scrolleas para abajo y aparecen todas las imagenes -->
-   
+  </div> <!-- Fin de header -->
+
     <!-- Acá irían apareciendo las imagenes q hicimos con IA -->
-
+  <div class="intro">
       <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Imágenes con Efecto de Aparición</title>
-          <link rel="stylesheet" href="styles.css">
-      </head>
-      <body>
-          <div class="image-container">
-              <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1"> <!-- aurora boreal -->
-              <img src="public/images/firefly2.jpg" class="image" alt="Imagen 2"> <!-- pavo real -->
-              <img src="public/images/firefly3.jpg" class="image" alt="Imagen 3"> <!-- leon -->
-              <img src="public/images/firefly4.jpg" class="image" alt="Imagen 4"> <!-- pájaro azul -->
-              <img src="public/images/firefly5.jpg" class="image" alt="Imagen 5"> <!-- gatitos -->
-              <img src="public/images/firefly6.jpg" class="image" alt="Imagen 6"> <!-- montaña -->
-              <img src="public/images/designer1.jpeg" class="image" alt="Imagen 7"> <!-- mariposa -->
-          </div>
-      </body>
-      <!-- </html> -->
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Imágenes con Efecto de Aparición</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="image-container">
+            <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1"> <!-- aurora boreal -->
+            <img src="public/images/firefly2.jpg" class="image" alt="Imagen 2"> <!-- pavo real -->
+            <img src="public/images/firefly3.jpg" class="image" alt="Imagen 3"> <!-- leon -->
+            <img src="public/images/firefly4.jpg" class="image" alt="Imagen 4"> <!-- pájaro azul -->
+            <img src="public/images/firefly5.jpg" class="image" alt="Imagen 5"> <!-- gatitos -->
+            <img src="public/images/firefly6.jpg" class="image" alt="Imagen 6"> <!-- montaña -->
+            <img src="public/images/designer1.jpeg" class="image" alt="Imagen 7"> <!-- mariposa -->
+            <img src="public/images/firefly7.jpg" class="image" alt="Imagen 8"> 
+            <img src="public/images/firefly9.jpg" class="image" alt="Imagen 9"> 
+            <img src="public/images/firefly8.jpg" class="image" alt="Imagen 10"> 
+            <img src="public/images/firefly10.jpg" class="image" alt="Imagen 11"> 
+        </div>
+    </body>
     <div class="introduccion">
-      <!-- <body> -->
         <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico en los últimos años. Estas imágenes han alcanzado niveles de realismo y creatividad que antes eran impensables. La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle no solo ha democratizado la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido impactante, sino que también ha planteado desafíos significativos en cuanto a la autenticidad y la percepción de la realidad.</p>
-    <!-- </body> -->
     </div>
-    <!-- <div class="introduction">
-      <p> introduccion del tema </p>
-    </div> -->
-  </div>
+</div>
+
 
   {#if progress < 1}
   <DebugScroller
@@ -214,37 +212,66 @@
   /* .main {
     background-color: black;
   } */
+  .main {
+  /* Set maximum width and center the container horizontally */
+    /* max-width: 800px; */
+    margin: 0 auto;
+  }
   .header {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    /* margin-top: 50px; */
+    margin-bottom: 50px;
+    background-color:black;
+    height: 100vh;
+    position: static;
+    margin-bottom: 100px;
+    /* word-wrap: break-word; */
+    /* width: 100vw; */
+
+    /* width: 100; */
+  }
+
+  .intro {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 80px;
-    background-color:brown;
-
+    margin-top: 200px;
+    margin-bottom: 50px;
+    background-color:black;
+    word-wrap: break-word;
+    position: static;
+    /* width: 100; */
   }
+
   .headline {
-    font-size: 30px;
+    /* font-size: 100px; */
     line-height: 1.2;
     font-weight: black;
     text-align: center;
     margin: 20px;
     color:white;
     font-family: 'IBM Plex Mono';
+    width: 100%;
   }
   .subtitulo {
     font-size: 40px;
+    line-height: 1.2;
     font-family: 'IBM Plex Mono';
     color:white;
   }
   .bajada {
+    
     font-size: 18px;
     font-weight: bold;
     text-align: center;
     margin: 10px;
     font-family:'IBM Plex Mono';
     color:white
+    
   }
 
   a {
