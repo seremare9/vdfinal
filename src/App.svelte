@@ -67,86 +67,94 @@
   }
 </script>
 
-<main>
-  <!-- Titulo y subtitulo-->
-  <div class="header">
+<body>
+  <main>
 
-    <h1 id="typewriter" class="headline">
-      <b>Entre la Realidad y la IA Generativa</b>
-    </h1>
-    <h2 id="subtitle" style="visibility: hidden;" class="subtitulo">
-      <b> Un Viaje por las Imágenes Digitales</b>
-    </h2>
-    <script src="typewriter.js"></script>
-    <p class="bajada">Por <a target="_blank" href="https://www.linkedin.com/in/serena-marelli/">SERENA MARELLI</a> y <a target="_blank" href="https://www.linkedin.com/in/josefina-jahde/">JOSEFINA JAHDE</a></p>
-    <button id="scrollButton">Scroll Down</button>
-  
-  </div> <!-- Fin de header -->
+    <!-- Titulo y subtitulo-->
+    <div class="header">
+      <h1 id="typewriter" class="headline">
+        <b>Entre la Realidad y la IA Generativa</b>
+      </h1>
+      <h2 id="subtitle" style="visibility: hidden;" class="subtitulo">
+        <b> Un Viaje por las Imágenes Digitales</b>
+      </h2>
+      <script src="typewriter.js"></script>
+      <p class="bajada">Por <a target="_blank" href="https://www.linkedin.com/in/serena-marelli/">SERENA MARELLI</a> y <a target="_blank" href="https://www.linkedin.com/in/josefina-jahde/">JOSEFINA JAHDE</a></p>
+      <button id="scrollButton">Scroll Down</button>
+    </div> 
+    <!-- Fin de header -->
 
-  <!-- Aparecen las imagenes q hicimos con IA -->
-  <div id="targetSection" class="intro target-section">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Imágenes con Efecto de Aparición</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="image-container">
-            <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1"> <!-- aurora boreal -->
-            <img src="public/images/firefly2.jpg" class="image" alt="Imagen 2"> <!-- pavo real -->
-            <img src="public/images/firefly3.jpg" class="image" alt="Imagen 3"> <!-- leon -->
-            <img src="public/images/firefly4.jpg" class="image" alt="Imagen 4"> <!-- pájaro azul -->
-            <img src="public/images/firefly5.jpg" class="image" alt="Imagen 5"> <!-- gatitos -->
-            <img src="public/images/firefly6.jpg" class="image" alt="Imagen 6"> <!-- montaña -->
-            <img src="public/images/designer1.jpeg" class="image" alt="Imagen 7"> <!-- mariposa -->
-            <img src="public/images/firefly7.jpg" class="image" alt="Imagen 8"> 
-            <img src="public/images/firefly9.jpg" class="image" alt="Imagen 9"> 
-            <img src="public/images/firefly8.jpg" class="image" alt="Imagen 10"> 
-            <img src="public/images/firefly10.jpg" class="image" alt="Imagen 11"> 
-        </div>
-    </body>
-    <div class="introduccion">
-        <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico 
-          en los últimos años. Estas imágenes han alcanzado niveles de realismo y creatividad que antes eran impensables. 
-          La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle no solo ha 
-          democratizado la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido 
-          impactante, sino que también ha planteado desafíos significativos en cuanto a la autenticidad y la percepción de la 
-          realidad.</p>
+    <!-- Aparecen las imagenes q hicimos con IA -->
+    <div id="targetSection" class="intro target-section">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Imágenes con Efecto de Aparición</title>
+          <link rel="stylesheet" href="styles.css">
+      </head>
+
+          <div class="image-container">
+              <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1"> <!-- aurora boreal -->
+              <img src="public/images/firefly2.jpg" class="image" alt="Imagen 2"> <!-- pavo real -->
+              <img src="public/images/firefly3.jpg" class="image" alt="Imagen 3"> <!-- leon -->
+              <img src="public/images/firefly4.jpg" class="image" alt="Imagen 4"> <!-- pájaro azul -->
+              <img src="public/images/firefly5.jpg" class="image" alt="Imagen 5"> <!-- gatitos -->
+              <img src="public/images/firefly6.jpg" class="image" alt="Imagen 6"> <!-- montaña -->
+              <img src="public/images/designer1.jpeg" class="image" alt="Imagen 7"> <!-- mariposa -->
+              <img src="public/images/firefly7.jpg" class="image" alt="Imagen 8"> 
+              <img src="public/images/firefly9.jpg" class="image" alt="Imagen 9"> 
+              <img src="public/images/firefly8.jpg" class="image" alt="Imagen 10"> 
+              <img src="public/images/firefly10.jpg" class="image" alt="Imagen 11"> 
+          </div>
+
+      <div class="introduccion">
+          <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico 
+            en los últimos años. Estas imágenes han alcanzado niveles de realismo y creatividad que antes eran impensables. 
+            La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle no solo ha 
+            democratizado la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido 
+            impactante, sino que también ha planteado desafíos significativos en cuanto a la autenticidad y la percepción de la 
+            realidad.</p>
+      </div>
     </div>
+
+     <!-- Carrusel de imagenes VS -->
+     <div class="carousel-container">
+      <h3 class="carousel-title">Realidad VS IA</h3>
+      <div class="carousel">
+          <div class="carousel-slide">
+              <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+              <img class="img-vs" src="public/images/vs1.1.jpg" alt="Imagen Real 1">
+              <img class="img-vs" src="public/images/vs1.2.jpg" alt="Imagen IA 1">
+              <div class="vs">VS</div>
+              <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+          </div>
+          <div class="carousel-slide">
+              <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+              <img class="img-vs" src="public/images/vs2.1.jpg" alt="Imagen Real 2">
+              <img class="img-vs" src="public/images/vs2.2.jpg" alt="Imagen IA 2">
+              <div class="vs">VS</div>
+              <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+          </div>
+          <div class="carousel-slide">
+              <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+              <img class="img-vs" src="public/images/vs3.1.jpg" alt="Imagen Real 3">
+              <img class="img-vs" src="public/images/vs3.2.jpg" alt="Imagen IA 3">
+              <div class="vs">VS</div>
+              <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+          </div>
+          <div class="carousel-slide">
+              <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+              <img class="img-vs" src="public/images/vs4.1.jpg" alt="Imagen Real 4">
+              <img class="img-vs" src="public/images/vs4.2.jpg" alt="Imagen IA 4">
+              <div class="vs">VS</div>
+              <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+          </div>
+      </div>
   </div>
 
-  <!-- Carrusel de imagenes VS -->
-  <div class="carousel-container">
-    <h3 class="carousel-title">Realidad VS IA</h3>
-    <div class="carousel">
-      <div class="carousel-1">
-        <img src="imagen-real-1.jpg" alt="Imagen Real 1">
-        <img src="imagen-ia-1.jpg" alt="Imagen IA 1">
-        <div class="vs">VS</div>
-      </div>
-
-      <div class="carousel-2">
-        <img src="imagen-real-2.jpg" alt="Imagen Real 2">
-          <img src="imagen-ia-2.jpg" alt="Imagen IA 2">
-          <div class="vs">VS</div>
-      </div>
-
-      <div class="carousel-3">
-        <img src="imagen-real-2.jpg" alt="Imagen Real 2">
-          <img src="imagen-ia-2.jpg" alt="Imagen IA 2">
-          <div class="vs">VS</div>
-      </div>
-  
-      </div>
-      <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-      <button class="next" onclick="moveCarousel(1)">&#10095;</button>
-  </div>
-
-  <script src="scripts.js"></script>
-  </div>
-
-
+  </main>
+</body>
+<!-- 
   {#if progress < 1}
   <DebugScroller
     index={index}
@@ -155,7 +163,9 @@
     progress={progress}
   />
   {/if}
+-->
   <!-- Primer scroller -->
+  <!--
   <Scroller
     top={top}
     threshold={threshold}
@@ -200,8 +210,9 @@
     <Loremipsum />
   </div>
   
-
+-->
   <!-- Segundo scroller -->
+  <!-- 
   <Scroller
     top={top2}
     threshold={threshold2}
@@ -236,7 +247,8 @@
       </section>
     </div>
   </Scroller>
-</main>
+
+-->
 
 <div class="lorem_ipsum">
   <Loremipsum />
@@ -254,16 +266,11 @@
     justify-content: center;
     align-self: center;
     flex-direction: column;
-    /* margin-top: 50px; */
     margin-bottom: 50px;
     background-color:black;
     height: 100vh;
     position: static;
     margin-bottom: 100px;
-    /* word-wrap: break-word; */
-    /* width: 100vw; */
-    
-    /* width: 100; */
   }
 
   .subtitulo {
@@ -279,7 +286,9 @@
     font-family: 'IBM Plex Mono';
     font-size:larger;
     text-align: justify;
-    margin: 15%;
+    margin-top: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
     
 
   }
