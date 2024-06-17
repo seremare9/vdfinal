@@ -68,23 +68,22 @@
 </script>
 
 <main>
+  <!-- Titulo y subtitulo-->
   <div class="header">
-    <!-- <img src="/images/olympics-logo.png" width="100" alt="anillos" /> -->
+
     <h1 id="typewriter" class="headline">
       <b>Entre la Realidad y la IA Generativa</b>
     </h1>
-    <h3 id="subtitle" style="visibility: hidden;" class="subtitulo">
+    <h2 id="subtitle" style="visibility: hidden;" class="subtitulo">
       <b> Un Viaje por las Imágenes Digitales</b>
-    </h3>
+    </h2>
     <script src="typewriter.js"></script>
-    <p class="bajada">Por <a href="https://www.linkedin.com/in/serena-marelli/">SERENA MARELLI</a> y <a href="https://www.linkedin.com/in/josefina-jahde/">JOSEFINA JAHDE</a></p>
+    <p class="bajada">Por <a target="_blank" href="https://www.linkedin.com/in/serena-marelli/">SERENA MARELLI</a> y <a target="_blank" href="https://www.linkedin.com/in/josefina-jahde/">JOSEFINA JAHDE</a></p>
     <button id="scrollButton">Scroll Down</button>
-    <!-- <div id="targetSection" class="target-section">
-      <p>This is the target section.</p>
-    </div> -->
+  
   </div> <!-- Fin de header -->
 
-    <!-- Acá irían apareciendo las imagenes q hicimos con IA -->
+  <!-- Aparecen las imagenes q hicimos con IA -->
   <div id="targetSection" class="intro target-section">
       <head>
         <meta charset="UTF-8">
@@ -108,9 +107,44 @@
         </div>
     </body>
     <div class="introduccion">
-        <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico en los últimos años. Estas imágenes han alcanzado niveles de realismo y creatividad que antes eran impensables. La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle no solo ha democratizado la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido impactante, sino que también ha planteado desafíos significativos en cuanto a la autenticidad y la percepción de la realidad.</p>
+        <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico 
+          en los últimos años. Estas imágenes han alcanzado niveles de realismo y creatividad que antes eran impensables. 
+          La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle no solo ha 
+          democratizado la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido 
+          impactante, sino que también ha planteado desafíos significativos en cuanto a la autenticidad y la percepción de la 
+          realidad.</p>
     </div>
-</div>
+  </div>
+
+  <!-- Carrusel de imagenes VS -->
+  <div class="carousel-container">
+    <h3 class="carousel-title">Realidad VS IA</h3>
+    <div class="carousel">
+      <div class="carousel-1">
+        <img src="imagen-real-1.jpg" alt="Imagen Real 1">
+        <img src="imagen-ia-1.jpg" alt="Imagen IA 1">
+        <div class="vs">VS</div>
+      </div>
+
+      <div class="carousel-2">
+        <img src="imagen-real-2.jpg" alt="Imagen Real 2">
+          <img src="imagen-ia-2.jpg" alt="Imagen IA 2">
+          <div class="vs">VS</div>
+      </div>
+
+      <div class="carousel-3">
+        <img src="imagen-real-2.jpg" alt="Imagen Real 2">
+          <img src="imagen-ia-2.jpg" alt="Imagen IA 2">
+          <div class="vs">VS</div>
+      </div>
+  
+      </div>
+      <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+      <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+  </div>
+
+  <script src="scripts.js"></script>
+  </div>
 
 
   {#if progress < 1}
@@ -212,12 +246,7 @@
  
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-  /* .main {
-    background-color: black;
-  } */
   .main {
-  /* Set maximum width and center the container horizontally */
-    /* max-width: 800px; */
     margin: 0 auto;
   }
   .header {
@@ -233,21 +262,26 @@
     margin-bottom: 100px;
     /* word-wrap: break-word; */
     /* width: 100vw; */
-
+    
     /* width: 100; */
   }
 
-  .intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 200px;
-    margin-bottom: 50px;
-    background-color:black;
-    word-wrap: break-word;
-    position: static;
-    /* width: 100; */
+  .subtitulo {
+    font-size: 40px;
+    line-height: 1.2;
+    font-family: 'IBM Plex Mono';
+    color:white;
+  }
+  
+  .introduccion {
+    background-color: black;
+    color: white;
+    font-family: 'IBM Plex Mono';
+    font-size:larger;
+    text-align: justify;
+    margin: 15%;
+    
+
   }
 
   .headline {
@@ -259,12 +293,6 @@
     color:white;
     font-family: 'IBM Plex Mono';
     width: 100%;
-  }
-  .subtitulo {
-    font-size: 40px;
-    line-height: 1.2;
-    font-family: 'IBM Plex Mono';
-    color:white;
   }
   .bajada {
     
@@ -289,15 +317,7 @@
     font-size: 70px;
   }
 
-  .introduccion {
-    background-color: black;
-    color: white;
-    font-family: 'IBM Plex Mono';
-    font-size:larger;
-    text-align: justify;
-    
 
-  }
 
   /* Estilos para el scroller */
   .foreground_container {
