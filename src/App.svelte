@@ -162,6 +162,7 @@
   </div>
   <!-- FIN DE CARRUSEL-->
 
+ <!-- GRAFICOS --> 
   <div class="Graficos-container">
     <div class="grafico-uno">
       <h3 class="grafico-title-1">Datos sobre las plataformas mas utilizadas (2023)</h3>
@@ -184,12 +185,47 @@
       <h3 class="graficos-title-2">Datos sobre la cantidad de imágenes generadas por dia en las plataformas mas usadas (2023)</h3>
       <img src="public/imagenes/grafico2.jpg" alt="grafico 2">
 
-
     </div>
-
-
-
   </div>
+  <!-- FIN GRAFICOS -->
+
+  <!-- CASO DEL PAPA -->
+   <div>
+    <h3>Impacto de las Imágenes Generadas por IA</h3>
+    <img src="public/imagenes/imagen-papa.jpg" alt="Papa Francisco">
+    <p>Según la revista Forbes, la imagen se creó utilizando Midjourney, una herramienta de inteligencia artificial que permite generar imágenes falsas 
+      increíblemente realistas. Luego, la imagen se compartió el viernes 24 de marzo de 2023  en Reddit antes de llegar a Twitter durante ese fin de 
+      semana. <br>Según un análisis de The New York Times, han obtenido más visitas, “me gusta” y comentarios que muchas otras fotos generadas con IA
+      (229.000 me gusta y 20,6 millones de visitas). A demás, esto provocó una carrera por retratar al líder de 86 años en situaciones cada vez más 
+      extrañas. <br>La prevalencia de Francisco en las imágenes generadas por IA es resultado de una combinación perfecta de factores, según expertos 
+      religiosos. Tras diez años al frente de la Iglesia católica, se lo reconoce al instante en todo el mundo. Se lo considera un líder más accesible que 
+      su predecesor, el papa Benedicto XVI, de línea más dura. Y cuando se combina con un repentino interés por las nuevas herramientas de IA, Francisco, 
+      que en la vida real suele aparecer en ambientes formales, se convierte en la elección recurrente de los creadores de imaganes con IA para colocarlo en 
+      los escenarios más incongruentes.</p>
+   </div>
+
+   <!-- FIN CASO PAPA -->
+
+  <!-- ¿QUÉ DIJO EL PAPA? -->
+   <div class="comentario">
+    <h4>¿Qué dijo el papa? </h4>
+    <p>El papa Francisco ha alertado de los malos usos de la IA, que puede ser un instrumento de “contaminación cognitiva” y “de alteración de la realidad 
+      a través de narrativas parcial o totalmente falsas que se creen, y se comparten, como si fueran verdaderas”. <br>Así ha citado el ejemplo de las 
+      fake news que hoy se sirve de deepfakes, es decir, de la creación y difusión de imágenes que parecen perfectamente verosímiles pero que son falsas. 
+      “También yo he sido objeto de ello”, revela. </p>
+      <!-- TWEETS APARECIENDO -->
+      <div class="container-tweets">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">ç
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+   </div>
+
 
   </main>
 </body>
