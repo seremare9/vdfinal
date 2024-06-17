@@ -121,39 +121,79 @@
      <div class="carousel-container">
       <h3 class="carousel-title">Realidad VS IA</h3>
       <div class="carousel">
-          <div class="carousel-slide">
-              <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+
+        <div class="carousel-slide">
+            <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <div class="carousel-slide">
               <img class="img-vs" src="public/images/vs1.1.jpg" alt="Imagen Real 1">
               <img class="img-vs" src="public/images/vs1.2.jpg" alt="Imagen IA 1">
-              <div class="vs">VS</div>
-              <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+            </div> 
+            <button class="next" onclick="moveCarousel(1)">&#10095;</button>
           </div>
+
           <div class="carousel-slide">
               <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-              <img class="img-vs" src="public/images/vs2.1.jpg" alt="Imagen Real 2">
-              <img class="img-vs" src="public/images/vs2.2.jpg" alt="Imagen IA 2">
-              <div class="vs">VS</div>
+              <div class="carousel-slide">
+                <img class="img-vs" src="public/images/vs2.1.jpg" alt="Imagen Real 2">
+                <img class="img-vs" src="public/images/vs2.2.jpg" alt="Imagen IA 2">
+              </div>
               <button class="next" onclick="moveCarousel(1)">&#10095;</button>
           </div>
+
           <div class="carousel-slide">
               <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-              <img class="img-vs" src="public/images/vs3.1.jpg" alt="Imagen Real 3">
-              <img class="img-vs" src="public/images/vs3.2.jpg" alt="Imagen IA 3">
-              <div class="vs">VS</div>
+              <div class="carousel-slide">
+                <img class="img-vs" src="public/images/vs3.1.jpg" alt="Imagen Real 3">
+                <img class="img-vs" src="public/images/vs3.2.jpg" alt="Imagen IA 3">
+              </div>
               <button class="next" onclick="moveCarousel(1)">&#10095;</button>
           </div>
+
           <div class="carousel-slide">
               <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-              <img class="img-vs" src="public/images/vs4.1.jpg" alt="Imagen Real 4">
-              <img class="img-vs" src="public/images/vs4.2.jpg" alt="Imagen IA 4">
-              <div class="vs">VS</div>
+              <div class="carousel-slide">
+                <img class="img-vs" src="public/images/vs4.1.jpg" alt="Imagen Real 4">
+                <img class="img-vs" src="public/images/vs4.2.jpg" alt="Imagen IA 4">
+              </div>
               <button class="next" onclick="moveCarousel(1)">&#10095;</button>
           </div>
+
       </div>
+  </div>
+  <!-- FIN DE CARRUSEL-->
+
+  <div class="Graficos-container">
+    <div class="grafico-uno">
+      <h3 class="grafico-title-1">Datos sobre las plataformas mas utilizadas (2023)</h3>
+      <img src="public/imagenes/grafico1.jpg" alt="grafico 1">
+      <p class="texCostado">En noviembre de 2023, la base de usuarios de Midjourney llegaba a  los 16 millones, con usuarios activos diarios que fluctúan 
+        entre 1,2 y 2,5 millones.  Esta sólida participación refleja el éxito de Midjourney a la hora de  captar y retener la atención 
+        de un público diverso. <br> El mayor segmento de su base de usuarios, que comprende 37,76%, se sitúa  en el grupo de edad de 25 a 34 años. Le sigue el grupo 
+        demográfico de 
+        </p>
+        <p class="texAbajo">18 a 25 años, que constituye el 26,18% de sus usuarios.  Estas estadísticas indican que Midjourney es especialmente popular entre  
+          los adultos más jóvenes y los millennials. <br> Los ingresos previstos de Midjourney para finales de 2023 ascienden a la  impresionante 
+          cifra de $300 millones. Esta cifra es un claro indicador  del éxito financiero de la plataforma y de su eficaz estrategia de  monetización. <br>Las 
+          estadísticas que rodean a Midjourney dibujan una imagen vívida de  una plataforma que no sólo está creciendo rápidamente, sino que también 
+          está influyendo profundamente en el panorama del arte generado por IA.  Desde su amplia base de usuarios y sus impresionantes previsiones de 
+          ingresos hasta la entusiasta participación de la comunidad en  plataformas como Discord y Reddit, Midjourney es un testimonio del  potencial 
+          de la IA en el ámbito creativo.</p>
+    </div>
+
+    <div class="grafico-dos">
+      <h3 class="graficos-title-2">Datos sobre la cantidad de imágenes generadas por dia en las plataformas mas usadas (2023)</h3>
+      <img src="public/imagenes/grafico2.jpg" alt="grafico 2">
+
+
+    </div>
+
+
+
   </div>
 
   </main>
 </body>
+
 <!-- 
   {#if progress < 1}
   <DebugScroller
@@ -286,7 +326,8 @@
     font-family: 'IBM Plex Mono';
     font-size:larger;
     text-align: justify;
-    margin-top: 20%;
+    margin-top: 30%;
+    margin-bottom: 17%;
     margin-left: 5%;
     margin-right: 5%;
     

@@ -214,7 +214,7 @@ button:focus-visible {
 
 
 .carousel-container {
-  position:absolute;
+  position:relative;
   width: 80%;
   margin: 0 auto;
   text-align: center;
@@ -223,52 +223,66 @@ button:focus-visible {
 }
 .carousel-title{
   color: white;
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 35px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .carousel {
   display: flex;
-  overflow: hidden;
   width: 100%;
-  justify-content: space-around;
+  overflow-x: scroll; /* Permitir desplazamiento horizontal */
+  scroll-snap-type: x mandatory; /* Hacer que cada slide se ajuste a la vista */
 }
 
 .carousel-slide {
+  position: relative;
   display: flex;
+  flex: 0 0 auto; /* No crecer, no encoger, tamaño automático */
   align-items: center;
   justify-content: center;
   min-width: 100%;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out; /* Transición para deslizamiento */
+}
+
+.carousel-imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: opacity 0.5s ease-in-out; /* Transición para opacidad */
+}
+
+.carousel-imgs img {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 1; /* Inicialmente mostramos las imágenes */
+  transition: opacity 0.5s ease-in-out; /* Transición para opacidad */
 }
 
 .img-vs {
-  width: 200px;
+  width: 500px;
   height: auto;
   margin: 0 10px;
 }
 
-.vs {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0 10px;
-  color: white;
-}
-
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
+  position: absolute; /* Posición absoluta para que los botones puedan estar superpuestos */
+  top: 50%; /* Ajustar la posición verticalmente */
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 10px;
   font-size: 18px;
+  z-index: 1; /* Para que estén sobre las imágenes */
 }
 
 .prev {
+
   left: 10px;
 }
 
