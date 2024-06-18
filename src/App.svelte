@@ -333,7 +333,15 @@
 
 <style>
  
+ /* Importo fonts */
+
+  /* Rubik */
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+ /* IBM Plex Mono (nombres) */
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+  /* IBM Plex Sans (texto) */
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 
   .main {
     margin: 0 auto;
@@ -350,46 +358,36 @@
     margin-bottom: 100px;
   }
 
-  .subtitulo {
-    font-size: 40px;
-    line-height: 1.2;
-    font-family: 'IBM Plex Mono';
-    color:white;
-  }
-  
-  .introduccion {
-    background-color: black;
-    color: white;
-    font-family: 'IBM Plex Mono';
-    font-size:larger;
-    text-align: justify;
-    margin-top: 30%;
-    margin-bottom: 17%;
-    margin-left: 5%;
-    margin-right: 5%;
-    
-
-  }
-
-  .headline {
-    /* font-size: 100px; */
+  .headline { /* Título */
+    font-size: 60px;
     line-height: 1.2;
     font-weight: black;
     text-align: center;
     margin: 20px;
     color:white;
-    font-family: 'IBM Plex Mono';
+    font-family: 'Rubik';
     width: 100%;
   }
-  .bajada {
-    
+
+  .headline b {
+    display: block;
+    font-size: 70px;
+  }
+
+  .subtitulo {
+    font-size: 50px;
+    line-height: 1.2;
+    font-family: 'Rubik';
+    color:white;
+  }
+
+  .bajada { /* Nombres */
     font-size: 18px;
     font-weight: bold;
     text-align: center;
     margin: 10px;
     font-family:'IBM Plex Mono';
     color:white
-    
   }
 
   a {
@@ -399,12 +397,18 @@
     text-decoration: underline;
   }
 
-  .headline b {
-    display: block;
-    font-size: 70px;
+  .introduccion {
+    background-color: black;
+    color: white;
+    font-family: 'IBM Plex Sans';
+    line-height: 2.5;
+    font-size:2px;
+    text-align: left;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
-
-
 
   /* Estilos para el scroller */
   .foreground_container {
