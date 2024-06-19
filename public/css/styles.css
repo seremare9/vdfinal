@@ -67,7 +67,7 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: mediumpurple;
+    background-color:crimson;
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
@@ -107,92 +107,105 @@ button:focus-visible {
 
 .image-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  position: static;
   margin-top: 80px;
   margin-bottom: 0%;
-  /* background-color:aqua; */
-  background-color:black;
-  /* color: black; */
-  width: 100vw; /* Set the width to 100% of the viewport width */
-  height: 60vh; /* Set the height to 60% of the viewport height */
+  background-color: black;
+  height: 100vh; /* Set the height to 60% of the viewport height */
+}
+.cuadroPrompt {
+  width: 550px;
+  height: auto;
+  visibility: hidden; 
+  position: absolute;
+  margin-bottom: 750px;
+  align-self: center;
+}
+
+#textoPrompt {
+  font-size: 20px;
+  font-family: 'IBM Plex Sans';
+  color:black;
+  font-style: italic;
+  margin-bottom: 755px;
+  margin-left: 395px;
+  z-index: 10;
 }
 
 .image {
   width: 300px;
   height: auto;
-  visibility: hidden; /* Hide the image initially */
-  animation: showImage 0s forwards;
+  visibility: hidden;
   position: absolute;
 }
 
-.image:nth-child(1) {
-  animation-delay: 10.5s;
+.image.visible {
+  visibility: visible; 
 }
 
-.image:nth-child(2) {
-  animation-delay: 11s;
-  right: 650px;
-  margin-top: 50px;
+/* Keyframes to make images visible */
+@keyframes showImage {
+  to {
+      visibility: visible;
+  }
 }
 
-.image:nth-child(3) {
-  animation-delay: 11.5s;
-  margin-top: 200px;
-  left: 680px;
+.image:nth-child(1) { /* aurora boreal */
+  align-self: center;
 }
 
-.image:nth-child(4) {
-  animation-delay: 12.5s;
-  right: 610px;
+.image:nth-child(2) { /* pavo real */
+  left: 600px;
+  margin-top: 90px;
+}
+
+.image:nth-child(3) { /* leon */
   margin-top: 300px;
+  left: 800px;
 }
 
-.image:nth-child(5) {
-  animation-delay: 13s;
-  left: 630px;
-  margin-top: 80px;
+.image:nth-child(4) { /* pajarito */
+  right: 510px;
+  margin-top: 10px;
 }
 
-.image:nth-child(6) {
-  animation-delay: 12s;
+.image:nth-child(5) { /* gatitos */
+  right: 580px;
+  margin-bottom: 370px;
+}
+
+.image:nth-child(6) { /* montaña */
   margin-top: 270px;
-  right: 900px;
+  left: 400px;
 }
 
-.image:nth-child(7) {
-  animation-delay: 13.5s;
-  left: 450px;
-  margin-top: 150px;
+.image:nth-child(7) { /* mariposa */
+  left: 370px;
+  margin-top: 120px;
 }
 
-.image:nth-child(8) {
-  animation-delay: 14s;
+.image:nth-child(8) { /* te */
   right: 390px;
 }
 
-.image:nth-child(9) {
-  animation-delay: 14.5s;
+.image:nth-child(9) { /* islandia */
   left: 400px;
-  margin-top: 400px;
+  margin-top: 500px;
 }
 
-.image:nth-child(10) {
-  animation-delay: 15s;
+.image:nth-child(10) { /* globo */
   right: 320px;
   margin-top: 350px;
 }
 
-.image:nth-child(11) {
-  animation-delay: 15.5s;
-  left: 330px;
-  margin-top: 10px;
+.image:nth-child(11) { /* peces */
+  left: 530px;
+  margin-bottom: 300px
 }
 
-@keyframes showImage {
-  to {
-    visibility: visible;
-  }
-}
 
 /* Imágenes del carrusel */
 

@@ -88,16 +88,11 @@
     </div> 
     <!-- Fin de header -->
 
-    <!-- Aparecen las imagenes q hicimos con IA -->
+    <!-- Aparece el recuadro del prompt y luego las imagenes q hicimos con IA -->
     <div id="targetSection" class="intro target-section">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Imágenes con Efecto de Aparición</title>
-          <link rel="stylesheet" href="styles.css">
-      </head>
-
-          <div class="image-container">
+      <div class="image-container">
+              <img src="public/images/prompt.png" id="promptImage" class="cuadroPrompt" alt="Prompt" style="visibility: hidden;">
+              <p id="textoPrompt" class="texto-prompt" style="visibility: hidden;">Imagen realista de...</p>
               <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1"> <!-- aurora boreal -->
               <img src="public/images/firefly2.jpg" class="image" alt="Imagen 2"> <!-- pavo real -->
               <img src="public/images/firefly3.jpg" class="image" alt="Imagen 3"> <!-- leon -->
@@ -109,7 +104,8 @@
               <img src="public/images/firefly9.jpg" class="image" alt="Imagen 9"> 
               <img src="public/images/firefly8.jpg" class="image" alt="Imagen 10"> 
               <img src="public/images/firefly10.jpg" class="image" alt="Imagen 11"> 
-          </div>
+      </div>
+  
 
       <div class="introduccion">
           <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico 
@@ -355,7 +351,7 @@
     background-color:black;
     height: 100vh;
     position: static;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
   }
 
   .headline { /* Título */
@@ -391,7 +387,7 @@
   }
 
   a {
-    color:mediumpurple;
+    color:crimson;
     font-family:'IBM Plex Mono';
     font-weight: bold;
     text-decoration: underline;
@@ -402,7 +398,7 @@
     color: white;
     font-family: 'IBM Plex Sans';
     line-height: 2.5;
-    font-size:2px;
+    font-size:25px;
     text-align: left;
     margin-top: 15%;
     margin-bottom: 15%;
