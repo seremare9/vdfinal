@@ -3,7 +3,7 @@
   import {onMount} from "svelte"
   import * as d3 from "d3"
 
-  import Medallero from "./components/Medallero.svelte"
+  // import Medallero from "./components/Medallero.svelte"
   import DebugScroller from "./components/DebugScroller.svelte"
   import Loremipsum from "./components/Loremipsum.svelte"
 
@@ -36,8 +36,7 @@
     2: "lines_03.png",
   }
 
-  
-  /*
+
   onMount(() => {
     d3.csv("./data/deportistas.csv", d3.autoType).then(data => {
       deportistas = data
@@ -49,26 +48,26 @@
     // Es un observer que se ejecuta cuando cambia el valor de index
     
     switch (index) {
-      case 0:
-        filteredDeportistas = deportistas
-        break
-      case 1:
-        filteredDeportistas = deportistas.filter(d => d.genero === "F")
-        break
-      case 2:
-        filteredDeportistas = deportistas.filter(d => d.genero === "M")
-        break
-      case 3:
-        filteredDeportistas = deportistas.filter(
-          d => d.continente === "América",
-        )
-        break
-      default:
-        filteredDeportistas = deportistas
+      // case 0:
+      //   filteredDeportistas = deportistas
+      //   break
+      // case 1:
+      //   filteredDeportistas = deportistas.filter(d => d.genero === "F")
+      //   break
+      // case 2:
+      //   filteredDeportistas = deportistas.filter(d => d.genero === "M")
+      //   break
+      // case 3:
+      //   filteredDeportistas = deportistas.filter(
+      //     d => d.continente === "América",
+      //   )
+      //   break
+      // default:
+      //   filteredDeportistas = deportistas
     }
-    console.log(filteredDeportistas)
+    // console.log(filteredDeportistas)
   }
-    */
+
 </script>
 
 <body>
@@ -105,18 +104,54 @@
               <img src="public/images/firefly8.jpg" class="image" alt="Imagen 10"> 
               <img src="public/images/firefly10.jpg" class="image" alt="Imagen 11"> 
       </div>
-  
-
-      <div class="introduccion">
-          <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico 
-            en los últimos años. Estas imágenes han alcanzado niveles de realismo y creatividad que antes eran impensables. 
-            La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle no solo ha 
-            democratizado la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido 
-            impactante, sino que también ha planteado desafíos significativos en cuanto a la autenticidad y la percepción de la 
-            realidad.</p>
-      </div>
     </div>
 
+
+    {#if progress < 1}
+    <DebugScroller
+      index={index}
+      count={count}
+      offset={offset}
+      progress={progress}
+    />
+    {/if}
+  
+    <!-- Primer scroller: Introducción -->
+      <Scroller
+        top={top}
+        threshold={threshold}
+        bottom={bottom}
+        bind:count={count}
+        bind:index={index}
+        bind:offset={offset}
+        bind:progress={progress}
+      >
+  
+      <div slot="foreground" class="foreground_container"> 
+        <section id="step1" class="step_foreground">
+          <div class="epi_foreground"> 
+            <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico en los últimos años. </p>
+          </div>
+        </section>
+        <section id="step2" class="step_foreground">
+          <div class="epi_foreground">
+            <p>La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle democratizó la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido impactante.</p>
+          </div>
+        </section>
+        <section id="step3" class="step_foreground">
+          <div class="epi_foreground">
+            <p>Este contexto plantea desafíos significativos en cuanto a la autenticidad y la percepción de la realidad.</p>
+          </div>
+        </section>
+      </div>
+    </Scroller>
+  
+    <!-- Texto despues del 1er scroller -->
+    <div class="lorem_ipsum">
+      <Loremipsum />
+    </div>
+
+    
      <!-- Carrusel de imagenes VS
      <div class="carousel-container">
       <h3 class="carousel-title">Realidad VS IA</h3>
@@ -160,9 +195,9 @@
 
       </div>
   </div>
-  <!-- FIN DE CARRUSEL-->
+ FIN DE CARRUSEL-->
   
-   <!-- GRAFICOS --> 
+   <!-- GRAFICOS 
     <div class="Graficos-container">
       <div class="grafico-uno">
         <h3 class="grafico-title-1">Datos sobre las plataformas mas utilizadas (2023)</h3>
@@ -187,10 +222,10 @@
   
       </div>
     </div>
-    <!-- FIN GRAFICOS -->
+    FIN GRAFICOS -->
   
     <!-- CASO DEL PAPA -->
-     <div>
+     <!-- <div>
       <h3>Impacto de las Imágenes Generadas por IA</h3>
       <img src="public/imagenes/imagen-papa.jpg" alt="Papa Francisco">
       <p>Según la revista Forbes, la imagen se creó utilizando Midjourney, una herramienta de inteligencia artificial que permite generar imágenes falsas 
@@ -202,19 +237,19 @@
         su predecesor, el papa Benedicto XVI, de línea más dura. Y cuando se combina con un repentino interés por las nuevas herramientas de IA, Francisco, 
         que en la vida real suele aparecer en ambientes formales, se convierte en la elección recurrente de los creadores de imaganes con IA para colocarlo en 
         los escenarios más incongruentes.</p>
-     </div>
+     </div> -->
   
      <!-- FIN CASO PAPA -->
   
     <!-- ¿QUÉ DIJO EL PAPA? -->
-     <div class="comentario">
+     <!-- <div class="comentario">
       <h4>¿Qué dijo el papa? </h4>
       <p>El papa Francisco ha alertado de los malos usos de la IA, que puede ser un instrumento de “contaminación cognitiva” y “de alteración de la realidad 
         a través de narrativas parcial o totalmente falsas que se creen, y se comparten, como si fueran verdaderas”. <br>Así ha citado el ejemplo de las 
         fake news que hoy se sirve de deepfakes, es decir, de la creación y difusión de imágenes que parecen perfectamente verosímiles pero que son falsas. 
         “También yo he sido objeto de ello”, revela. </p>
-        <!-- TWEETS APARECIENDO -->
-        <div class="container-tweets">
+        TWEETS APARECIENDO -->
+        <!-- <div class="container-tweets">
           <img src="" alt="">
           <img src="" alt="">
           <img src="" alt="">
@@ -222,74 +257,14 @@
           <img src="" alt="">ç
           <img src="" alt="">
           <img src="" alt="">
-          <img src="" alt="">
-        </div>
-     </div>
-  
-  
-</main>
-</body> 
+          <img src="" alt=""> -->
+        <!-- </div> -->
+     <!-- </div>  -->
 
-<!-- 
-  {#if progress < 1}
-  <DebugScroller
-    index={index}
-    count={count}
-    offset={offset}
-    progress={progress}
-  />
-  {/if}
--->
-  <!-- Primer scroller -->
-  <!--
-  <Scroller
-    top={top}
-    threshold={threshold}
-    bottom={bottom}
-    bind:count={count}
-    bind:index={index}
-    bind:offset={offset}
-    bind:progress={progress}
-  >
-    <div slot="background">
-      <Medallero deportistas={filteredDeportistas} />
-    </div>
-    <div slot="foreground" class="foreground_container">
-      <section class="step_foreground">
-        <div class="epi_foreground">
-          <h3>Seccion {index + 1}</h3>
-          <p>Todos los deportistas</p>
-        </div>
-      </section>
-      <section class="step_foreground">
-        <div class="epi_foreground">
-          <h3>Seccion {index + 1}</h3>
-          <p>Deportistas femeninas</p>
-        </div>
-      </section>
-      <section class="step_foreground">
-        <div class="epi_foreground">
-          <h3>Seccion {index + 1}</h3>
-          <p>Deportistas masculinos</p>
-        </div>
-      </section>
-      <section class="step_foreground">
-        <div class="epi_foreground">
-          <h3>Seccion {index + 1}</h3>
-          <p>Deportistas americanos</p>
-        </div>
-      </section>
-    </div>
-  </Scroller>
-
-  <div class="lorem_ipsum">
-    <Loremipsum />
-  </div>
   
--->
   <!-- Segundo scroller -->
-  <!-- 
-  <Scroller
+  
+  <!-- <Scroller
     top={top2}
     threshold={threshold2}
     bottom={bottom2}
@@ -322,7 +297,10 @@
         </div>
       </section>
     </div>
-  </Scroller>
+  </Scroller> -->
+</main>
+</body> 
 
--->
+
+
 

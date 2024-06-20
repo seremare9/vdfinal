@@ -1,9 +1,10 @@
 
-// Function to simulate typing effect for the main title
+// Función para simular el efecto de typing 
+
+// Título
 function typeMainTitle() {
     var text = document.getElementById('typewriter').textContent.trim();
     document.getElementById('typewriter').textContent = '';
-
     function typeEffect(i) {
         if (i < text.length) {
             document.getElementById('typewriter').textContent += text.charAt(i);
@@ -17,15 +18,12 @@ function typeMainTitle() {
             typeSubtitle();
         }
     }
-
     typeEffect(0);
 }
-
-// Function to simulate typing effect for the subtitle
+// Subtítulo
 function typeSubtitle() {
     var text = document.getElementById('subtitle').textContent.trim();
     document.getElementById('subtitle').textContent = '';
-
     function typeEffect(i) {
         if (i < text.length) {
             document.getElementById('subtitle').textContent += text.charAt(i);
@@ -34,11 +32,10 @@ function typeSubtitle() {
             }, 100);
         }
     }
-
     typeEffect(0);
 }
 
-// Function to simulate typing effect for the new text
+// Texto del cuadro de "Prompt"
 function typeNewText() {
     var text = document.getElementById('textoPrompt').textContent.trim();
     document.getElementById('textoPrompt').textContent = '';
@@ -82,7 +79,11 @@ document.getElementById('scrollButton').addEventListener('click', function() {
                 }, delay);
                 delay += 300; // Adjust delay between images appearing
             });
-        }, 4000); // 10 seconds delay
+        }, 4000); // 4 seconds delay
 
     }, 1000); // Adjust the delay as needed to show new text
 });
+
+// scroll de containers
+
+// 
