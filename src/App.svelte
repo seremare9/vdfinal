@@ -348,13 +348,16 @@
     align-self: center;
     flex-direction: column;
     margin-bottom: 50px;
-    background-color:aquamarine;
+    background-color:black;
     height: 100vh;
     /* width:100vw; */
     position: static;
     background-image: url('/public/gifs/fondo.gif');
-    background-size: 79vw;
+    background-size: 70vw;
+    background-repeat: no-repeat;
     background-position: center;
+    padding: 0%;
+    margin: 0%;
     /* margin-bottom: 100px; */
   }
 
