@@ -88,18 +88,18 @@
     </div> 
     <!-- Fin de header -->
 
-    <!-- Aparece el recuadro del prompt y luego las imagenes q hicimos con IA -->
+    <!-- Aparece el recuadro del prompt y luego las imagenes que hicimos con IA -->
     <div id="targetSection" class="intro target-section">
       <div class="image-container">
               <img src="public/images/prompt.png" id="promptImage" class="cuadroPrompt" alt="Prompt" style="visibility: hidden;">
               <p id="textoPrompt" class="texto-prompt" style="visibility: hidden;">Imagen realista de...</p>
-              <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1"> <!-- aurora boreal -->
-              <img src="public/images/firefly2.jpg" class="image" alt="Imagen 2"> <!-- pavo real -->
-              <img src="public/images/firefly3.jpg" class="image" alt="Imagen 3"> <!-- leon -->
-              <img src="public/images/firefly4.jpg" class="image" alt="Imagen 4"> <!-- pájaro azul -->
-              <img src="public/images/firefly5.jpg" class="image" alt="Imagen 5"> <!-- gatitos -->
-              <img src="public/images/firefly6.jpg" class="image" alt="Imagen 6"> <!-- montaña -->
-              <img src="public/images/designer1.jpeg" class="image" alt="Imagen 7"> <!-- mariposa -->
+              <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1"> 
+              <img src="public/images/firefly2.jpg" class="image" alt="Imagen 2"> 
+              <img src="public/images/firefly3.jpg" class="image" alt="Imagen 3"> 
+              <img src="public/images/firefly4.jpg" class="image" alt="Imagen 4"> 
+              <img src="public/images/firefly5.jpg" class="image" alt="Imagen 5"> 
+              <img src="public/images/firefly6.jpg" class="image" alt="Imagen 6"> 
+              <img src="public/images/designer1.jpeg" class="image" alt="Imagen 7">
               <img src="public/images/firefly7.jpg" class="image" alt="Imagen 8"> 
               <img src="public/images/firefly9.jpg" class="image" alt="Imagen 9"> 
               <img src="public/images/firefly8.jpg" class="image" alt="Imagen 10"> 
@@ -117,7 +117,7 @@
       </div>
     </div>
 
-     <!-- Carrusel de imagenes VS -->
+     <!-- Carrusel de imagenes VS
      <div class="carousel-container">
       <h3 class="carousel-title">Realidad VS IA</h3>
       <div class="carousel">
@@ -228,7 +228,7 @@
   
   
 </main>
-</body>
+</body> 
 
 <!-- 
   {#if progress < 1}
@@ -326,124 +326,3 @@
 
 -->
 
-
-<style>
- 
- /* Importo fonts */
-
-  /* Rubik */
-  @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
- /* IBM Plex Mono (nombres) */
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-  /* IBM Plex Sans (texto) */
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
-
-  .main {
-    margin: 0 auto;
-  }
-  .header {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    flex-direction: column;
-    margin-bottom: 50px;
-    background-color:black;
-    height: 100vh;
-    /* width:100vw; */
-    position: static;
-    background-image: url('/public/gifs/fondo.gif');
-    background-size: 70vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 0%;
-    margin: 0%;
-    /* margin-bottom: 100px; */
-  }
-
-  .headline { /* Título */
-    font-size: 60px;
-    line-height: 1.2;
-    font-weight: black;
-    text-align: center;
-    margin: 20px;
-    color:white;
-    font-family: 'Rubik';
-    width: 100%;
-  }
-
-  .headline b {
-    display: block;
-    font-size: 70px;
-  }
-
-  .subtitulo {
-    font-size: 50px;
-    line-height: 1.2;
-    font-family: 'Rubik';
-    color:white;
-  }
-
-  .bajada { /* Nombres */
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    margin: 10px;
-    font-family:'IBM Plex Mono';
-    color:white
-  }
-
-  a {
-    color:crimson;
-    font-family:'IBM Plex Mono';
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  .introduccion {
-    background-color: black;
-    color: white;
-    font-family: 'IBM Plex Sans';
-    line-height: 2.5;
-    font-size:25px;
-    text-align: left;
-    margin-top: 15%;
-    margin-bottom: 15%;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  /* Estilos para el scroller */
-  .foreground_container {
-    pointer-events: none;
-    padding-left: 50%;
-    /* background-color: aquamarine; */
-  }
-
-  .step_foreground { /* los recuadros con borde negro de la derecha */
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    height: 100vh;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    color: white;
-    padding: 1em;
-    margin: 0 0 2em 0;
-  }
-  .epi_foreground { /* recuadro negro donde dice la seccion */
-    padding: 20px;
-    max-width: 150px;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  .lorem_ipsum {
-    margin: 100px auto;
-    max-width: 740px;
-    color: white;
-  }
-  .image_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-</style>

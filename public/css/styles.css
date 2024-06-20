@@ -12,16 +12,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 body {
-  background-color: black;
-  color: black;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color:black; /* Optional: a background color for body */
 }
 
 h1 {
@@ -105,18 +100,138 @@ button:focus-visible {
 
 /* Imagenes que aparecen al principio */
 
+/* .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* position: static; */
+  /* margin-top: 80px;
+  margin-bottom: 0%;
+  background-color:#747bff;
+  height: 100vh; 
+  width: 80vw;
+} */ 
+
+ /* Importo fonts */
+
+  /* Rubik */
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+ /* IBM Plex Mono (nombres) */
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+  /* IBM Plex Sans (texto) */
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+  
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 20px auto; 
+    background-color: black;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    background-image: url('/public/gifs/fondo_header.gif');
+    background-size:91%;
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh;
+    width:100%;
+  }
+
+  .headline { /* Título */
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: black;
+    text-align: center;
+    margin: 20px;
+    color:white;
+    font-family: 'Rubik';
+    width: 100%;
+  }
+
+  .subtitulo {
+    font-size: 50px;
+    line-height: 1.2;
+    font-family: 'Rubik';
+    color:white;
+  }
+
+  .bajada { 
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    font-family:'IBM Plex Mono';
+    color:white
+  }
+
+  a { /* Nombres */
+    color:crimson;
+    font-family:'IBM Plex Mono';
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .introduccion {
+    background-color: black;
+    color: white;
+    font-family: 'IBM Plex Sans';
+    line-height: 2.5;
+    font-size:25px;
+    text-align: left;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  /* Estilos para el scroller */
+  .foreground_container {
+    pointer-events: none;
+    padding-left: 50%;
+    /* background-color: aquamarine; */
+  }
+
+  .step_foreground { /* los recuadros con borde negro de la derecha */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100vh;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 1em;
+    margin: 0 0 2em 0;
+  }
+  .epi_foreground { /* recuadro negro donde dice la seccion */
+    padding: 20px;
+    max-width: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .lorem_ipsum {
+    margin: 100px auto;
+    max-width: 740px;
+    color: white;
+  }
+
 .image-container {
   display: flex;
   justify-content: center;
-  align-self: center;
+  align-items: center;
   flex-direction: column;
-  position: static;
-  margin-top: 80px;
-  margin-bottom: 0%;
-  background-color: black;
-  height: 100vh; /* Set the height to 60% of the viewport height */
+  background-color: #747bff;
+  height: 100vh; 
+  width: 80vw;
+  margin-top: 100px;;
 }
-.cuadroPrompt {
+.cuadroPrompt { /* acomoda el png */
   width: 550px;
   height: auto;
   visibility: hidden; 

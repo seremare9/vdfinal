@@ -1,3 +1,4 @@
+
 // Function to simulate typing effect for the main title
 function typeMainTitle() {
     var text = document.getElementById('typewriter').textContent.trim();
