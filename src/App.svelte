@@ -348,9 +348,13 @@
     align-self: center;
     flex-direction: column;
     margin-bottom: 50px;
-    background-color:black;
+    background-color:aquamarine;
     height: 100vh;
+    /* width:100vw; */
     position: static;
+    background-image: url('/public/gifs/fondo.gif');
+    background-size: 79vw;
+    background-position: center;
     /* margin-bottom: 100px; */
   }
 
