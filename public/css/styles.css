@@ -167,10 +167,15 @@ button:focus-visible {
     display: flex; 
     justify-content: center;
     align-items: center; 
-    height: 100vh; 
-    width: 1536px;
-    background-color:darkgray;
+    height: 2000px; 
+    width: 100%;
+    background-color: black;
+    /* background-image: url('/public/images/pruebita.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; Centra la imagen de fondo */
   }
+
 
   .epi_foreground { /* recuadros donde esta el texto */
     background-color:antiquewhite;
