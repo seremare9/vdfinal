@@ -123,7 +123,7 @@ button:focus-visible {
     font-weight: black;
     text-align: center;
     margin: 20px;
-    color:white;
+    color:antiquewhite;
     font-family: 'Rubik';
     width: 100%;
   }
@@ -132,7 +132,7 @@ button:focus-visible {
     font-size: 50px;
     line-height: 1.2;
     font-family: 'Rubik';
-    color:white;
+    color:antiquewhite;
   }
 
   .bajada { 
@@ -160,20 +160,19 @@ button:focus-visible {
     margin-top: 10%; 
     margin-bottom: 10%;  
     width: 1536px;
-    height: 200vh;
+    height: 3000px;
+    background-image: url('/public/images/fondo_container.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
   }
   
   .step_foreground { /* container de la introduccion */
     display: flex; 
     justify-content: center;
     align-items: center; 
-    height: 2000px; 
-    width: 100%;
-    background-color: black;
-    /* background-image: url('/public/images/pruebita.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; Centra la imagen de fondo */
+    height: 3000px; 
+    width: 1536px;
   }
 
 
