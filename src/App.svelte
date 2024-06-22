@@ -93,8 +93,8 @@
               <img src="public/images/prompt.png" id="promptImage" class="cuadroPrompt" alt="Prompt" style="visibility: hidden;">
               <p id="textoPrompt" class="texto-prompt" style="visibility: hidden;">Imagen realista de...</p>
               <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1"> 
-              <img src="public/images/firefly2.jpg" class="image" alt="Imagen 2"> 
-              <img src="public/images/firefly3.jpg" class="image" alt="Imagen 3"> 
+              <img src="public/images/firefly2.jpg" class="image" alt="Imagen 2">
+              <img src="public/images/firefly3.jpg" class="image" alt="Imagen 3">
               <img src="public/images/firefly4.jpg" class="image" alt="Imagen 4"> 
               <img src="public/images/firefly5.jpg" class="image" alt="Imagen 5"> 
               <img src="public/images/firefly6.jpg" class="image" alt="Imagen 6"> 
@@ -102,7 +102,7 @@
               <img src="public/images/firefly7.jpg" class="image" alt="Imagen 8"> 
               <img src="public/images/firefly9.jpg" class="image" alt="Imagen 9"> 
               <img src="public/images/firefly8.jpg" class="image" alt="Imagen 10"> 
-              <img src="public/images/firefly10.jpg" class="image" alt="Imagen 11"> 
+              <img src="public/images/firefly10.jpg" class="image" alt="Imagen 11">
       </div>
     </div>
 
@@ -196,8 +196,7 @@
       </div>
   </div>
  FIN DE CARRUSEL-->
-  
-   <!-- GRAFICOS 
+   
     <div class="Graficos-container">
       <div class="grafico-uno">
         <h3 class="grafico-title-1">Datos sobre las plataformas mas utilizadas (2023)</h3>

@@ -58,19 +58,6 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color:crimson;
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 100px;
-    border-color: black;
-    font-weight: 500;
-    font-family: inherit;
-    color:black;
-  }
 }
 
 #typewriter {
@@ -126,6 +113,7 @@ button:focus-visible {
     color:antiquewhite;
     font-family: 'Rubik';
     width: 100%;
+    margin-top: 0%;
   }
 
   .subtitulo {
@@ -133,6 +121,7 @@ button:focus-visible {
     line-height: 1.2;
     font-family: 'Rubik';
     color:antiquewhite;
+    margin-top: 0%;
   }
 
   .bajada { 
@@ -142,6 +131,9 @@ button:focus-visible {
     margin: 10px;
     font-family:'IBM Plex Mono';
     color:white
+  }
+  button{
+    width: 30px;
   }
 
   a { /* Nombres */
@@ -212,6 +204,8 @@ button:focus-visible {
   position: absolute;
   margin-bottom: 750px;
   align-self: center;
+  margin-left: 30%;
+  margin-top: 20%;
 }
 
 #textoPrompt {
@@ -221,8 +215,9 @@ button:focus-visible {
   font-style: italic;
   margin-bottom: 755px;
   align-self: first baseline;
-  margin-left: 520px;
+  margin-left: 61%;
   z-index: 10;
+  margin-top: 25%;
 }
 
 .image {
@@ -246,61 +241,71 @@ button:focus-visible {
 /* IMÁGENES */
 
 .image:nth-child(1) { /* aurora boreal */
-  align-self: center;
+  right: 1000px;
 }
 
 .image:nth-child(2) { /* pavo real */
-  left: 600px;
+  right: 10px;
   margin-top: 90px;
 }
 
-.image:nth-child(3) { /* leon */
-  margin-top: 300px;
-  left: 800px;
+.image:nth-child(3) { /* leon --> aurora */
+  right: 350px;
+  width: 350px;
 }
 
-.image:nth-child(4) { /* pajarito */
-  right: 510px;
-  margin-top: 10px;
+.image:nth-child(4) { /* pajarito --> pavo */
+  width: 360px;
+  left: 33%;
+  margin-top: 60px;
 }
 
-.image:nth-child(5) { /* gatitos */
-  right: 580px;
-  margin-bottom: 370px;
+.image:nth-child(5) { /* gatitos --> leon*/
+  left: 10%;
+  width: 300px;
 }
 
-.image:nth-child(6) { /* montaña */
-  margin-top: 270px;
-  left: 400px;
+.image:nth-child(6) { /* montaña  --> pajarito*/
+  margin-top: 280px;
+  left: 36%;
+  width: 360px;
 }
 
-.image:nth-child(7) { /* mariposa */
-  left: 370px;
-  margin-top: 120px;
-}
-
-.image:nth-child(8) { /* te */
-  right: 390px;
-}
-
-.image:nth-child(9) { /* islandia */
-  left: 400px;
-  margin-top: 500px;
-}
-
-.image:nth-child(10) { /* globo */
-  right: 320px;
+.image:nth-child(7) { /* mariposa ---> gatitos*/
+  left: 350px;
   margin-top: 350px;
 }
 
-.image:nth-child(11) { /* peces */
-  left: 530px;
-  margin-bottom: 300px
+.image:nth-child(8) { /* te --> Otoño */
+  right: 4%;
+  margin-top: 270px;
+}
+
+.image:nth-child(9) { /* islandia  --> mariposa*/
+  left: 4%;
+  margin-top: 250px;
+}
+
+.image:nth-child(10) { /* globo --> té */
+  right: 19%;
+  margin-top: 200px;
+  width: 270px;
+}
+
+.image:nth-child(11) { /* peces --> paisaje */
+  right: 5%;
+  width: 400px;
+  margin-bottom: 106px;
+}
+
+.image:nth-child(12) { /* peces --> paisaje */
+  right: 5%;
+  width: 400px;
+  margin-bottom: 106px;
 }
 
 
 /* Imágenes del carrusel */
-
 .carousel-container {
   position:relative;
   width: 80%;
