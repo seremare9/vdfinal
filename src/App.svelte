@@ -106,33 +106,33 @@ onMount(() => {
     {/if}
   
     <!-- Primer scroller: Introducción -->
-      <Scroller
-        top={top}
-        threshold={threshold}
-        bottom={bottom}
-        bind:count={count}
-        bind:index={index}
-        bind:offset={offset}
-        bind:progress={progress}
-      >
+    <Scroller
+      top={top}
+      threshold={threshold}
+      bottom={bottom}
+      bind:count={count}
+      bind:index={index}
+      bind:offset={offset}
+      bind:progress={progress}
+    >
   
-      <div slot="foreground" class="foreground_container"> 
-        <section id="step1" class="step_foreground">
-          <div class="epi_foreground"> 
+    <div slot="foreground" class="foreground_container"> 
+      <section id="step1" class="step_foreground">
+        <div class="epi_foreground"> 
             <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico en los últimos años. </p>
-          </div>
-        </section>
-        <section id="step2" class="step_foreground">
-          <div class="epi_foreground">
-            <p>La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle democratizó la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido impactante.</p>
-          </div>
-        </section>
-        <section id="step3" class="step_foreground">
-          <div class="epi_foreground">
-            <p>Este contexto plantea desafíos significativos en cuanto a la autenticidad y la percepción de la realidad.</p>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
+      <section id="step2" class="step_foreground">
+        <div class="epi_foreground">
+          <p>La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle democratizó la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido impactante.</p>
+        </div>
+      </section>
+      <section id="step3" class="step_foreground">
+        <div class="epi_foreground">
+          <p>Este contexto plantea desafíos significativos en cuanto a la autenticidad y la percepción de la realidad.</p>
+        </div>
+      </section>
+    </div>
     </Scroller>
   
     <!-- Texto despues del 1er scroller -->
@@ -141,118 +141,101 @@ onMount(() => {
     </div>
 
     
-     <!-- Carrusel de imagenes VS
-     <div class="carousel-container">
+    <!-- Carrusel de imagenes VS
+    <div class="carousel-container">
       <h3 class="carousel-title">Realidad VS IA</h3>
       <div class="carousel">
+        <div class="carousel-slide">
+          <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+          <div class="carousel-slide">
+            <img class="img-vs" src="public/images/vs1.1.jpg" alt="Imagen Real 1">
+            <img class="img-vs" src="public/images/vs1.2.jpg" alt="Imagen IA 1">
+          </div> 
+          <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
 
         <div class="carousel-slide">
-            <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+          <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
             <div class="carousel-slide">
-              <img class="img-vs" src="public/images/vs1.1.jpg" alt="Imagen Real 1">
-              <img class="img-vs" src="public/images/vs1.2.jpg" alt="Imagen IA 1">
-            </div> 
+              <img class="img-vs" src="public/images/vs2.1.jpg" alt="Imagen Real 2">
+              <img class="img-vs" src="public/images/vs2.2.jpg" alt="Imagen IA 2">
+            </div>
             <button class="next" onclick="moveCarousel(1)">&#10095;</button>
-          </div>
+        </div>
 
+        <div class="carousel-slide">
+          <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
           <div class="carousel-slide">
-              <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-              <div class="carousel-slide">
-                <img class="img-vs" src="public/images/vs2.1.jpg" alt="Imagen Real 2">
-                <img class="img-vs" src="public/images/vs2.2.jpg" alt="Imagen IA 2">
-              </div>
-              <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+            <img class="img-vs" src="public/images/vs3.1.jpg" alt="Imagen Real 3">
+            <img class="img-vs" src="public/images/vs3.2.jpg" alt="Imagen IA 3">
           </div>
+          <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
 
+        <div class="carousel-slide">
+          <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
           <div class="carousel-slide">
-              <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-              <div class="carousel-slide">
-                <img class="img-vs" src="public/images/vs3.1.jpg" alt="Imagen Real 3">
-                <img class="img-vs" src="public/images/vs3.2.jpg" alt="Imagen IA 3">
-              </div>
-              <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+            <img class="img-vs" src="public/images/vs4.1.jpg" alt="Imagen Real 4">
+            <img class="img-vs" src="public/images/vs4.2.jpg" alt="Imagen IA 4">
           </div>
+          <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
 
-          <div class="carousel-slide">
-              <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-              <div class="carousel-slide">
-                <img class="img-vs" src="public/images/vs4.1.jpg" alt="Imagen Real 4">
-                <img class="img-vs" src="public/images/vs4.2.jpg" alt="Imagen IA 4">
-              </div>
-              <button class="next" onclick="moveCarousel(1)">&#10095;</button>
-          </div>
-
-      </div>
-  </div>
- FIN DE CARRUSEL-->
-   
-  <!-- GRAFICOS -->
-  <Scroller
-    top={top2}
-    threshold={threshold2}
-    bottom={bottom2}
-    bind:count={count2}
-    bind:index={index2}
-    bind:offset={offset2}
-    bind:progress={progress2}
-  >
-  <div slot="background" class="image_container">
-    <img src="/images/{charts[index2]}" alt="chart {index2}" class="charts"
-    />
-  </div>
-  <div slot="foreground" class="foreground_container2">
-    <section class="step_foreground2">
-      <div class="epi_foreground2">
-        <h3>Seccion {index2 + 1}</h3>
-        <p>Gráfico 1</p>
-      </div>
-    </section>
-    <section class="step_foreground2">
-      <div class="epi_foreground2">
-        <h3>Seccion {index2 + 1}</h3>
-        <p>Gráfico 1</p>
-      </div>
-    </section>
-    <section class="step_foreground2">
-      <div class="epi_foreground2">
-        <h3>Seccion {index2 + 1}</h3>
-        <p>Gráfico 1</p>
-      </div>
-    </section>
-    <section class="step_foreground2">
-      <div class="epi_foreground2">
-        <h3>Seccion {index2 + 1}</h3>
-        <p>Gráfico 1</p>
-      </div>
-    </section>
-  </div>
-</Scroller>
-  <!---
-    <div class="Graficos-container">
-      <div class="grafico-uno">
-        <h3 class="grafico-title-1">Datos sobre las plataformas mas utilizadas (2023)</h3>
-        <img src="public/imagenes/grafico1.jpg" alt="grafico 1">
-        <p class="texCostado">En noviembre de 2023, la base de usuarios de Midjourney llegaba a  los 16 millones, con usuarios activos diarios que fluctúan 
-          entre 1,2 y 2,5 millones.  Esta sólida participación refleja el éxito de Midjourney a la hora de  captar y retener la atención 
-          de un público diverso. <br> El mayor segmento de su base de usuarios, que comprende 37,76%, se sitúa  en el grupo de edad de 25 a 34 años. Le sigue el grupo 
-          demográfico de 
-          </p>
-          <p class="texAbajo">18 a 25 años, que constituye el 26,18% de sus usuarios.  Estas estadísticas indican que Midjourney es especialmente popular entre  
-            los adultos más jóvenes y los millennials. <br> Los ingresos previstos de Midjourney para finales de 2023 ascienden a la  impresionante 
-            cifra de $300 millones. Esta cifra es un claro indicador  del éxito financiero de la plataforma y de su eficaz estrategia de  monetización. <br>Las 
-            estadísticas que rodean a Midjourney dibujan una imagen vívida de  una plataforma que no sólo está creciendo rápidamente, sino que también 
-            está influyendo profundamente en el panorama del arte generado por IA.  Desde su amplia base de usuarios y sus impresionantes previsiones de 
-            ingresos hasta la entusiasta participación de la comunidad en  plataformas como Discord y Reddit, Midjourney es un testimonio del  potencial 
-            de la IA en el ámbito creativo.</p>
-      </div>
-  
-      <div class="grafico-dos">
-        <h3 class="graficos-title-2">Datos sobre la cantidad de imágenes generadas por dia en las plataformas mas usadas (2023)</h3>
-        <img src="public/imagenes/grafico2.jpg" alt="grafico 2">
-  
       </div>
     </div>
--->
+   FIN DE CARRUSEL-->
+   
+    <!-- GRAFICOS -->
+    <Scroller
+      top={top2}
+      threshold={threshold2}
+      bottom={bottom2}
+      bind:count={count2}
+      bind:index={index2}
+      bind:offset={offset2}
+      bind:progress={progress2}
+    >
+    <div slot="background" class="image_container">
+      <img src="/images/{charts[index2]}" alt="chart {index2}" class="charts"
+      />
+    </div>
+    <div slot="foreground" class="foreground_container2">
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 1</p>
+        </div>
+      </section>
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 1</p>
+        </div>
+      </section>
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 1</p>
+        </div>
+      </section>
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 1</p>
+        </div>
+      </section>
+    </div>
+    </Scroller>
+    <div class="lorem_ipsum">
+      <p class="texCostado">En noviembre de 2023, la base de usuarios de Midjourney llegaba a  los 16 millones, con usuarios activos diarios que fluctúan 
+        entre 1,2 y 2,5 millones.  Esta sólida participación refleja el éxito de Midjourney a la hora de  captar y retener la atención 
+        de un público diverso. <br> El mayor segmento de su base de usuarios, que comprende 37,76%, se sitúa  en el grupo de edad de 25 a 34 años. Le sigue el grupo 
+        demográfico de 18 a 25 años, que constituye el 26,18% de sus usuarios. Las estadísticas que rodean a Midjourney dibujan una imagen vívida de  una plataforma que no sólo está creciendo rápidamente, sino que también 
+        está influyendo profundamente en el panorama del arte generado por IA.  Desde su amplia base de usuarios y sus impresionantes previsiones de 
+        ingresos hasta la entusiasta participación de la comunidad en  plataformas como Discord y Reddit, Midjourney es un testimonio del  potencial 
+        de la IA en el ámbito creativo.
+      </p> 
+    </div>
     <!-- FIN GRAFICOS -->
 
 
