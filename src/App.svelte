@@ -1,9 +1,9 @@
 <script>
+  import { onMount } from 'svelte';
   import Scroller from "@sveltejs/svelte-scroller"
-  import {onMount} from "svelte"
   import * as d3 from "d3"
 
-  // import Medallero from "./components/Medallero.svelte"
+  // import Medalero from "./components/Medallero.svelte"
   import DebugScroller from "./components/DebugScroller.svelte"
   import Loremipsum from "./components/Loremipsum.svelte"
 
@@ -11,7 +11,7 @@
   let deportistas = []
   let filteredDeportistas = []
 
-  /* Variables para el scroller1 */
+  /* Variables para el scroller 1 */
   let count
   let index
   let offset
@@ -20,7 +20,8 @@
   let threshold = 0.5
   let bottom = 0.9
 
-  /* Variables para el scroller 2 */
+
+  /* Variables para el scroller de los graficos */
   let count2
   let index2
   let offset2
@@ -29,44 +30,32 @@
   let threshold2 = 0.5
   let bottom2 = 0.9
 
-  /* Charts */
+ /* Charts */
   let charts = {
     0: "lines_01.png",
     1: "lines_02.png",
     2: "lines_03.png",
+    3: "lines_04.png"
   }
 
+onMount(() => {
+    const controller = new ScrollMagic.Controller();
 
-  onMount(() => {
-    d3.csv("./data/deportistas.csv", d3.autoType).then(data => {
-      deportistas = data
-      filteredDeportistas = deportistas
+    const tween = gsap.fromTo(chartContainer, { opacity: 0 }, { opacity: 1, duration: 1 });
+
+    const scene = new ScrollMagic.Scene({
+        triggerElement: chartContainer,
+        triggerHook: 0.5
     })
-  })
+    .setTween(tween)
+    .addTo(controller);
+
+    return () => {
+        scene.destroy();
+        controller.destroy();
+    };
+})
   
-  $: {
-    // Es un observer que se ejecuta cuando cambia el valor de index
-    
-    switch (index) {
-      // case 0:
-      //   filteredDeportistas = deportistas
-      //   break
-      // case 1:
-      //   filteredDeportistas = deportistas.filter(d => d.genero === "F")
-      //   break
-      // case 2:
-      //   filteredDeportistas = deportistas.filter(d => d.genero === "M")
-      //   break
-      // case 3:
-      //   filteredDeportistas = deportistas.filter(
-      //     d => d.continente === "América",
-      //   )
-      //   break
-      // default:
-      //   filteredDeportistas = deportistas
-    }
-    // console.log(filteredDeportistas)
-  }
 
 </script>
 
@@ -197,6 +186,48 @@
   </div>
  FIN DE CARRUSEL-->
    
+  <!-- GRAFICOS -->
+  <Scroller
+    top={top2}
+    threshold={threshold2}
+    bottom={bottom2}
+    bind:count={count2}
+    bind:index={index2}
+    bind:offset={offset2}
+    bind:progress={progress2}
+  >
+  <div slot="background" class="image_container">
+    <img src="/images/{charts[index2]}" alt="chart {index2}" class="charts"
+    />
+  </div>
+  <div slot="foreground" class="foreground_container2">
+    <section class="step_foreground2">
+      <div class="epi_foreground2">
+        <h3>Seccion {index2 + 1}</h3>
+        <p>Gráfico 1</p>
+      </div>
+    </section>
+    <section class="step_foreground2">
+      <div class="epi_foreground2">
+        <h3>Seccion {index2 + 1}</h3>
+        <p>Gráfico 1</p>
+      </div>
+    </section>
+    <section class="step_foreground2">
+      <div class="epi_foreground2">
+        <h3>Seccion {index2 + 1}</h3>
+        <p>Gráfico 1</p>
+      </div>
+    </section>
+    <section class="step_foreground2">
+      <div class="epi_foreground2">
+        <h3>Seccion {index2 + 1}</h3>
+        <p>Gráfico 1</p>
+      </div>
+    </section>
+  </div>
+</Scroller>
+  <!---
     <div class="Graficos-container">
       <div class="grafico-uno">
         <h3 class="grafico-title-1">Datos sobre las plataformas mas utilizadas (2023)</h3>
@@ -221,7 +252,10 @@
   
       </div>
     </div>
-    FIN GRAFICOS -->
+-->
+    <!-- FIN GRAFICOS -->
+
+
   
     <!-- CASO DEL PAPA -->
      <!-- <div>
@@ -297,9 +331,43 @@
       </section>
     </div>
   </Scroller> -->
-</main>
+  </main>
 </body> 
 
 
+<style>
+  /* Estilos para el scroller */
+  .foreground_container2 {
+    pointer-events: none;
+    padding-left: 50%;
+  }
 
+  /* CUADRITO DEL COSTADO*/
+  .step_foreground2 {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 70vh;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 1em;
+    margin: 0 0 2em 0;
+    ;
+  }
 
+  /* parte negra del cuadradito*/
+  .epi_foreground2 {
+    padding: 20px;
+    max-width: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  .charts{
+    width: 700px;
+  }
+</style>

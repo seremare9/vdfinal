@@ -132,9 +132,7 @@ button:focus-visible {
     font-family:'IBM Plex Mono';
     color:white
   }
-  button{
-    width: 30px;
-  }
+ 
 
   a { /* Nombres */
     color:crimson;
@@ -381,3 +379,4 @@ button:focus-visible {
 .next {
   right: 10px;
 }
+
