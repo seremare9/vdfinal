@@ -35,7 +35,15 @@
     0: "lines_01.png",
     1: "lines_02.png",
     2: "lines_03.png",
-    3: "lines_04.png"
+    3: "lines_04.png",
+  }
+
+  /* Charts 2 */
+  let charts2 = {
+    0: "graf_1.png",
+    1: "graf_2.png",
+    2: "graf_3.png",
+    3: "graf_4.png",
   }
 
 onMount(() => {
@@ -79,19 +87,19 @@ onMount(() => {
     <!-- Aparece el recuadro del prompt y luego las imagenes que hicimos con IA -->
     <div id="targetSection" class="intro target-section">
       <div class="image-container">
-              <img src="public/images/prompt.png" id="promptImage" class="cuadroPrompt" alt="Prompt" style="visibility: hidden;">
-              <p id="textoPrompt" class="texto-prompt" style="visibility: hidden;">Imagen realista de...</p>
-              <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1"> 
-              <img src="public/images/firefly2.jpg" class="image" alt="Imagen 2">
-              <img src="public/images/firefly3.jpg" class="image" alt="Imagen 3">
-              <img src="public/images/firefly4.jpg" class="image" alt="Imagen 4"> 
-              <img src="public/images/firefly5.jpg" class="image" alt="Imagen 5"> 
-              <img src="public/images/firefly6.jpg" class="image" alt="Imagen 6"> 
-              <img src="public/images/designer1.jpeg" class="image" alt="Imagen 7">
-              <img src="public/images/firefly7.jpg" class="image" alt="Imagen 8"> 
-              <img src="public/images/firefly9.jpg" class="image" alt="Imagen 9"> 
-              <img src="public/images/firefly8.jpg" class="image" alt="Imagen 10"> 
-              <img src="public/images/firefly10.jpg" class="image" alt="Imagen 11">
+        <img src="public/images/prompt.png" id="promptImage" class="cuadroPrompt" alt="Prompt" style="visibility: hidden;">
+        <p id="textoPrompt" class="texto-prompt" style="visibility: hidden;">Imagen realista de...</p>
+        <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1"> 
+        <img src="public/images/firefly2.jpg" class="image" alt="Imagen 2">
+        <img src="public/images/firefly3.jpg" class="image" alt="Imagen 3">
+        <img src="public/images/firefly4.jpg" class="image" alt="Imagen 4"> 
+        <img src="public/images/firefly5.jpg" class="image" alt="Imagen 5"> 
+        <img src="public/images/firefly6.jpg" class="image" alt="Imagen 6"> 
+        <img src="public/images/designer1.jpeg" class="image" alt="Imagen 7">
+        <img src="public/images/firefly7.jpg" class="image" alt="Imagen 8"> 
+        <img src="public/images/firefly9.jpg" class="image" alt="Imagen 9"> 
+        <img src="public/images/firefly8.jpg" class="image" alt="Imagen 10"> 
+        <img src="public/images/firefly10.jpg" class="image" alt="Imagen 11">
       </div>
     </div>
 
@@ -195,7 +203,7 @@ onMount(() => {
       bind:offset={offset2}
       bind:progress={progress2}
     >
-    <div slot="background" class="image_container">
+    <div slot="background" class="image_container"> 
       <img src="/images/{charts[index2]}" alt="chart {index2}" class="charts"
       />
     </div>
@@ -236,6 +244,47 @@ onMount(() => {
         de la IA en el ámbito creativo.
       </p> 
     </div>
+    <!-- Grafico 2-->
+    <Scroller
+      top={top2}
+      threshold={threshold2}
+      bottom={bottom2}
+      bind:count={count2}
+      bind:index={index2}
+      bind:offset={offset2}
+      bind:progress={progress2}
+    >
+    <div slot="background" class="image_container">
+      <img src="/images/{charts2[index2]}" alt="chart {index2}" class="charts2"
+      />
+    </div>
+    <div slot="foreground" class="foreground_container2">
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 2</p>
+        </div>
+      </section>
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 2</p>
+        </div>
+      </section>
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 2</p>
+        </div>
+      </section>
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 2</p>
+        </div>
+      </section>
+    </div>
+    </Scroller>
     <!-- FIN GRAFICOS -->
 
 
@@ -328,14 +377,13 @@ onMount(() => {
   /* CUADRITO DEL COSTADO*/
   .step_foreground2 {
     display: flex;
-    justify-content: end;
+    justify-content: end;    
     align-items: center;
-    height: 70vh;
+    height: 50vh;
     border: 1px solid rgba(0, 0, 0, 0.4);
     color: white;
     padding: 1em;
     margin: 0 0 2em 0;
-    ;
   }
 
   /* parte negra del cuadradito*/
@@ -351,6 +399,10 @@ onMount(() => {
     height: 80vh;
   }
   .charts{
-    width: 700px;
+    width: 770px;
+  }
+
+  .charts2{
+    width: 790px;
   }
 </style>
