@@ -81,17 +81,8 @@ onMount(() => {
       <div class="image-container">
               <img src="public/images/prompt.png" id="promptImage" class="cuadroPrompt" alt="Prompt" style="visibility: hidden;">
               <p id="textoPrompt" class="texto-prompt" style="visibility: hidden;">Imagen realista de...</p>
-              <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1"> 
-              <img src="public/images/firefly2.jpg" class="image" alt="Imagen 2">
-              <img src="public/images/firefly3.jpg" class="image" alt="Imagen 3">
-              <img src="public/images/firefly4.jpg" class="image" alt="Imagen 4"> 
-              <img src="public/images/firefly5.jpg" class="image" alt="Imagen 5"> 
-              <img src="public/images/firefly6.jpg" class="image" alt="Imagen 6"> 
-              <img src="public/images/designer1.jpeg" class="image" alt="Imagen 7">
-              <img src="public/images/firefly7.jpg" class="image" alt="Imagen 8"> 
-              <img src="public/images/firefly9.jpg" class="image" alt="Imagen 9"> 
-              <img src="public/images/firefly8.jpg" class="image" alt="Imagen 10"> 
-              <img src="public/images/firefly10.jpg" class="image" alt="Imagen 11">
+              <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1">  
+         
       </div>
     </div>
 
@@ -136,8 +127,8 @@ onMount(() => {
     </Scroller>
   
     <!-- Texto despues del 1er scroller -->
-    <div class="lorem_ipsum">
-      <Loremipsum />
+    <div class="intro-graficos">
+      <p>Acá podemos explicar un poco (no muy extenso) cuando empezó a crecer la IA antes de mostrar los gráficos</p>
     </div>
 
     
@@ -203,26 +194,26 @@ onMount(() => {
   <div slot="foreground" class="foreground_container2">
     <section class="step_foreground2">
       <div class="epi_foreground2">
-        <h3>Seccion {index2 + 1}</h3>
-        <p>Gráfico 1</p>
+        <h3>{index2 + 1}</h3>
+        <p>Explicación parte 1</p>
+      </div>
+    </section>
+    <section class="step_foreground2">
+      <div class="epi_foreground2">
+        <h3>{index2 + 1}</h3>
+        <p>Explicación parte 2</p>
+      </div>
+    </section>
+    <section class="step_foreground2">
+      <div class="epi_foreground2">
+        <h3>{index2 + 1}</h3>
+        <p>Explicación parte 3</p>
       </div>
     </section>
     <section class="step_foreground2">
       <div class="epi_foreground2">
         <h3>Seccion {index2 + 1}</h3>
-        <p>Gráfico 1</p>
-      </div>
-    </section>
-    <section class="step_foreground2">
-      <div class="epi_foreground2">
-        <h3>Seccion {index2 + 1}</h3>
-        <p>Gráfico 1</p>
-      </div>
-    </section>
-    <section class="step_foreground2">
-      <div class="epi_foreground2">
-        <h3>Seccion {index2 + 1}</h3>
-        <p>Gráfico 1</p>
+        <p>Explicación parte 4</p>
       </div>
     </section>
   </div>

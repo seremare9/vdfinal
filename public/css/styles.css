@@ -50,6 +50,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+body.no-scroll, html.no-scroll {
+  overflow: hidden;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -98,7 +102,7 @@ button:focus-visible {
     background-color: black;
     background-image: url('/public/gifs/fondo_header.gif');
     background-size:91%;
-    background-position: center; 
+    background-position: center calc(50% - 20px); 
     background-repeat: no-repeat; 
     height: 100vh;
     width:100%;
@@ -110,7 +114,7 @@ button:focus-visible {
     font-weight: black;
     text-align: center;
     margin: 20px;
-    color:antiquewhite;
+    color:white;
     font-family: 'Rubik';
     width: 100%;
     margin-top: 0%;
@@ -120,7 +124,7 @@ button:focus-visible {
     font-size: 50px;
     line-height: 1.2;
     font-family: 'Rubik';
-    color:antiquewhite;
+    color:white;
     margin-top: 0%;
   }
 
@@ -151,7 +155,7 @@ button:focus-visible {
     margin-bottom: 10%;  
     width: 1536px;
     height: 3000px;
-    background-image: url('/public/images/fondo_container.jpg');
+    background-image: url('/public/images/fondo_container.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
@@ -165,9 +169,8 @@ button:focus-visible {
     width: 1536px;
   }
 
-
   .epi_foreground { /* recuadros donde esta el texto */
-    background-color:antiquewhite;
+    background-color:white;
     border-radius: 25px; 
     width: 30vw; 
     color:black;
@@ -179,10 +182,11 @@ button:focus-visible {
     padding:1.5%;
   }
 
-  .lorem_ipsum {
+  .intro-graficos {
     margin: 100px auto;
     max-width: 740px;
     color: white;
+    font-size: 20px;
   }
 
 .image-container {
@@ -190,20 +194,16 @@ button:focus-visible {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color:black;
+  background-color:aqua;
   height: 100vh; 
   width: 80vw;
   margin-top: 100px;
 }
 .cuadroPrompt { /* acomoda el png */
-  width: 550px;
-  height: auto;
   visibility: hidden; 
   position: absolute;
-  margin-bottom: 750px;
   align-self: center;
-  margin-left: 30%;
-  margin-top: 20%;
+  margin-bottom: 35%;
 }
 
 #textoPrompt {
@@ -211,11 +211,15 @@ button:focus-visible {
   font-family: 'IBM Plex Sans';
   color:black;
   font-style: italic;
-  margin-bottom: 755px;
-  align-self: first baseline;
-  margin-left: 61%;
   z-index: 10;
-  margin-top: 25%;
+  margin-bottom: 43%;
+  margin-right: 35%;
+}
+
+.texto2 {
+  font-size: 20px;
+  font-family: 'IBM Plex Sans';
+  color: white;
 }
 
 .image {
@@ -229,78 +233,79 @@ button:focus-visible {
   visibility: visible; 
 }
 
+/* IMÁGENES: Esto vuela */
+
 /* Keyframes to make images visible */
-@keyframes showImage {
+/* @keyframes showImage {
   to {
       visibility: visible;
   }
-}
+} */
 
-/* IMÁGENES */
 
-.image:nth-child(1) { /* aurora boreal */
+/* .image:nth-child(1) { 
   right: 1000px;
 }
 
-.image:nth-child(2) { /* pavo real */
+.image:nth-child(2) { 
   right: 10px;
   margin-top: 90px;
 }
 
-.image:nth-child(3) { /* leon --> aurora */
+.image:nth-child(3) { 
   right: 350px;
   width: 350px;
 }
 
-.image:nth-child(4) { /* pajarito --> pavo */
+.image:nth-child(4) { 
   width: 360px;
   left: 33%;
   margin-top: 60px;
 }
 
-.image:nth-child(5) { /* gatitos --> leon*/
+.image:nth-child(5) { 
   left: 10%;
   width: 300px;
 }
 
-.image:nth-child(6) { /* montaña  --> pajarito*/
+.image:nth-child(6) { 
   margin-top: 280px;
   left: 36%;
   width: 360px;
 }
 
-.image:nth-child(7) { /* mariposa ---> gatitos*/
+.image:nth-child(7) { 
   left: 350px;
   margin-top: 350px;
 }
 
-.image:nth-child(8) { /* te --> Otoño */
+.image:nth-child(8) { 
   right: 4%;
   margin-top: 270px;
 }
 
-.image:nth-child(9) { /* islandia  --> mariposa*/
+.image:nth-child(9) { 
   left: 4%;
   margin-top: 250px;
 }
 
-.image:nth-child(10) { /* globo --> té */
+.image:nth-child(10) { 
   right: 19%;
   margin-top: 200px;
   width: 270px;
 }
 
-.image:nth-child(11) { /* peces --> paisaje */
+.image:nth-child(11) { 
   right: 5%;
   width: 400px;
   margin-bottom: 106px;
 }
 
-.image:nth-child(12) { /* peces --> paisaje */
+.image:nth-child(12) { 
   right: 5%;
   width: 400px;
   margin-bottom: 106px;
-}
+} */
 
 
 /* Imágenes del carrusel */
