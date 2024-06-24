@@ -35,7 +35,15 @@
     0: "lines_01.png",
     1: "lines_02.png",
     2: "lines_03.png",
-    3: "lines_04.png"
+    3: "lines_04.png",
+  }
+
+  /* Charts 2 */
+  let charts2 = {
+    0: "graf_1.png",
+    1: "graf_2.png",
+    2: "graf_3.png",
+    3: "graf_4.png",
   }
 
 onMount(() => {
@@ -79,10 +87,26 @@ onMount(() => {
     <!-- Aparece el recuadro del prompt y luego las imagenes que hicimos con IA -->
     <div id="targetSection" class="intro target-section">
       <div class="image-container">
+<<<<<<< HEAD
               <img src="public/images/prompt.png" id="promptImage" class="cuadroPrompt" alt="Prompt" style="visibility: hidden;">
               <p id="textoPrompt" class="texto-prompt" style="visibility: hidden;">Imagen realista de...</p>
               <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1">  
          
+=======
+        <img src="public/images/prompt.png" id="promptImage" class="cuadroPrompt" alt="Prompt" style="visibility: hidden;">
+        <p id="textoPrompt" class="texto-prompt" style="visibility: hidden;">Imagen realista de...</p>
+        <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1"> 
+        <img src="public/images/firefly2.jpg" class="image" alt="Imagen 2">
+        <img src="public/images/firefly3.jpg" class="image" alt="Imagen 3">
+        <img src="public/images/firefly4.jpg" class="image" alt="Imagen 4"> 
+        <img src="public/images/firefly5.jpg" class="image" alt="Imagen 5"> 
+        <img src="public/images/firefly6.jpg" class="image" alt="Imagen 6"> 
+        <img src="public/images/designer1.jpeg" class="image" alt="Imagen 7">
+        <img src="public/images/firefly7.jpg" class="image" alt="Imagen 8"> 
+        <img src="public/images/firefly9.jpg" class="image" alt="Imagen 9"> 
+        <img src="public/images/firefly8.jpg" class="image" alt="Imagen 10"> 
+        <img src="public/images/firefly10.jpg" class="image" alt="Imagen 11">
+>>>>>>> c6a1d0e123d9d1d2a7fe36c272b0206b61e8874c
       </div>
     </div>
 
@@ -97,33 +121,33 @@ onMount(() => {
     {/if}
   
     <!-- Primer scroller: Introducción -->
-      <Scroller
-        top={top}
-        threshold={threshold}
-        bottom={bottom}
-        bind:count={count}
-        bind:index={index}
-        bind:offset={offset}
-        bind:progress={progress}
-      >
+    <Scroller
+      top={top}
+      threshold={threshold}
+      bottom={bottom}
+      bind:count={count}
+      bind:index={index}
+      bind:offset={offset}
+      bind:progress={progress}
+    >
   
-      <div slot="foreground" class="foreground_container"> 
-        <section id="step1" class="step_foreground">
-          <div class="epi_foreground"> 
+    <div slot="foreground" class="foreground_container"> 
+      <section id="step1" class="step_foreground">
+        <div class="epi_foreground"> 
             <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico en los últimos años. </p>
-          </div>
-        </section>
-        <section id="step2" class="step_foreground">
-          <div class="epi_foreground">
-            <p>La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle democratizó la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido impactante.</p>
-          </div>
-        </section>
-        <section id="step3" class="step_foreground">
-          <div class="epi_foreground">
-            <p>Este contexto plantea desafíos significativos en cuanto a la autenticidad y la percepción de la realidad.</p>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
+      <section id="step2" class="step_foreground">
+        <div class="epi_foreground">
+          <p>La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle democratizó la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido impactante.</p>
+        </div>
+      </section>
+      <section id="step3" class="step_foreground">
+        <div class="epi_foreground">
+          <p>Este contexto plantea desafíos significativos en cuanto a la autenticidad y la percepción de la realidad.</p>
+        </div>
+      </section>
+    </div>
     </Scroller>
   
     <!-- Texto despues del 1er scroller -->
@@ -132,51 +156,51 @@ onMount(() => {
     </div>
 
     
-     <!-- Carrusel de imagenes VS
-     <div class="carousel-container">
+    <!-- Carrusel de imagenes VS
+    <div class="carousel-container">
       <h3 class="carousel-title">Realidad VS IA</h3>
       <div class="carousel">
+        <div class="carousel-slide">
+          <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+          <div class="carousel-slide">
+            <img class="img-vs" src="public/images/vs1.1.jpg" alt="Imagen Real 1">
+            <img class="img-vs" src="public/images/vs1.2.jpg" alt="Imagen IA 1">
+          </div> 
+          <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
 
         <div class="carousel-slide">
-            <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+          <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
             <div class="carousel-slide">
-              <img class="img-vs" src="public/images/vs1.1.jpg" alt="Imagen Real 1">
-              <img class="img-vs" src="public/images/vs1.2.jpg" alt="Imagen IA 1">
-            </div> 
+              <img class="img-vs" src="public/images/vs2.1.jpg" alt="Imagen Real 2">
+              <img class="img-vs" src="public/images/vs2.2.jpg" alt="Imagen IA 2">
+            </div>
             <button class="next" onclick="moveCarousel(1)">&#10095;</button>
-          </div>
+        </div>
 
+        <div class="carousel-slide">
+          <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
           <div class="carousel-slide">
-              <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-              <div class="carousel-slide">
-                <img class="img-vs" src="public/images/vs2.1.jpg" alt="Imagen Real 2">
-                <img class="img-vs" src="public/images/vs2.2.jpg" alt="Imagen IA 2">
-              </div>
-              <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+            <img class="img-vs" src="public/images/vs3.1.jpg" alt="Imagen Real 3">
+            <img class="img-vs" src="public/images/vs3.2.jpg" alt="Imagen IA 3">
           </div>
+          <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
 
+        <div class="carousel-slide">
+          <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
           <div class="carousel-slide">
-              <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-              <div class="carousel-slide">
-                <img class="img-vs" src="public/images/vs3.1.jpg" alt="Imagen Real 3">
-                <img class="img-vs" src="public/images/vs3.2.jpg" alt="Imagen IA 3">
-              </div>
-              <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+            <img class="img-vs" src="public/images/vs4.1.jpg" alt="Imagen Real 4">
+            <img class="img-vs" src="public/images/vs4.2.jpg" alt="Imagen IA 4">
           </div>
-
-          <div class="carousel-slide">
-              <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-              <div class="carousel-slide">
-                <img class="img-vs" src="public/images/vs4.1.jpg" alt="Imagen Real 4">
-                <img class="img-vs" src="public/images/vs4.2.jpg" alt="Imagen IA 4">
-              </div>
-              <button class="next" onclick="moveCarousel(1)">&#10095;</button>
-          </div>
+          <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
 
       </div>
-  </div>
- FIN DE CARRUSEL-->
+    </div>
+   FIN DE CARRUSEL-->
    
+<<<<<<< HEAD
   <!-- GRAFICOS -->
   <Scroller
     top={top2}
@@ -242,8 +266,100 @@ onMount(() => {
         <img src="public/imagenes/grafico2.jpg" alt="grafico 2">
   
       </div>
+=======
+    <!-- GRAFICOS -->
+    <Scroller
+      top={top2}
+      threshold={threshold2}
+      bottom={bottom2}
+      bind:count={count2}
+      bind:index={index2}
+      bind:offset={offset2}
+      bind:progress={progress2}
+    >
+    <div slot="background" class="image_container"> 
+      <img src="/images/{charts[index2]}" alt="chart {index2}" class="charts"
+      />
     </div>
--->
+    <div slot="foreground" class="foreground_container2">
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 1</p>
+        </div>
+      </section>
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 1</p>
+        </div>
+      </section>
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 1</p>
+        </div>
+      </section>
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 1</p>
+        </div>
+      </section>
+>>>>>>> c6a1d0e123d9d1d2a7fe36c272b0206b61e8874c
+    </div>
+    </Scroller>
+    <div class="lorem_ipsum">
+      <p class="texCostado">En noviembre de 2023, la base de usuarios de Midjourney llegaba a  los 16 millones, con usuarios activos diarios que fluctúan 
+        entre 1,2 y 2,5 millones.  Esta sólida participación refleja el éxito de Midjourney a la hora de  captar y retener la atención 
+        de un público diverso. <br> El mayor segmento de su base de usuarios, que comprende 37,76%, se sitúa  en el grupo de edad de 25 a 34 años. Le sigue el grupo 
+        demográfico de 18 a 25 años, que constituye el 26,18% de sus usuarios. Las estadísticas que rodean a Midjourney dibujan una imagen vívida de  una plataforma que no sólo está creciendo rápidamente, sino que también 
+        está influyendo profundamente en el panorama del arte generado por IA.  Desde su amplia base de usuarios y sus impresionantes previsiones de 
+        ingresos hasta la entusiasta participación de la comunidad en  plataformas como Discord y Reddit, Midjourney es un testimonio del  potencial 
+        de la IA en el ámbito creativo.
+      </p> 
+    </div>
+    <!-- Grafico 2-->
+    <Scroller
+      top={top2}
+      threshold={threshold2}
+      bottom={bottom2}
+      bind:count={count2}
+      bind:index={index2}
+      bind:offset={offset2}
+      bind:progress={progress2}
+    >
+    <div slot="background" class="image_container">
+      <img src="/images/{charts2[index2]}" alt="chart {index2}" class="charts2"
+      />
+    </div>
+    <div slot="foreground" class="foreground_container2">
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 2</p>
+        </div>
+      </section>
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 2</p>
+        </div>
+      </section>
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 2</p>
+        </div>
+      </section>
+      <section class="step_foreground2">
+        <div class="epi_foreground2">
+          <h3>Seccion {index2 + 1}</h3>
+          <p>Gráfico 2</p>
+        </div>
+      </section>
+    </div>
+    </Scroller>
     <!-- FIN GRAFICOS -->
 
 
@@ -336,14 +452,13 @@ onMount(() => {
   /* CUADRITO DEL COSTADO*/
   .step_foreground2 {
     display: flex;
-    justify-content: end;
+    justify-content: end;    
     align-items: center;
-    height: 70vh;
+    height: 50vh;
     border: 1px solid rgba(0, 0, 0, 0.4);
     color: white;
     padding: 1em;
     margin: 0 0 2em 0;
-    ;
   }
 
   /* parte negra del cuadradito*/
@@ -359,6 +474,10 @@ onMount(() => {
     height: 80vh;
   }
   .charts{
-    width: 700px;
+    width: 770px;
+  }
+
+  .charts2{
+    width: 790px;
   }
 </style>
