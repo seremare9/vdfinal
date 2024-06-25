@@ -112,23 +112,24 @@ onMount(() => {
       bind:offset={offset}
       bind:progress={progress}
     >
-  
-    <div slot="foreground" class="foreground_container"> 
-      <section id="step1" class="step_foreground">
-        <div class="epi_foreground"> 
-            <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico en los últimos años. </p>
-        </div>
-      </section>
-      <section id="step2" class="step_foreground">
-        <div class="epi_foreground">
+      
+    <div slot="foreground" class="foreground_container">
+
+      <!-- <div class="flourish-embed" data-src="story/2110346">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+      </div> -->
+
+      <div class="epi_foreground"> 
+          <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico en los últimos años.</p>
+      </div>
+
+      <div class="epi_foreground">
           <p>La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle democratizó la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido impactante.</p>
-        </div>
-      </section>
-      <section id="step3" class="step_foreground">
-        <div class="epi_foreground">
+      </div>
+
+      <div class="epi_foreground">
           <p>Este contexto plantea desafíos significativos en cuanto a la autenticidad y la percepción de la realidad.</p>
-        </div>
-      </section>
+      </div>
     </div>
     </Scroller>
   
@@ -223,16 +224,15 @@ onMount(() => {
       </section>
     </div>
     </Scroller>
-    <div class="lorem_ipsum">
-      <p class="texCostado">En noviembre de 2023, la base de usuarios de Midjourney llegaba a  los 16 millones, con usuarios activos diarios que fluctúan 
+
+    <div class="intro-graficos">
+      <p>En noviembre de 2023, la base de usuarios de Midjourney llegaba a los 16 millones, con usuarios activos diarios que fluctúan 
         entre 1,2 y 2,5 millones.  Esta sólida participación refleja el éxito de Midjourney a la hora de  captar y retener la atención 
-        de un público diverso. <br> El mayor segmento de su base de usuarios, que comprende 37,76%, se sitúa  en el grupo de edad de 25 a 34 años. Le sigue el grupo 
+        de un público diverso. <br> El mayor segmento de su base de usuarios se sitúa  en el grupo de edad de 25 a 34 años. Le sigue el grupo 
         demográfico de 18 a 25 años, que constituye el 26,18% de sus usuarios. Las estadísticas que rodean a Midjourney dibujan una imagen vívida de  una plataforma que no sólo está creciendo rápidamente, sino que también 
-        está influyendo profundamente en el panorama del arte generado por IA.  Desde su amplia base de usuarios y sus impresionantes previsiones de 
-        ingresos hasta la entusiasta participación de la comunidad en  plataformas como Discord y Reddit, Midjourney es un testimonio del  potencial 
-        de la IA en el ámbito creativo.
-      </p> 
+        está influyendo profundamente en el panorama del arte generado por IA.</p>
     </div>
+  
     <!-- Grafico 2-->
     <Scroller
       top={top2}
@@ -276,22 +276,25 @@ onMount(() => {
     </Scroller>
     <!-- FIN GRAFICOS -->
 
-
-  
     <!-- CASO DEL PAPA -->
-     <!-- <div>
-      <h3>Impacto de las Imágenes Generadas por IA</h3>
-      <img src="public/imagenes/imagen-papa.jpg" alt="Papa Francisco">
-      <p>Según la revista Forbes, la imagen se creó utilizando Midjourney, una herramienta de inteligencia artificial que permite generar imágenes falsas 
-        increíblemente realistas. Luego, la imagen se compartió el viernes 24 de marzo de 2023  en Reddit antes de llegar a Twitter durante ese fin de 
-        semana. <br>Según un análisis de The New York Times, han obtenido más visitas, “me gusta” y comentarios que muchas otras fotos generadas con IA
-        (229.000 me gusta y 20,6 millones de visitas). A demás, esto provocó una carrera por retratar al líder de 86 años en situaciones cada vez más 
-        extrañas. <br>La prevalencia de Francisco en las imágenes generadas por IA es resultado de una combinación perfecta de factores, según expertos 
-        religiosos. Tras diez años al frente de la Iglesia católica, se lo reconoce al instante en todo el mundo. Se lo considera un líder más accesible que 
-        su predecesor, el papa Benedicto XVI, de línea más dura. Y cuando se combina con un repentino interés por las nuevas herramientas de IA, Francisco, 
-        que en la vida real suele aparecer en ambientes formales, se convierte en la elección recurrente de los creadores de imaganes con IA para colocarlo en 
-        los escenarios más incongruentes.</p>
-     </div> -->
+     
+    <div class="container-papa">
+        <h1 class="headline">
+          <b>Un caso real: Imágenes del Papa Francisco</b>
+        </h1>
+        <div class="tweets-papa">
+          <img src="./public/gifs/tweets-papa.gif" alt="gif de tweets del papa francisco">
+        </div>
+        <div class="imagenes-papa">  <!-- container que tiene las fotos bizarras del papa de fondo-->
+          <p>Estas imágenes, creadas con Midjourney, se compartieron en Reddit el 24 de Marzo de 2023. Tuvieron millones de vistas</p>
+        </div>
+    </div>
+    
+
+
+
+
+
   
      <!-- FIN CASO PAPA -->
   

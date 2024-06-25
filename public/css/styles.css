@@ -141,7 +141,6 @@ body.no-scroll, html.no-scroll {
     color:white
   }
  
-
   a { /* Nombres */
     color:crimson;
     font-family:'IBM Plex Mono';
@@ -150,6 +149,7 @@ body.no-scroll, html.no-scroll {
   }
 
   /* Estilos para el scroller */
+
   .foreground_container {
     display: flex; 
     flex-direction: column; 
@@ -158,8 +158,8 @@ body.no-scroll, html.no-scroll {
     margin-top: 10%; 
     margin-bottom: 10%;  
     width: 1536px;
-    height: 3000px;
-    background-image: url('/public/images/fondo_container.png');
+    height: 100vh;
+    background-image: url('/public/images/fondo_container_chico.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
@@ -169,7 +169,7 @@ body.no-scroll, html.no-scroll {
     display: flex; 
     justify-content: center;
     align-items: center; 
-    height: 3000px; 
+    height: 100vh; 
     width: 1536px;
   }
 
@@ -184,6 +184,7 @@ body.no-scroll, html.no-scroll {
     position: sticky;
     top: 300px; /* AJUSTAR */
     padding:1.5%;
+    position: static;
   }
 
   .intro-graficos {
@@ -191,6 +192,8 @@ body.no-scroll, html.no-scroll {
     max-width: 740px;
     color: white;
     font-size: 20px;
+    line-height: 2;
+    text-align: left;
   }
 
 .image-container {
@@ -238,6 +241,31 @@ body.no-scroll, html.no-scroll {
 .image.visible {
   visibility: visible; 
 }
+
+.container-papa {
+  width: 1536px;
+  height: auto;
+  background-color: black;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.tweets-papa {
+  margin-top: 100px;
+}
+
+.tweets-papa img {
+  width: 100%;
+  height: auto;
+}
+
+.imagenes-papa {
+  background-color: darkorange;
+  width: 1536px;
+  height: 100vh;
+}
+
+
 
 /* IMÁGENES: Esto vuela */
 
@@ -315,7 +343,7 @@ body.no-scroll, html.no-scroll {
 
 
 /* Imágenes del carrusel */
-.carousel-container {
+/* .carousel-container {
   position:relative;
   width: 80%;
   margin: 0 auto;
@@ -330,7 +358,7 @@ body.no-scroll, html.no-scroll {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .carousel {
   display: flex;

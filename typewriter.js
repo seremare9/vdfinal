@@ -52,7 +52,6 @@ function typeNewText() {
     typeEffect(0);
 }
 
-// Call the function to start main title typing
 typeMainTitle();
 
 // // Efecto botón de scroll
@@ -84,24 +83,25 @@ typeMainTitle();
 //     }, 1000); // Adjust the delay as needed to show new text
 // });
 
-// Disable scrolling initially
+
+// Desabilita el scroll al inicio (hasta que el usuario haga click en el botón)
 document.body.classList.add('no-scroll');
 document.documentElement.classList.add('no-scroll');
 
 // Efecto botón de scroll
 document.getElementById('scrollButton').addEventListener('click', function() {
-    // Enable scrolling
+    // Habilita el scroll
     document.body.classList.remove('no-scroll');
     document.documentElement.classList.remove('no-scroll');
     
-    // Scroll to the target section
+    // Scroll a la target sección
     document.getElementById('targetSection').scrollIntoView({ behavior: 'smooth' });
 
     // Show the prompt image
     const promptImage = document.getElementById('promptImage');
     promptImage.style.visibility = 'visible';
 
-    // Show the new text with typewriter effect after prompt image is visible
+    // Muestra el texto dentro de la caja de prompt luego de que aparezca la caja
     setTimeout(() => {
         document.getElementById('textoPrompt').style.visibility = 'visible';
         typeNewText();
@@ -127,5 +127,6 @@ window.addEventListener('scroll', function() {
         window.scrollTo(0, 0);
     }
 });
-// scroll de containers
+
+
 
