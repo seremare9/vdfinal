@@ -87,26 +87,8 @@ onMount(() => {
     <!-- Aparece el recuadro del prompt y luego las imagenes que hicimos con IA -->
     <div id="targetSection" class="intro target-section">
       <div class="image-container">
-<<<<<<< HEAD
               <img src="public/images/prompt.png" id="promptImage" class="cuadroPrompt" alt="Prompt" style="visibility: hidden;">
-              <p id="textoPrompt" class="texto-prompt" style="visibility: hidden;">Imagen realista de...</p>
-              <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1">  
-         
-=======
-        <img src="public/images/prompt.png" id="promptImage" class="cuadroPrompt" alt="Prompt" style="visibility: hidden;">
-        <p id="textoPrompt" class="texto-prompt" style="visibility: hidden;">Imagen realista de...</p>
-        <img src="public/images/firefly1.jpg" class="image" alt="Imagen 1"> 
-        <img src="public/images/firefly2.jpg" class="image" alt="Imagen 2">
-        <img src="public/images/firefly3.jpg" class="image" alt="Imagen 3">
-        <img src="public/images/firefly4.jpg" class="image" alt="Imagen 4"> 
-        <img src="public/images/firefly5.jpg" class="image" alt="Imagen 5"> 
-        <img src="public/images/firefly6.jpg" class="image" alt="Imagen 6"> 
-        <img src="public/images/designer1.jpeg" class="image" alt="Imagen 7">
-        <img src="public/images/firefly7.jpg" class="image" alt="Imagen 8"> 
-        <img src="public/images/firefly9.jpg" class="image" alt="Imagen 9"> 
-        <img src="public/images/firefly8.jpg" class="image" alt="Imagen 10"> 
-        <img src="public/images/firefly10.jpg" class="image" alt="Imagen 11">
->>>>>>> c6a1d0e123d9d1d2a7fe36c272b0206b61e8874c
+              <p id="textoPrompt" class="texto-prompt" style="visibility: hidden;">Imagen realista de...</p> 
       </div>
     </div>
 
@@ -200,73 +182,6 @@ onMount(() => {
     </div>
    FIN DE CARRUSEL-->
    
-<<<<<<< HEAD
-  <!-- GRAFICOS -->
-  <Scroller
-    top={top2}
-    threshold={threshold2}
-    bottom={bottom2}
-    bind:count={count2}
-    bind:index={index2}
-    bind:offset={offset2}
-    bind:progress={progress2}
-  >
-  <div slot="background" class="image_container">
-    <img src="/images/{charts[index2]}" alt="chart {index2}" class="charts"
-    />
-  </div>
-  <div slot="foreground" class="foreground_container2">
-    <section class="step_foreground2">
-      <div class="epi_foreground2">
-        <h3>{index2 + 1}</h3>
-        <p>Explicación parte 1</p>
-      </div>
-    </section>
-    <section class="step_foreground2">
-      <div class="epi_foreground2">
-        <h3>{index2 + 1}</h3>
-        <p>Explicación parte 2</p>
-      </div>
-    </section>
-    <section class="step_foreground2">
-      <div class="epi_foreground2">
-        <h3>{index2 + 1}</h3>
-        <p>Explicación parte 3</p>
-      </div>
-    </section>
-    <section class="step_foreground2">
-      <div class="epi_foreground2">
-        <h3>Seccion {index2 + 1}</h3>
-        <p>Explicación parte 4</p>
-      </div>
-    </section>
-  </div>
-</Scroller>
-  <!---
-    <div class="Graficos-container">
-      <div class="grafico-uno">
-        <h3 class="grafico-title-1">Datos sobre las plataformas mas utilizadas (2023)</h3>
-        <img src="public/imagenes/grafico1.jpg" alt="grafico 1">
-        <p class="texCostado">En noviembre de 2023, la base de usuarios de Midjourney llegaba a  los 16 millones, con usuarios activos diarios que fluctúan 
-          entre 1,2 y 2,5 millones.  Esta sólida participación refleja el éxito de Midjourney a la hora de  captar y retener la atención 
-          de un público diverso. <br> El mayor segmento de su base de usuarios, que comprende 37,76%, se sitúa  en el grupo de edad de 25 a 34 años. Le sigue el grupo 
-          demográfico de 
-          </p>
-          <p class="texAbajo">18 a 25 años, que constituye el 26,18% de sus usuarios.  Estas estadísticas indican que Midjourney es especialmente popular entre  
-            los adultos más jóvenes y los millennials. <br> Los ingresos previstos de Midjourney para finales de 2023 ascienden a la  impresionante 
-            cifra de $300 millones. Esta cifra es un claro indicador  del éxito financiero de la plataforma y de su eficaz estrategia de  monetización. <br>Las 
-            estadísticas que rodean a Midjourney dibujan una imagen vívida de  una plataforma que no sólo está creciendo rápidamente, sino que también 
-            está influyendo profundamente en el panorama del arte generado por IA.  Desde su amplia base de usuarios y sus impresionantes previsiones de 
-            ingresos hasta la entusiasta participación de la comunidad en  plataformas como Discord y Reddit, Midjourney es un testimonio del  potencial 
-            de la IA en el ámbito creativo.</p>
-      </div>
-  
-      <div class="grafico-dos">
-        <h3 class="graficos-title-2">Datos sobre la cantidad de imágenes generadas por dia en las plataformas mas usadas (2023)</h3>
-        <img src="public/imagenes/grafico2.jpg" alt="grafico 2">
-  
-      </div>
-=======
     <!-- GRAFICOS -->
     <Scroller
       top={top2}
@@ -306,7 +221,6 @@ onMount(() => {
           <p>Gráfico 1</p>
         </div>
       </section>
->>>>>>> c6a1d0e123d9d1d2a7fe36c272b0206b61e8874c
     </div>
     </Scroller>
     <div class="lorem_ipsum">
