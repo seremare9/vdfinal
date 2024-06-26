@@ -6,6 +6,7 @@
   // import Medalero from "./components/Medallero.svelte"
   import DebugScroller from "./components/DebugScroller.svelte"
   import Loremipsum from "./components/Loremipsum.svelte"
+    import { fade } from 'svelte/transition';
 
   /* Variables para la data del medallero */
   let deportistas = []
@@ -63,6 +64,25 @@ onMount(() => {
         controller.destroy();
     };
 })
+
+  // Efecto del cambio de fondo en el scroller del Papa
+  let top1 = 0;
+  let threshold1 = 0.5;
+  let bottom1 = 0;
+  let count1 = 2;
+  let index1 = 0;
+  let offset1 = 0;
+  let progress1 = 0;
+
+  let backgroundImage = '/images/fondo-negro.png';
+
+  // Update background image when index changes
+  $: if (index1 === 1) {
+    backgroundImage = '/images/fondo-papa.png';
+  } else {
+    backgroundImage = '/images/fondo-negro.png';
+  }
+
   
 
 </script>
@@ -112,24 +132,26 @@ onMount(() => {
       bind:offset={offset}
       bind:progress={progress}
     >
-      
+    <div slot="background" class="fondo-container-rojo"> 
+      <img src="/images/fondo_container_chico.png" alt="chart {index2}" class="charts"
+      />
+    </div>
     <div slot="foreground" class="foreground_container">
-
-      <!-- <div class="flourish-embed" data-src="story/2110346">
-        <script src="https://public.flourish.studio/resources/embed.js"></script>
-      </div> -->
-
-      <div class="epi_foreground"> 
+      <section class="step_foreground">
+        <div class="epi_foreground"> 
           <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico en los últimos años.</p>
-      </div>
-
-      <div class="epi_foreground">
+        </div>
+      </section>
+      <section class="step_foreground">
+        <div class="epi_foreground">
           <p>La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle democratizó la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido impactante.</p>
-      </div>
-
-      <div class="epi_foreground">
+        </div>
+      </section>
+      <section class="step_foreground">
+        <div class="epi_foreground">
           <p>Este contexto plantea desafíos significativos en cuanto a la autenticidad y la percepción de la realidad.</p>
-      </div>
+        </div>
+      </section>
     </div>
     </Scroller>
   
@@ -139,6 +161,76 @@ onMount(() => {
     </div>
 
     
+<!-- 
+    <Scroller
+    top={top}
+    threshold={threshold}
+    bottom={bottom}
+    bind:count={count}
+    bind:index={index}
+    bind:offset={offset}
+    bind:progress={progress}
+  >
+    <div slot="background">
+      <Medallero deportistas={filteredDeportistas} />
+    </div>
+    <div slot="foreground" class="foreground_container">
+      <section class="step_foreground">
+        <div class="epi_foreground">
+          <h3>Seccion {index + 1}</h3>
+          <p>Todos los deportistas</p>
+        </div>
+      </section>
+      <section class="step_foreground">
+        <div class="epi_foreground">
+          <h3>Seccion {index + 1}</h3>
+          <p>Deportistas femeninas</p>
+        </div>
+      </section>
+      <section class="step_foreground">
+        <div class="epi_foreground">
+          <h3>Seccion {index + 1}</h3>
+          <p>Deportistas masculinos</p>
+        </div>
+      </section>
+      <section class="step_foreground">
+        <div class="epi_foreground">
+          <h3>Seccion {index + 1}</h3>
+          <p>Deportistas americanos</p>
+        </div>
+      </section>
+    </div>
+  </Scroller> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Carrusel de imagenes VS
     <div class="carousel-container">
       <h3 class="carousel-title">Realidad VS IA</h3>
@@ -243,7 +335,7 @@ onMount(() => {
       bind:offset={offset2}
       bind:progress={progress2}
     >
-    <div slot="background" class="image_container">
+    <div slot="background" class="image_container2">
       <img src="/images/{charts2[index2]}" alt="chart {index2}" class="charts2"
       />
     </div>
@@ -285,15 +377,36 @@ onMount(() => {
         <div class="tweets-papa">
           <img src="./public/gifs/tweets-papa.gif" alt="gif de tweets del papa francisco">
         </div>
-        <div class="imagenes-papa">  <!-- container que tiene las fotos bizarras del papa de fondo-->
-          <p>Estas imágenes, creadas con Midjourney, se compartieron en Reddit el 24 de Marzo de 2023. Tuvieron millones de vistas</p>
-        </div>
     </div>
+
     
-
-
-
-
+    <!-- Scroller Papa -->
+        <Scroller
+        top={top1}
+        threshold={threshold1}
+        bottom={bottom1}
+        bind:count={count1}
+        bind:index={index1}
+        bind:offset={offset1}
+        bind:progress={progress1}
+      >
+      <div slot="background" class="fondo-fotos-papa" > 
+        <img src={backgroundImage} alt="chart {index2}" class="charts"
+        />
+      </div>
+      <div slot="foreground" class="foreground_container">
+        <section class="step_foreground">
+          <div class="epi_foreground3"> 
+            <p>Estas imágenes, creadas con Midjourney, fueron compartidas en Reddit el 24 de Marzo de 2023. Tuvieron millones de vistas.</p>
+          </div>
+        </section>
+        <section class="step_foreground">
+          <div class="epi_foreground3">
+            <p>En redes sociales, se desató una competencia de retratar al Pontífice de 86 años en situaciones cada vez más extrañas.</p>
+          </div>
+        </section>
+      </div>
+      </Scroller>
 
   
      <!-- FIN CASO PAPA -->
@@ -384,7 +497,7 @@ onMount(() => {
     max-width: 150px;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  .image_container {
+  .image_container2 {
     display: flex;
     justify-content: center;
     align-items: center;

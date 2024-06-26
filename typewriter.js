@@ -54,36 +54,6 @@ function typeNewText() {
 
 typeMainTitle();
 
-// // Efecto botón de scroll
-// document.getElementById('scrollButton').addEventListener('click', function() {
-//     // Scroll to the target section
-//     document.getElementById('targetSection').scrollIntoView({ behavior: 'smooth' });
-
-//     // Show the prompt image
-//     const promptImage = document.getElementById('promptImage');
-//     promptImage.style.visibility = 'visible';
-
-//     // Show the new text with typewriter effect after prompt image is visible
-//     setTimeout(() => {
-//         document.getElementById('textoPrompt').style.visibility = 'visible';
-//         typeNewText();
-
-//         // After 10 seconds from showing the prompt image, start showing the other images
-//         setTimeout(() => {
-//             const images = document.querySelectorAll('.image-container .image');
-//             let delay = 0;
-//             images.forEach((image, index) => {
-//                 setTimeout(() => {
-//                     image.classList.add('visible');
-//                 }, delay);
-//                 delay += 300; // Adjust delay between images appearing
-//             });
-//         }, 4000); // 4 seconds delay
-
-//     }, 1000); // Adjust the delay as needed to show new text
-// });
-
-
 // Desabilita el scroll al inicio (hasta que el usuario haga click en el botón)
 document.body.classList.add('no-scroll');
 document.documentElement.classList.add('no-scroll');
