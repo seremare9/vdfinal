@@ -76,12 +76,12 @@ onMount(() => {
 
   let backgroundImage = '/images/fondo-negro.png';
 
-  // Update background image when index changes
-  $: if (index1 === 1) {
-    backgroundImage = '/images/fondo-papa.png';
-  } else {
-    backgroundImage = '/images/fondo-negro.png';
-  }
+  // // Update background image when index changes
+  // $: if (index1 === 1) {
+  //   backgroundImage = '/images/fondo-papa.png';
+  // } else {
+  //   backgroundImage = '/images/fondo-negro.png';
+  // }
 
   
 
@@ -112,6 +112,22 @@ onMount(() => {
       </div>
     </div>
 
+    <div class="intro-general">
+      <div class="lorem_ipsum">
+        <Loremipsum />
+      </div>
+      <div class="container-grafico1">
+        <h2 class="subtitulo2">
+          <b> Puntajes en tests de los sistemas de IA en diversas capacidades en comparación con el rendimiento humano</b>
+        </h2>
+        <div class="grafico-progreso">
+        <iframe title="Graf1" aria-label="Interactive line chart" id="datawrapper-chart-LqQGR" src="https://datawrapper.dwcdn.net/LqQGR/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="450" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+        </script>
+        </div>
+        <p> Breve resumen de la info de los gráficos y empezamos la transición para hablar de las imagenes hechas con IA</p>
+      </div>
+    </div>
+   
 
     {#if progress < 1}
     <DebugScroller
@@ -123,7 +139,7 @@ onMount(() => {
     {/if}
   
     <!-- Primer scroller: Introducción -->
-    <Scroller
+    <!-- <Scroller
       top={top}
       threshold={threshold}
       bottom={bottom}
@@ -153,127 +169,13 @@ onMount(() => {
         </div>
       </section>
     </div>
-    </Scroller>
+    </Scroller> -->
   
     <!-- Texto despues del 1er scroller -->
     <div class="intro-graficos">
       <p>Acá podemos explicar un poco (no muy extenso) cuando empezó a crecer la IA antes de mostrar los gráficos</p>
     </div>
 
-    
-<!-- 
-    <Scroller
-    top={top}
-    threshold={threshold}
-    bottom={bottom}
-    bind:count={count}
-    bind:index={index}
-    bind:offset={offset}
-    bind:progress={progress}
-  >
-    <div slot="background">
-      <Medallero deportistas={filteredDeportistas} />
-    </div>
-    <div slot="foreground" class="foreground_container">
-      <section class="step_foreground">
-        <div class="epi_foreground">
-          <h3>Seccion {index + 1}</h3>
-          <p>Todos los deportistas</p>
-        </div>
-      </section>
-      <section class="step_foreground">
-        <div class="epi_foreground">
-          <h3>Seccion {index + 1}</h3>
-          <p>Deportistas femeninas</p>
-        </div>
-      </section>
-      <section class="step_foreground">
-        <div class="epi_foreground">
-          <h3>Seccion {index + 1}</h3>
-          <p>Deportistas masculinos</p>
-        </div>
-      </section>
-      <section class="step_foreground">
-        <div class="epi_foreground">
-          <h3>Seccion {index + 1}</h3>
-          <p>Deportistas americanos</p>
-        </div>
-      </section>
-    </div>
-  </Scroller> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Carrusel de imagenes VS
-    <div class="carousel-container">
-      <h3 class="carousel-title">Realidad VS IA</h3>
-      <div class="carousel">
-        <div class="carousel-slide">
-          <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-          <div class="carousel-slide">
-            <img class="img-vs" src="public/images/vs1.1.jpg" alt="Imagen Real 1">
-            <img class="img-vs" src="public/images/vs1.2.jpg" alt="Imagen IA 1">
-          </div> 
-          <button class="next" onclick="moveCarousel(1)">&#10095;</button>
-        </div>
-
-        <div class="carousel-slide">
-          <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-            <div class="carousel-slide">
-              <img class="img-vs" src="public/images/vs2.1.jpg" alt="Imagen Real 2">
-              <img class="img-vs" src="public/images/vs2.2.jpg" alt="Imagen IA 2">
-            </div>
-            <button class="next" onclick="moveCarousel(1)">&#10095;</button>
-        </div>
-
-        <div class="carousel-slide">
-          <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-          <div class="carousel-slide">
-            <img class="img-vs" src="public/images/vs3.1.jpg" alt="Imagen Real 3">
-            <img class="img-vs" src="public/images/vs3.2.jpg" alt="Imagen IA 3">
-          </div>
-          <button class="next" onclick="moveCarousel(1)">&#10095;</button>
-        </div>
-
-        <div class="carousel-slide">
-          <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-          <div class="carousel-slide">
-            <img class="img-vs" src="public/images/vs4.1.jpg" alt="Imagen Real 4">
-            <img class="img-vs" src="public/images/vs4.2.jpg" alt="Imagen IA 4">
-          </div>
-          <button class="next" onclick="moveCarousel(1)">&#10095;</button>
-        </div>
-
-      </div>
-    </div>
-   FIN DE CARRUSEL-->
    
     <!-- GRAFICOS -->
     <Scroller
@@ -379,7 +281,6 @@ onMount(() => {
         </div>
     </div>
 
-    
     <!-- Scroller Papa -->
         <Scroller
         top={top1}
@@ -390,8 +291,8 @@ onMount(() => {
         bind:offset={offset1}
         bind:progress={progress1}
       >
-      <div slot="background" class="fondo-fotos-papa" > 
-        <img src={backgroundImage} alt="chart {index2}" class="charts"
+      <div slot="background" class="fondo-fotos-papa"> 
+        <img src="/images/fondo-papa.png" alt="chart {index2}" class="charts"
         />
       </div>
       <div slot="foreground" class="foreground_container">
@@ -408,7 +309,27 @@ onMount(() => {
       </div>
       </Scroller>
 
-  
+      <!-- <div class='que-dijo'>
+        <h1 class="subtitulo">
+          <b>Qué dijo el Papa?</b>
+        <img src="./public/images/papa.png" alt="png del papa con una burbuja de texto">
+      </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      <!-- FIN CASO PAPA -->
   
     <!-- ¿QUÉ DIJO EL PAPA? -->
