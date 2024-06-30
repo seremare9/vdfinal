@@ -113,22 +113,32 @@ onMount(() => {
     </div>
 
     <div class="intro-general">
-      <div class="lorem_ipsum">
-        <Loremipsum />
+      <div class="texto">
+        <p>La Inteligencia Artificial Generativa (Gen AI) es una inteligencia artificial capaz de generar distintos tipos de contenido, como textos, imágenes y música, a partir de un input (prompt) del usuario.
+          Esta tecnología utiliza bases de datos para su entrenamiento. La capacidad de las IA Generativa está creciendo a un ritmo cada vez más acelerado.</p>
       </div>
-      <div class="container-grafico1">
-        <h2 class="subtitulo2">
-          <b> Puntajes en tests de los sistemas de IA en diversas capacidades en comparación con el rendimiento humano</b>
-        </h2>
-        <div class="grafico-progreso">
-        <iframe title="Graf1" aria-label="Interactive line chart" id="datawrapper-chart-LqQGR" src="https://datawrapper.dwcdn.net/LqQGR/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="450" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-        </script>
-        </div>
-        <p> Breve resumen de la info de los gráficos y empezamos la transición para hablar de las imagenes hechas con IA</p>
-      </div>
+        <div class="container-grafico1">
+          <h2 class="subtitulo2">
+            <b>Puntajes en tests de los sistemas de IA en diversas capacidades en comparación con el rendimiento humano</b>
+          </h2>
+          <div class="grafico-progreso">
+            <iframe title="Graf1" aria-label="Interactive line chart" id="datawrapper-chart-LqQGR" src="https://datawrapper.dwcdn.net/LqQGR/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="450" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+            </script>
+          </div>
+          </div>  <!-- Cierre container-grafico-->
+          <div class="texto">
+          <p> Hasta hace menos de 15 años, la habilidad de las IA Generativas para reconocer imágenes, comprender textos y audio y entender lenguajes era muy limitada, y solían producir resultados que carecían de coherencia y precisión comparados con los estándares humanos. 
+            Sin embargo, para el año 2023, el rendimiento de las IA Generativas alcanzó niveles comparables con el rendimiento humano.
+            Por este motivo, cada vez se vuelve más dificil distinguir contenido realizado por una IA de uno creado por una persona.
+            Esto es especialmente notable en las imágenes creadas con inteligencia artificial.<br>
+            La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico en los últimos años.
+            La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle democratizó la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido impactante.
+            Este contexto plantea desafíos significativos en cuanto a la autenticidad y la percepción de la realidad.</p>
+          </div>
     </div>
-   
 
+    
+   
     {#if progress < 1}
     <DebugScroller
       index={index}
@@ -170,11 +180,6 @@ onMount(() => {
       </section>
     </div>
     </Scroller> -->
-  
-    <!-- Texto despues del 1er scroller -->
-    <div class="intro-graficos">
-      <p>Acá podemos explicar un poco (no muy extenso) cuando empezó a crecer la IA antes de mostrar los gráficos</p>
-    </div>
 
    
     <!-- GRAFICOS -->
@@ -188,38 +193,45 @@ onMount(() => {
       bind:progress={progress2}
     >
     <div slot="background" class="image_container"> 
-      <img src="/images/{charts[index2]}" alt="chart {index2}" class="charts"
-      />
+      <img src="/images/{charts[index2]}" alt="chart {index2}" class="charts"/>
     </div>
     <div slot="foreground" class="foreground_container2">
       <section class="step_foreground2">
         <div class="epi_foreground2">
-          <h3>Seccion {index2 + 1}</h3>
-          <p>Gráfico 1</p>
+          <h3> <a href="https://openai.com/index/dall-e-2/">DALL-E 2</a></h3>
+          <p><b> Año de lanzamiento: </b>2021<br>
+             <b> Desarrollador: </b> Open AI<br>
+             <b> Precio: </b> El paquetes de 115 créditos cuesta 15 USD. Cada crédito permite generar una imagen.</p>
         </div>
       </section>
       <section class="step_foreground2">
         <div class="epi_foreground2">
-          <h3>Seccion {index2 + 1}</h3>
-          <p>Gráfico 1</p>
+          <h3> <a href="https://www.adobe.com/ar/products/firefly.html">Adobe Firefly</a></h3>
+          <p><b> Año de lanzamiento: </b>2023<br>
+            <b> Desarrollador: </b> Adobe <br>
+            <b> Precio: </b> Existe un Plan gratuito (25 créditos mensuales) y un Plan Premium (100 créditos mensuales) por 5 USD</p>
         </div>
       </section>
       <section class="step_foreground2">
         <div class="epi_foreground2">
-          <h3>Seccion {index2 + 1}</h3>
-          <p>Gráfico 1</p>
+          <h3><a href="https://stability.ai/">Stable Diffusion</a></h3>
+          <p><b> Año de lanzamiento: </b>2022<br>
+            <b> Desarrollador: </b> Stability AI<br>
+            <b> Precio: </b> El paquetes de 1000 créditos cuesta 10 USD. Cada imagen cuesta entre 0.2 y 8 créditos.</p>
         </div>
       </section>
       <section class="step_foreground2">
         <div class="epi_foreground2">
-          <h3>Seccion {index2 + 1}</h3>
-          <p>Gráfico 1</p>
+          <h3><a href="https://www.midjourney.com/home">Midjourney</a></h3>
+          <p><b> Año de lanzamiento: </b>2022<br>
+            <b> Desarrollador: </b> David Holz<br>
+            <b> Precio: </b> Planes de entre 10 USD (Plan Básico) y 120 USD (Plan Mega)</p>
         </div>
       </section>
     </div>
     </Scroller>
 
-    <div class="intro-graficos">
+    <div class="texto">
       <p>En noviembre de 2023, la base de usuarios de Midjourney llegaba a los 16 millones, con usuarios activos diarios que fluctúan 
         entre 1,2 y 2,5 millones.  Esta sólida participación refleja el éxito de Midjourney a la hora de  captar y retener la atención 
         de un público diverso. <br> El mayor segmento de su base de usuarios se sitúa  en el grupo de edad de 25 a 34 años. Le sigue el grupo 
@@ -273,7 +285,7 @@ onMount(() => {
     <!-- CASO DEL PAPA -->
      
     <div class="container-papa">
-        <h1 class="headline">
+        <h1 class="headline-papa">
           <b>Un caso real: Imágenes del Papa Francisco</b>
         </h1>
         <div class="tweets-papa">
@@ -392,43 +404,3 @@ onMount(() => {
   </main>
 </body> 
 
-
-<style>
-  /* Estilos para el scroller */
-  .foreground_container2 {
-    pointer-events: none;
-    padding-left: 50%;
-  }
-
-  /* CUADRITO DEL COSTADO*/
-  .step_foreground2 {
-    display: flex;
-    justify-content: end;    
-    align-items: center;
-    height: 50vh;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    color: white;
-    padding: 1em;
-    margin: 0 0 2em 0;
-  }
-
-  /* parte negra del cuadradito*/
-  .epi_foreground2 {
-    padding: 20px;
-    max-width: 150px;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  .image_container2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-  }
-  .charts{
-    width: 770px;
-  }
-
-  .charts2{
-    width: 790px;
-  }
-</style>

@@ -157,12 +157,46 @@ body.no-scroll, html.no-scroll {
     text-decoration: underline;
   }
 
-  .intro-general {
-    color:white;
+  .cuadroPrompt { /* acomoda el png */
+    visibility: hidden; 
+    position: absolute;
+    align-self: center;
+    margin-bottom: 35%;
+  }
+  
+  #textoPrompt {
+    font-size: 20px;
+    font-family: 'IBM Plex Sans';
+    color:black;
+    font-style: italic;
+    z-index: 10;
+    margin-bottom: 43%;
+    margin-right: 35%;
   }
 
-  .container-grafico1 {
+  .intro-general { /* Introducción, hablamos sobre qué es la IA Generativa */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+  }
+
+  .texto { /* Para todos los <p> */
+    display: flex;
+    color:white;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: left;
+    font-family: 'IBM Plex Sans';
+    font-size: 25px;
+    line-height: 2;
+    width: 75vw;
+    background-color: black;
+  }
+
+  .container-grafico1 { /* Gráfico de líneas de Datawrapper */
     margin-top: 100px;
+    margin-bottom: 100px;
     background-color: black;
     justify-content: center;
     align-items: center;
@@ -175,125 +209,81 @@ body.no-scroll, html.no-scroll {
 
   }
 
-  .fondo-container-rojo {
-    height: 100vh;
-    width: 100%;
-    display: grid;
+  /* PRIMER SCROLLER */
+
+  .image-container {
+    display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .fondo-container-rojo img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    flex-direction: column;
+    background-color:black;
+    height: 100vh; 
+    width: 80vw;
+    margin-top: 100px;
   }
 
-  .foreground_container { /* Para el container del Papa */
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
+  .charts{
+    width: 770px;
+  }
+  
+  .foreground_container2 {
     pointer-events: none;
-    margin-top: 10%; 
-    margin-bottom: 10%;  
-    width: 1536px;
-  } 
-  
-  .step_foreground { 
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    height: 100vh;
-    width:1536px;
-    /* margin: 0 0 2em 0; */
+    padding-left: 50%;
   }
 
-  .epi_foreground { 
-    background-color:white;
-    border-radius: 25px; 
-    width: 30vw; 
-    color:black;
-    font-family: 'IBM Plex Sans';
-    font-size: 18px;
-    text-align: center;
-    padding:1.9%;
-  }
-
-  .epi_foreground3 { 
-    background-color:crimson;
-    border-radius: 25px; 
-    width: 30vw; 
-    color:white;
-    font-family: 'IBM Plex Sans';
-    font-size: 18px;
-    text-align: center;
-    padding:1.9%;
-  }
-
-  .intro-graficos {
-    margin: 100px auto;
-    max-width: 740px;
+  /* CUADRITO DEL COSTADO*/
+  .step_foreground2 {
+    display: flex;
+    justify-content: end;    
+    align-items: center;
+    height: 50vh;
+    border: 1px solid rgba(0, 0, 0, 0.4);
     color: white;
-    font-size: 20px;
-    line-height: 2;
-    text-align: left;
-    margin-top: 200px;
-    background-color: black;
+    padding: 1em;
+    margin: 0 0 2em 0;
   }
 
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color:black;
-  height: 100vh; 
-  width: 80vw;
-  margin-top: 100px;
-}
+  /* parte negra del cuadradito*/
+  .epi_foreground2 {
+    padding: 20px;
+    max-width: 200px;
+    width: 55vw;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* SEGUNDO SCROLLER */
+  .image_container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+ 
+  .charts2{
+    width: 790px;
+  }
 
 
-.cuadroPrompt { /* acomoda el png */
-  visibility: hidden; 
-  position: absolute;
-  align-self: center;
-  margin-bottom: 35%;
-}
-
-#textoPrompt {
-  font-size: 20px;
-  font-family: 'IBM Plex Sans';
-  color:black;
-  font-style: italic;
-  z-index: 10;
-  margin-bottom: 43%;
-  margin-right: 35%;
-}
-
-.texto2 {
-  font-size: 20px;
-  font-family: 'IBM Plex Sans';
-  color: white;
-}
-
-.image {
-  width: 300px;
-  height: auto;
-  visibility: hidden;
-  position: absolute;
-}
-
-.image.visible {
-  visibility: visible; 
-}
+/* SECCIÓN DEL PAPA */
 
 .container-papa {
   width: 1536px;
   height: auto;
-  background-color: blue;
+  background-color: black;
   align-items: center; 
   justify-content: center; 
+}
+
+.headline-papa { /* Título */
+  font-size: 50px;
+  line-height: 1.2;
+  font-weight: black;
+  text-align: center;
+  margin: 20px;
+  color:white;
+  font-family: 'Rubik';
+  width: 100%;
+  margin-top: 0%;
 }
 
 .tweets-papa {
@@ -318,11 +308,99 @@ body.no-scroll, html.no-scroll {
   object-fit: contain;
 }
 
-.que-dijo {
-  align-items: center;
+.fondo-container-rojo { /* Para los container de texto de la sección del Papa */
+  height: 100vh;
+  width: 100%;
+  display: grid;
   justify-content: center;
-  display: flex;
+  align-items: center;
 }
+  
+.fondo-container-rojo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.foreground_container { /* Para el container de scroll Papa */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  pointer-events: none;
+  margin-top: 10%; 
+  margin-bottom: 10%;  
+  width: 1536px;
+  } 
+  
+.step_foreground { 
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  height: 100vh;
+  width:1536px;
+
+  }
+
+  .epi_foreground3 { 
+    background-color:crimson;
+    border-radius: 25px; 
+    width: 30vw; 
+    color:white;
+    font-family: 'IBM Plex Sans';
+    font-size: 18px;
+    text-align: center;
+    padding:1.9%;
+  }
+
+  /* .epi_foreground { Para que usamos este? */
+    /* background-color:white;
+    border-radius: 25px; 
+    width: 30vw; 
+    color:black;
+    font-family: 'IBM Plex Sans';
+    font-size: 18px;
+    text-align: center;
+    padding:1.9%;
+  } */
+
+  .que-dijo {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+/* FIN SECCIÓN PAPA */
+
+  /* .intro-graficos {
+    margin: 100px auto;
+    max-width: 740px;
+    color: white;
+    font-size: 20px;
+    line-height: 2;
+    text-align: left;
+    margin-top: 200px;
+    background-color: black;
+  } */
+
+
+
+/* .image {
+  width: 300px;
+  height: auto;
+  visibility: hidden;
+  position: absolute;
+}
+
+.image.visible {
+  visibility: visible; 
+} */
+
+
+
+
+
+
 
 
 
@@ -422,21 +500,21 @@ body.no-scroll, html.no-scroll {
   align-items: center;
 } */
 
-.carousel {
+/* .carousel {
   display: flex;
   width: 100%;
-  overflow-x: scroll; /* Permitir desplazamiento horizontal */
-  scroll-snap-type: x mandatory; /* Hacer que cada slide se ajuste a la vista */
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory; 
 }
 
 .carousel-slide {
   position: relative;
   display: flex;
-  flex: 0 0 auto; /* No crecer, no encoger, tamaño automático */
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
   min-width: 100%;
-  transition: transform 0.5s ease-in-out; /* Transición para deslizamiento */
+  transition: transform 0.5s ease-in-out; 
 }
 
 .carousel-imgs {
@@ -444,14 +522,14 @@ body.no-scroll, html.no-scroll {
   justify-content: center;
   align-items: center;
   width: 100%;
-  transition: opacity 0.5s ease-in-out; /* Transición para opacidad */
+  transition: opacity 0.5s ease-in-out; 
 }
 
 .carousel-imgs img {
   max-width: 100%;
   max-height: 100%;
-  opacity: 1; /* Inicialmente mostramos las imágenes */
-  transition: opacity 0.5s ease-in-out; /* Transición para opacidad */
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out; 
 }
 
 .img-vs {
@@ -461,15 +539,15 @@ body.no-scroll, html.no-scroll {
 }
 
 .prev, .next {
-  position: absolute; /* Posición absoluta para que los botones puedan estar superpuestos */
-  top: 50%; /* Ajustar la posición verticalmente */
+  position: absolute; 
+  top: 50%; 
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 10px;
   font-size: 18px;
-  z-index: 1; /* Para que estén sobre las imágenes */
+  z-index: 1; 
 }
 
 .prev {
@@ -479,5 +557,5 @@ body.no-scroll, html.no-scroll {
 
 .next {
   right: 10px;
-}
+} */
 
