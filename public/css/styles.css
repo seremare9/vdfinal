@@ -207,14 +207,31 @@ body.no-scroll, html.no-scroll {
 
   }
 
-  /* 2da intro*/
+  /* 2DA INTRO */
+
   .fondo-container-rojo{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: -1;
   }
+  .fondo-container-rojo img {
+    object-fit: contain;
+  }
+
+  .epi_foreground { 
+    background-color:white;
+    border-radius: 25px; 
+    width: 30vw; 
+    color: black;
+    font-family: 'IBM Plex Sans';
+    font-size: 22px;
+    text-align: center;
+    padding:1.9%;
+  }
+
 
   /* PRIMER GRAFICO */
 
@@ -297,11 +314,11 @@ body.no-scroll, html.no-scroll {
   color:white;
   font-family: 'Rubik';
   width: 100%;
-  margin-top: 0%;
+  margin-top: 10%;
 }
 
 .tweets-papa {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .tweets-papa img {
@@ -310,12 +327,13 @@ body.no-scroll, html.no-scroll {
 }
 
 .fondo-fotos-papa {
-  height: 100vh;
-  width: 1536px;
-  display: grid;
+  height: 100%;
+  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: -1;
+  size-adjust: 100%;
 }
 
 .fondo-fotos-papa img {
@@ -336,7 +354,7 @@ body.no-scroll, html.no-scroll {
   object-fit: cover;
 }
 
-.foreground_container { /* Para el container de scroll Papa */
+.foreground_container { /* Para el container de scroll Papa y de la intro 2  */
   display: flex; 
   flex-direction: column; 
   align-items: center; 
@@ -362,21 +380,10 @@ body.no-scroll, html.no-scroll {
     width: 30vw; 
     color:white;
     font-family: 'IBM Plex Sans';
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
     padding:1.9%;
   }
-
-  /* .epi_foreground { Para que usamos este? */
-    /* background-color:white;
-    border-radius: 25px; 
-    width: 30vw; 
-    color:black;
-    font-family: 'IBM Plex Sans';
-    font-size: 18px;
-    text-align: center;
-    padding:1.9%;
-  } */
 
   .que-dijo {
     align-items: center;
