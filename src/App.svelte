@@ -24,12 +24,26 @@
 
   /* Variables para el scroller de los graficos */
   let count2
-  let index2
+  let index2 =0;
   let offset2
   let progress2
   let top2 = 0.1
-  let threshold2 = 0.5
+  let threshold2 = 0.6
   let bottom2 = 0.9
+  let isAtEnd = false;
+
+  function updateIndex2(newIndex) {
+    if (isAtEnd) {
+      return;
+    }
+
+    if (newIndex >= charts.length - 1) {
+      index2 = charts.length - 1;
+    } else {
+      index2 = newIndex;
+    }
+  }
+  
 
  /* Charts */
   let charts = {
@@ -39,17 +53,10 @@
     3: "lines_04.png",
   }
 
-  /* Charts 2 */
-  let charts2 = {
-    0: "graf_1.png",
-    1: "graf_2.png",
-    2: "graf_3.png",
-    3: "graf_4.png",
-  }
 
 onMount(() => {
     const controller = new ScrollMagic.Controller();
-
+    const chartContainer = document.querySelector('.image_container');
     const tween = gsap.fromTo(chartContainer, { opacity: 0 }, { opacity: 1, duration: 1 });
 
     const scene = new ScrollMagic.Scene({
@@ -57,6 +64,14 @@ onMount(() => {
         triggerHook: 0.5
     })
     .setTween(tween)
+    .on('progress', function(event) {
+      if (event.progress === 1) {
+        isAtEnd = true;
+        index2 = charts.length - 1;
+      } else {
+          isAtEnd = false;
+      }
+    })
     .addTo(controller);
 
     return () => {
@@ -83,7 +98,6 @@ onMount(() => {
   //   backgroundImage = '/images/fondo-negro.png';
   // }
 
-  
 
 </script>
 
@@ -112,11 +126,12 @@ onMount(() => {
       </div>
     </div>
 
+    <div class="texto">
+      <p>La Inteligencia Artificial Generativa (Gen AI) es una inteligencia artificial capaz de generar distintos tipos de contenido, como textos, imágenes y música, a partir de un input (prompt) del usuario.
+        Esta tecnología utiliza bases de datos para su entrenamiento. La capacidad de las IA Generativa está creciendo a un ritmo cada vez más acelerado.</p>
+    </div>
+    
     <div class="intro-general">
-      <div class="texto">
-        <p>La Inteligencia Artificial Generativa (Gen AI) es una inteligencia artificial capaz de generar distintos tipos de contenido, como textos, imágenes y música, a partir de un input (prompt) del usuario.
-          Esta tecnología utiliza bases de datos para su entrenamiento. La capacidad de las IA Generativa está creciendo a un ritmo cada vez más acelerado.</p>
-      </div>
         <div class="container-grafico1">
           <h2 class="subtitulo2">
             <b>Puntajes en tests de los sistemas de IA en diversas capacidades en comparación con el rendimiento humano</b>
@@ -126,15 +141,15 @@ onMount(() => {
             </script>
           </div>
           </div>  <!-- Cierre container-grafico-->
-          <div class="texto">
-          <p> Hasta hace menos de 15 años, la habilidad de las IA Generativas para reconocer imágenes, comprender textos y audio y entender lenguajes era muy limitada, y solían producir resultados que carecían de coherencia y precisión comparados con los estándares humanos. 
-            Sin embargo, para el año 2023, el rendimiento de las IA Generativas alcanzó niveles comparables con el rendimiento humano.
-            Por este motivo, cada vez se vuelve más dificil distinguir contenido realizado por una IA de uno creado por una persona.
-            Esto es especialmente notable en las imágenes creadas con inteligencia artificial.<br>
-            La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico en los últimos años.
-            La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle democratizó la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido impactante.
-            Este contexto plantea desafíos significativos en cuanto a la autenticidad y la percepción de la realidad.</p>
-          </div>
+        </div>
+    <div class="texto">
+      <p> Hasta hace menos de 15 años, la habilidad de las IA Generativas para reconocer imágenes, comprender textos y audio y entender lenguajes era muy limitada, y solían producir resultados que carecían de coherencia y precisión comparados con los estándares humanos. 
+          Sin embargo, para el año 2023, el rendimiento de las IA Generativas alcanzó niveles comparables con el rendimiento humano.
+          Por este motivo, cada vez se vuelve más dificil distinguir contenido realizado por una IA de uno creado por una persona.
+          Esto es especialmente notable en las imágenes creadas con inteligencia artificial.<br>
+          La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico en los últimos años.
+          La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle democratizó la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido impactante.
+          Este contexto plantea desafíos significativos en cuanto a la autenticidad y la percepción de la realidad.</p>
     </div>
 
     
@@ -231,55 +246,19 @@ onMount(() => {
     </div>
     </Scroller>
 
-    <div class="texto">
-      <p>En noviembre de 2023, la base de usuarios de Midjourney llegaba a los 16 millones, con usuarios activos diarios que fluctúan 
-        entre 1,2 y 2,5 millones.  Esta sólida participación refleja el éxito de Midjourney a la hora de  captar y retener la atención 
-        de un público diverso. <br> El mayor segmento de su base de usuarios se sitúa  en el grupo de edad de 25 a 34 años. Le sigue el grupo 
-        demográfico de 18 a 25 años, que constituye el 26,18% de sus usuarios. Las estadísticas que rodean a Midjourney dibujan una imagen vívida de  una plataforma que no sólo está creciendo rápidamente, sino que también 
-        está influyendo profundamente en el panorama del arte generado por IA.</p>
-    </div>
-  
+    
     <!-- Grafico 2-->
-    <Scroller
-      top={top2}
-      threshold={threshold2}
-      bottom={bottom2}
-      bind:count={count2}
-      bind:index={index2}
-      bind:offset={offset2}
-      bind:progress={progress2}
-    >
-    <div slot="background" class="image_container2">
-      <img src="/images/{charts2[index2]}" alt="chart {index2}" class="charts2"
-      />
+    <div class="container_graf2">
+      <img class="grafico2" src=".VDFINAL/public/images/grafico2.jpg" alt="grafico 2">
+      <p class="texto"> La cantidad de imágenes generadas con inteligencia artificial (IA) ha crecido exponencialmente 
+        en los últimos años. Cada día, millones de imágenes son creadas por diversas aplicaciones y 
+        plataformas que utilizan IA, reflejando el impresionante avance en esta tecnología. 
+        Desde el arte digital hasta la generación de imágenes para publicidad, marketing, entretenimiento, y 
+        hasta en la investigación científica, la capacidad de la IA para producir contenido visual de alta 
+        calidad y realismo es asombrosa.
+      </p>
     </div>
-    <div slot="foreground" class="foreground_container2">
-      <section class="step_foreground2">
-        <div class="epi_foreground2">
-          <h3>Seccion {index2 + 1}</h3>
-          <p>Gráfico 2</p>
-        </div>
-      </section>
-      <section class="step_foreground2">
-        <div class="epi_foreground2">
-          <h3>Seccion {index2 + 1}</h3>
-          <p>Gráfico 2</p>
-        </div>
-      </section>
-      <section class="step_foreground2">
-        <div class="epi_foreground2">
-          <h3>Seccion {index2 + 1}</h3>
-          <p>Gráfico 2</p>
-        </div>
-      </section>
-      <section class="step_foreground2">
-        <div class="epi_foreground2">
-          <h3>Seccion {index2 + 1}</h3>
-          <p>Gráfico 2</p>
-        </div>
-      </section>
-    </div>
-    </Scroller>
+
     <!-- FIN GRAFICOS -->
 
     <!-- CASO DEL PAPA -->
