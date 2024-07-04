@@ -130,7 +130,7 @@ onMount(() => {
       <p>La Inteligencia Artificial Generativa (Gen AI) es una inteligencia artificial capaz de generar distintos tipos de contenido, como textos, imágenes y música, a partir de un input (prompt) del usuario.
         Esta tecnología utiliza bases de datos para su entrenamiento. La capacidad de las IA Generativa está creciendo a un ritmo cada vez más acelerado.</p>
     </div>
-    
+
     <div class="intro-general">
         <div class="container-grafico1">
           <h2 class="subtitulo2">
@@ -140,16 +140,14 @@ onMount(() => {
             <iframe title="Graf1" aria-label="Interactive line chart" id="datawrapper-chart-LqQGR" src="https://datawrapper.dwcdn.net/LqQGR/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="450" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
             </script>
           </div>
-          </div>  <!-- Cierre container-grafico-->
         </div>
+    </div> <!-- Cierre container-grafico-->
     <div class="texto">
       <p> Hasta hace menos de 15 años, la habilidad de las IA Generativas para reconocer imágenes, comprender textos y audio y entender lenguajes era muy limitada, y solían producir resultados que carecían de coherencia y precisión comparados con los estándares humanos. 
           Sin embargo, para el año 2023, el rendimiento de las IA Generativas alcanzó niveles comparables con el rendimiento humano.
-          Por este motivo, cada vez se vuelve más dificil distinguir contenido realizado por una IA de uno creado por una persona.
-          Esto es especialmente notable en las imágenes creadas con inteligencia artificial.<br>
-          La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico en los últimos años.
-          La capacidad de las IA para producir obras de arte, fotografías y gráficos con alta precisión y detalle democratizó la creación visual, permitiendo a personas sin habilidades artísticas tradicionales generar contenido impactante.
-          Este contexto plantea desafíos significativos en cuanto a la autenticidad y la percepción de la realidad.</p>
+          Por este motivo, cada vez se vuelve más dificil distinguir contenido realizado por una IA de uno creado por una persona. <br>
+          Esto es especialmente notable en las imágenes creadas con inteligencia artificial.
+      </p>
     </div>
 
     
@@ -164,7 +162,7 @@ onMount(() => {
     {/if}
   
     <!-- Primer scroller: Introducción -->
-    <!-- <Scroller
+    <Scroller
       top={top}
       threshold={threshold}
       bottom={bottom}
@@ -194,7 +192,7 @@ onMount(() => {
         </div>
       </section>
     </div>
-    </Scroller> -->
+    </Scroller> 
 
    
     <!-- GRAFICOS -->

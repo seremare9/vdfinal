@@ -203,11 +203,20 @@ body.no-scroll, html.no-scroll {
   .grafico-progreso {
     background-color: whitesmoke;
     border-radius: 25px; 
-    margin-bottom: 200px;
+    margin-bottom: 50px;
 
   }
 
-  /* PRIMER SCROLLER */
+  /* 2da intro*/
+  .fondo-container-rojo{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* PRIMER GRAFICO */
 
   .image-container {
     display: flex;
