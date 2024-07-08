@@ -139,8 +139,7 @@ onMount(() => {
       </p>
     </div>
 
-    
-   
+   <!-- introduccion generacion de imaganes con IA --> 
     {#if progress < 1}
     <DebugScroller
       index={index}
@@ -262,7 +261,7 @@ onMount(() => {
 
 
     <div class="container_graf2">
-      <img class="grafico2" src=".VDFINAL/public/images/grafico2.jpg" alt="grafico 2">
+      <img class="grafico2" src="./public/images/grafico2.jpg" alt="grafico 2">
       <p class="texto"> La cantidad de imágenes generadas con inteligencia artificial (IA) ha crecido exponencialmente 
         en los últimos años. Cada día, millones de imágenes son creadas por diversas aplicaciones y 
         plataformas que utilizan IA, reflejando el impresionante avance en esta tecnología. 
