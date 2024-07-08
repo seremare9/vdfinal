@@ -80,24 +80,14 @@ onMount(() => {
     };
 })
 
-  // Efecto del cambio de fondo en el scroller del Papa
-  let top1 = 0;
-  let threshold1 = 0.5;
-  let bottom1 = 0;
-  let count1 = 2;
-  let index1 = 0;
-  let offset1 = 0;
-  let progress1 = 0;
-
-  let backgroundImage = '/images/fondo-negro.png';
-
-  // // Update background image when index changes
-  // $: if (index1 === 1) {
-  //   backgroundImage = '/images/fondo-papa.png';
-  // } else {
-  //   backgroundImage = '/images/fondo-negro.png';
-  // }
-
+  // Variables para el scroller del Papa
+  let count1
+  let index1
+  let offset1
+  let progress1
+  let top1 = 0.1
+  let threshold1 = 0.5
+  let bottom1 = 0.9
 
 </script>
 
@@ -145,8 +135,7 @@ onMount(() => {
     <div class="texto">
       <p> Hasta hace menos de 15 años, la habilidad de las IA Generativas para reconocer imágenes, comprender textos y audio y entender lenguajes era muy limitada, y solían producir resultados que carecían de coherencia y precisión comparados con los estándares humanos. 
           Sin embargo, para el año 2023, el rendimiento de las IA Generativas alcanzó niveles comparables con el rendimiento humano.
-          Por este motivo, cada vez se vuelve más dificil distinguir contenido realizado por una IA de uno creado por una persona. <br>
-          Esto es especialmente notable en las imágenes creadas con inteligencia artificial.
+          Por este motivo, cada vez se vuelve más dificil distinguir contenido realizado por una IA de uno creado por una persona. Esto es especialmente notable en las imágenes creadas con inteligencia artificial.
       </p>
     </div>
 
@@ -162,7 +151,7 @@ onMount(() => {
     {/if}
   
     <!-- Primer scroller: Introducción -->
-    <Scroller
+    <!-- <Scroller
       top={top}
       threshold={threshold}
       bottom={bottom}
@@ -192,7 +181,7 @@ onMount(() => {
         </div>
       </section>
     </div>
-    </Scroller> 
+    </Scroller>  -->
 
    
     <!-- GRAFICOS -->
@@ -246,6 +235,32 @@ onMount(() => {
 
     
     <!-- Grafico 2-->
+
+    <div class="generacion-imagenes">
+      <div class="container-graf2">
+        <h2 class="subtitulo2">
+          <b>Cantidad de imágenes generadas por día (en millones) 2023</b>
+        </h2>
+        <div class="grafico2">
+          <iframe title="" aria-label="Column Chart" id="datawrapper-chart-YvGA0" src="https://datawrapper.dwcdn.net/YvGA0/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="373" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+          </script>
+        </div>
+      </div>
+  <div class="texto"> 
+    <p>La cantidad de imágenes generadas con inteligencia artificial (IA) ha crecido exponencialmente en los últimos años. 
+    Cada día, millones de imágenes son creadas por diversas aplicaciones y plataformas que utilizan IA, reflejando el impresionante avance en esta tecnología. 
+    Desde el arte digital hasta la generación de imágenes para publicidad, marketing, entretenimiento, y hasta en la investigación científica, la capacidad de 
+    la IA para producir contenido visual de alta calidad y realismo es asombrosa.
+    </p>
+  </div>
+</div> 
+<!-- 
+
+
+
+
+
+
     <div class="container_graf2">
       <img class="grafico2" src=".VDFINAL/public/images/grafico2.jpg" alt="grafico 2">
       <p class="texto"> La cantidad de imágenes generadas con inteligencia artificial (IA) ha crecido exponencialmente 
@@ -255,7 +270,7 @@ onMount(() => {
         hasta en la investigación científica, la capacidad de la IA para producir contenido visual de alta 
         calidad y realismo es asombrosa.
       </p>
-    </div>
+    </div> -->
 
     <!-- FIN GRAFICOS -->
 
@@ -281,8 +296,7 @@ onMount(() => {
         bind:progress={progress1}
       >
       <div slot="background" class="fondo-fotos-papa"> 
-        <img src="/images/fondo-papa.png" alt="chart {index2}" class="charts"
-        />
+        <img src="/images/fondo-papa.png" alt/>
       </div>
       <div slot="foreground" class="foreground_container">
         <section class="step_foreground">
@@ -298,11 +312,7 @@ onMount(() => {
       </div>
       </Scroller>
 
-      <!-- <div class='que-dijo'>
-        <h1 class="subtitulo">
-          <b>Qué dijo el Papa?</b>
-        <img src="./public/images/papa.png" alt="png del papa con una burbuja de texto">
-      </div> -->
+     
 
 
 
