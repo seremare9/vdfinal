@@ -95,7 +95,7 @@ body.no-scroll, html.no-scroll {
     flex-direction: column;
     background-color: black;
     background-image: url('/public/gifs/fondo_header.gif');
-    background-size:100% 99%;
+    background-size:98% 99%;
     background-position: center calc(50% - 20px); 
     background-repeat: no-repeat; 
     height: 100vh;
@@ -142,15 +142,13 @@ body.no-scroll, html.no-scroll {
   }
 
   .subtitulo3 {
-    font-size: 50px;
+    font-size: 40px;
     line-height: 1.2;
     font-family: 'Rubik';
     color:white;
-    margin-top: 120px;
-    margin-bottom: 80px;
-    display: flex;
+    margin-top: 170px;
+    margin-bottom: 3%;
     text-align: center;
-
   }
 
   .bajada { 
@@ -186,6 +184,15 @@ body.no-scroll, html.no-scroll {
     margin-bottom: 36%;
     margin-right: 35%;
   }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100%;
+  }
+
 
   .intro-general { /* Introducción, hablamos sobre qué es la IA Generativa */
     display: flex;
@@ -242,30 +249,20 @@ body.no-scroll, html.no-scroll {
     border-radius: 25px; 
     width: 30vw; 
     color: black;
-    font-family: 'Rubik';
-    font-size: 22px;
+    font-family: Helvetica;
+    font-size: 20px;
     text-align: center;
     padding:1.9%;
   }
 
-
   /* PRIMER GRAFICO */
-
-  .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    width: 100%;
-  }
-
   .charts{
   max-width: 50%;
   height: auto; /* Ajusta automáticamente la altura según el ancho */
+  margin-left: 20%;
   }
   
   .foreground_container2 {
-    /* pointer-events: none; */
     padding-left: 50%;
     display: flex; 
     flex-direction: column;
@@ -299,7 +296,6 @@ body.no-scroll, html.no-scroll {
 
 
   /* SEGUNDO GRAFICO*/
-
   .container-graf2 {
     margin-top: 6%;
   }
@@ -324,7 +320,6 @@ body.no-scroll, html.no-scroll {
  
 
 /* SECCIÓN DEL PAPA */
-
 .container-papa {
   width: 1536px;
   height: auto;
@@ -390,6 +385,7 @@ body.no-scroll, html.no-scroll {
   object-fit: cover;
 }
 
+
 .que-dijo {
   margin-top: 100px;
   display: flex;
@@ -421,33 +417,17 @@ body.no-scroll, html.no-scroll {
   left: -17px;
 }
 
-
-/* .burbuja-papa {
-  background-color: deeppink;
+.epi_foreground-papa { 
+  background-color: white;
+  border-radius: 25px; 
+  width: 30vw; 
   color: black;
-  margin-top: 150px;
-  align-items: center;
-  justify-content: center;
-} */
-
-/* .foreground_container2 {
-  padding-left: 50%;
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
+  font-family: Helvetica;
+  font-size: 20px;
+  text-align: center;
+  padding:1.9%;
 }
 
-.step_foreground2 {
-  display: flex;
-  justify-content: end;    
-  align-items: center;
-  height: 80vh;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  color: white;
-  padding: 1em;
-  margin: 0 0 2em 0;
-  width: 70%;
-} */
 
 .foreground_container { /* Para el container de scroll Papa */
   display: flex; 
@@ -461,15 +441,35 @@ body.no-scroll, html.no-scroll {
   width: 100%;
   /* background-color: aquamarine; */
   } 
-  
-.step_foreground { 
-  display: flex; 
-  justify-content: center;
-  align-items: center; 
-  height: 100vh;
-  /* width:1536px; */
 
+  .foreground_container-papa { /* Para el container de scroll Papa */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    /* pointer-events: none; */
+    margin-top: 10%; 
+    margin-bottom: 10%;  
+    /* width: 1536px; */
+    width: 100%;
+    /* background-color: aquamarine; */
+    } 
+  
+  .step_foreground { 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    /* width:1536px; */
+    }
+
+  .step_foreground-papa { 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
   }
+  
 
   .epi_foreground3 { 
     background-color:white;
@@ -481,55 +481,3 @@ body.no-scroll, html.no-scroll {
     text-align: center;
     padding:1.9%;
   }
-
-  
-
- /* .subtitulo3 {
-  font-size: 35px;
-  font-family: 'rubik';
-  font-weight: bold;
-  background-color: darkslategray;
-  align-self:baseline;
-  justify-self: center;
- }
-
-  .cierre-papa {
-    background-color: deepskyblue;
-    margin-top: 200px;
-    height: 100vh;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
-
-  .burbuja-papa {
-    background-color: bisque;
-  } */
-
-/* FIN SECCIÓN PAPA */
-
-  /* .intro-graficos {
-    margin: 100px auto;
-    max-width: 740px;
-    color: white;
-    font-size: 20px;
-    line-height: 2;
-    text-align: left;
-    margin-top: 200px;
-    background-color: black;
-  } */
-
-
-
-/* .image {
-  width: 300px;
-  height: auto;
-  visibility: hidden;
-  position: absolute;
-}
-
-.image.visible {
-  visibility: visible; 
-} */
-

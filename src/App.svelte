@@ -282,32 +282,32 @@ onMount(() => {
         />
         <img src="/images/fondo-papa.png" alt/>
       </div>
-      <div slot="foreground" class="foreground_container">
-        <section class="step_foreground">
-          <div class="epi_foreground"> 
+      <div slot="foreground" class="foreground_container-papa">
+        <section class="step_foreground-papa">
+          <div class="epi_foreground-papa"> 
             <p>Estas imágenes, creadas con Midjourney, fueron compartidas en Reddit el 24 de Marzo de 2023. Tuvieron millones de vistas.</p>
           </div>
         </section>
-        <section class="step_foreground">
-          <div class="epi_foreground">
+        <section class="step_foreground-papa">
+          <div class="epi_foreground-papa">
             <p>En redes sociales, se desató una competencia de retratar al Pontífice de 86 años en situaciones cada vez más extrañas.</p>
           </div>
         </section>
       </div>
       </Scroller>
-      <div>
-        <p class="texto">Según un análisis de The New York Times, han obtenido más visitas, “me gusta”  y comentarios en la red social X  
-          que muchas otras imagenes generadas con IA. Desde entonces, Francisco se ha convertido en musa de la IA. Se  le ha 
-          visto comiendo comida rápida, reuniéndose con extraterrestres,  tocando la guitarra en el Festival de Glastonbury, 
-          buceando, bailando en  la playa y limpiando residuos biológicos con un traje de protección de  materiales peligrosos. 
-          La avalancha de imágenes papales ha sido tan  voluminosa que algunos participantes en foros en línea sobre IA  generativa 
-          han rogado a los creadores que utilicen otra inspiración</p>
-      </div>
 
-      <h1 class="subtitulo3">
-        <b>Qué dijo el Papa Francisco?</b></h1>
+      <div class="texto">  
+      <p class="text-papa">Según un análisis de The New York Times, han obtenido más visitas, “me gusta”  y comentarios en la red social X  
+        que muchas otras imagenes generadas con IA. Desde entonces, Francisco se ha convertido en musa de la IA. Se  le ha 
+        visto comiendo comida rápida, reuniéndose con extraterrestres,  tocando la guitarra en el Festival de Glastonbury, 
+        buceando, bailando en  la playa y limpiando residuos biológicos con un traje de protección de  materiales peligrosos. 
+        La avalancha de imágenes papales ha sido tan  voluminosa que algunos participantes en foros en línea sobre IA  generativa 
+        han rogado a los creadores que utilicen otra inspiración</p>
+      </div>
+  
+      <h1 class="subtitulo3"><b>Qué dijo el Papa Francisco?</b></h1>
       <div class='que-dijo'>
-        <img src="./public/images/papa.png" alt="png del papa con una burbuja de texto">
+        <img class="foto-final-papa" src="./public/images/papa.png" alt="png del papa con una burbuja de texto">
         <p class="texto2">"La Inteligencia Artificial puede ser un instrumento de<br>contaminación cognitiva y de alteración de la realidad"</p>
       </div> 
 
@@ -334,7 +334,7 @@ onMount(() => {
       </div>
     </section>
     <section class="step_foreground">
-      <div class="epi_foreground">
+      <div class="epi_foreground-papa">
         <p>Sin embargo, esta tecnología también plantea importantes desafíos éticos. La capacidad de crear imágenes realistas con facilidad ha facilitado
           la difusión de desinformación y el uso de <i>deepfakes</i>.</p>
       </div>
