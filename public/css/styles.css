@@ -151,6 +151,18 @@ body.no-scroll, html.no-scroll {
     margin-top: 10%;
   }
 
+  .subtitulo3 {
+    font-size: 50px;
+    line-height: 1.2;
+    font-family: 'Rubik';
+    color:white;
+    margin-top: 120px;
+    margin-bottom: 80px;
+    display: flex;
+    text-align: center;
+
+  }
+
   .bajada { 
     font-size: 18px;
     font-weight: bold;
@@ -329,6 +341,7 @@ body.no-scroll, html.no-scroll {
   align-items: center; 
   justify-content: center; 
   margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .headline-papa { /* Título */
@@ -385,6 +398,46 @@ body.no-scroll, html.no-scroll {
   width: 100%;
   object-fit: cover;
 }
+
+.que-dijo {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center; /* Centers children horizontally */
+  align-items: center; /* Centers children vertically */
+  background-color: black;
+  text-align: center; 
+  flex-direction: column;
+  position: relative;
+  /* height: 100vh; */
+}
+
+.que-dijo img {
+  z-index: 1;
+}
+
+.texto2 {
+  font-size: 20px;
+  color: black;
+  /* align-self: center;
+  justify-self: center; */
+  /* background-color: greenyellow; */
+  font-family: Helvetica;
+  font-weight: 600;
+  font-style: italic;
+  z-index: 2;
+  position: relative;
+  top:-105px;
+  left: -17px;
+}
+
+
+/* .burbuja-papa {
+  background-color: deeppink;
+  color: black;
+  margin-top: 150px;
+  align-items: center;
+  justify-content: center;
+} */
 
 /* .foreground_container2 {
   padding-left: 50%;

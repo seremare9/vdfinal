@@ -90,14 +90,14 @@ onMount(() => {
   let offset1 = 0;
   let progress1 = 0;
 
-  let backgroundImage = '/images/fondo-negro.png';
+  // let backgroundImage = '/images/fondo-negro.png';
 
-  //Update background image when index changes
-  $: if (index1 === 1) {
-  backgroundImage = '/images/fondo-papa.png';
-  } else {
-  backgroundImage = '/images/fondo-negro.png';
-  }
+  // //Update background image when index changes
+  // $: if (index1 === 1) {
+  // backgroundImage = '/images/fondo-papa.png';
+  // } else {
+  // backgroundImage = '/images/fondo-negro.png';
+  // }
 
   // Variables para el scroller del Papa
   let count3
@@ -276,23 +276,6 @@ onMount(() => {
     </p>
   </div>
 </div> 
-<!-- 
-
-
-
-
-
-
-    <div class="container_graf2">
-      <img class="grafico2" src="./public/images/grafico2.jpg" alt="grafico 2">
-      <p class="texto"> La cantidad de imágenes generadas con inteligencia artificial (IA) ha crecido exponencialmente 
-        en los últimos años. Cada día, millones de imágenes son creadas por diversas aplicaciones y 
-        plataformas que utilizan IA, reflejando el impresionante avance en esta tecnología. 
-        Desde el arte digital hasta la generación de imágenes para publicidad, marketing, entretenimiento, y 
-        hasta en la investigación científica, la capacidad de la IA para producir contenido visual de alta 
-        calidad y realismo es asombrosa.
-      </p>
-    </div> -->
 
     <!-- FIN GRAFICOS -->
 
@@ -344,14 +327,14 @@ onMount(() => {
           han rogado a los creadores que utilicen otra inspiración</p>
       </div>
 
-      <!--
+      <h1 class="subtitulo3">
+        <b>Qué dijo el Papa Francisco?</b></h1>
       <div class='que-dijo'>
-        <h1 class="subtitulo">
-        <b>Qué dijo el Papa?</b>
         <img src="./public/images/papa.png" alt="png del papa con una burbuja de texto">
+        <p class="texto2">"La Inteligencia Artificial puede ser un instrumento de<br>contaminación cognitiva y de alteración de la realidad"</p>
       </div> 
 
-      -->
+
 
 
 
