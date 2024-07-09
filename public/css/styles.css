@@ -290,8 +290,10 @@ body.no-scroll, html.no-scroll {
   }
   
   .grafico2 {
-    max-width: 70%; /* Ajusta el tamaño máximo del gráfico */
+    max-width: 64%; /* Ajusta el tamaño máximo del gráfico */
     height: auto; /* Ajusta automáticamente la altura según el ancho */
+    margin-top: 10%;
+    margin-bottom: 5%;
   }
  
 
@@ -327,7 +329,8 @@ body.no-scroll, html.no-scroll {
 }
 
 .fondo-fotos-papa {
-  height: 100%;
+  position: relative;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -337,7 +340,9 @@ body.no-scroll, html.no-scroll {
 }
 
 .fondo-fotos-papa img {
-  object-fit: contain;
+  width: 100%; /* Ajusta el ancho de la imagen */
+  height: auto; /* Ajusta la altura automáticamente */
+  object-fit: cover; /* Ajusta el ajuste del objeto según sea necesario */
 }
 
 .fondo-container-rojo { /* Para los container de texto de la sección del Papa */

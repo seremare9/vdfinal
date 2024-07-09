@@ -91,12 +91,12 @@ onMount(() => {
 
   let backgroundImage = '/images/fondo-negro.png';
 
-  // // Update background image when index changes
-  // $: if (index1 === 1) {
-  //   backgroundImage = '/images/fondo-papa.png';
-  // } else {
-  //   backgroundImage = '/images/fondo-negro.png';
-  // }
+  //Update background image when index changes
+  $: if (index1 === 1) {
+  backgroundImage = '/images/fondo-papa.png';
+  } else {
+  backgroundImage = '/images/fondo-negro.png';
+  }
 
 
 </script>
@@ -280,7 +280,7 @@ onMount(() => {
         bind:progress={progress1}
       >
       <div slot="background" class="fondo-fotos-papa"> 
-        <img src="/images/fondo-papa.png" alt="chart {index2}" class="charts"
+        <img src="/images/fondo-papa.png" alt="chart {index1}" class="charts"
         />
       </div>
       <div slot="foreground" class="foreground_container">
@@ -297,11 +297,23 @@ onMount(() => {
       </div>
       </Scroller>
 
-      <!-- <div class='que-dijo'>
+      <div>
+        <p class="texto">Según un análisis de The New York Times, han obtenido más visitas, “me gusta”  y comentarios en la red social X  
+          que muchas otras imagenes generadas con IA. Desde entonces, Francisco se ha convertido en musa de la IA. Se  le ha 
+          visto comiendo comida rápida, reuniéndose con extraterrestres,  tocando la guitarra en el Festival de Glastonbury, 
+          buceando, bailando en  la playa y limpiando residuos biológicos con un traje de protección de  materiales peligrosos. 
+          La avalancha de imágenes papales ha sido tan  voluminosa que algunos participantes en foros en línea sobre IA  generativa 
+          han rogado a los creadores que utilicen otra inspiración</p>
+      </div>
+
+      <!--
+      <div class='que-dijo'>
         <h1 class="subtitulo">
-          <b>Qué dijo el Papa?</b>
+        <b>Qué dijo el Papa?</b>
         <img src="./public/images/papa.png" alt="png del papa con una burbuja de texto">
-      </div> -->
+      </div> 
+
+      -->
 
 
 
