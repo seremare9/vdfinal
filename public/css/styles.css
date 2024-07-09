@@ -73,21 +73,13 @@ body.no-scroll, html.no-scroll {
 
 @keyframes typing {
   from {
-      width: 0; /* Start from no width */
+      width: 0; 
   }
   to {
-      width: auto; /* Increase width to fit content */
+      width: auto; 
   }
 }
 
- /* Importo fonts */
-  /* Rubik: Títulos (sujeto a cambios) */
-  @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
- /* IBM Plex Mono (bajada) */
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-  /* IBM Plex Sans (la que mas usamos) */
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-  
   .header {
     display: flex;
     justify-content: center;
@@ -95,7 +87,7 @@ body.no-scroll, html.no-scroll {
     flex-direction: column;
     background-color: black;
     background-image: url('/public/gifs/fondo_header.gif');
-    background-size:98% 99%;
+    background-size:100% 99%;
     background-position: center calc(50% - 20px); 
     background-repeat: no-repeat; 
     height: 100vh;
@@ -109,7 +101,7 @@ body.no-scroll, html.no-scroll {
     text-align: center;
     margin: 20px;
     color:white;
-    font-family: 'Rubik';
+    font-family:Tahoma;
     width: 100%;
     margin-top: 0%;
   }
@@ -117,7 +109,7 @@ body.no-scroll, html.no-scroll {
   .subtitulo {
     font-size: 50px;
     line-height: 1.2;
-    font-family: 'Rubik';
+    font-family: Tahoma;
     color:white;
     margin-top: 0%;
   }
@@ -125,7 +117,7 @@ body.no-scroll, html.no-scroll {
   .subtitulo2 {
     font-size: 35px;
     line-height: 1.2;
-    font-family: 'Rubik';
+    font-family: Tahoma;
     color:white;
     align-self:center;
     text-align: center;
@@ -134,7 +126,7 @@ body.no-scroll, html.no-scroll {
   .subtitulo-graf1{
     font-size: 35px;
     line-height: 1.2;
-    font-family: 'Rubik';
+    font-family: Tahoma;
     color:white;
     align-self:center;
     text-align: center;
@@ -142,13 +134,15 @@ body.no-scroll, html.no-scroll {
   }
 
   .subtitulo3 {
-    font-size: 40px;
+    font-size: 50px;
     line-height: 1.2;
-    font-family: 'Rubik';
+    font-family: Tahoma;
     color:white;
-    margin-top: 170px;
-    margin-bottom: 3%;
+    margin-top: 120px;
+    margin-bottom: 80px;
+    display: flex;
     text-align: center;
+
   }
 
   .bajada { 
@@ -156,13 +150,13 @@ body.no-scroll, html.no-scroll {
     font-weight: bold;
     text-align: center;
     margin: 10px;
-    font-family: 'Rubik';
+    font-family: Tahoma;
     color:white
   }
  
   a { /* Nombres */
     color:crimson;
-    font-family:'Rubik';
+    font-family:Tahoma;
     font-weight: bold;
     text-decoration: underline;
     z-index: 100;
@@ -185,20 +179,10 @@ body.no-scroll, html.no-scroll {
     margin-right: 35%;
   }
 
-  .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    width: 100%;
-  }
-
-
   .intro-general { /* Introducción, hablamos sobre qué es la IA Generativa */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 150px; */
     background-color: black;
   }
 
@@ -211,15 +195,6 @@ body.no-scroll, html.no-scroll {
     width: 900px;
     background-color: black;
     margin: auto;
-  }
-
-  .gif {
-    margin-top: -33%;
-  }
-  
-  .gif img {
-    width: 100%;
-    height: auto;
   }
 
   .container-grafico1 { /* Gráfico de líneas de Datawrapper */
@@ -249,17 +224,25 @@ body.no-scroll, html.no-scroll {
     border-radius: 25px; 
     width: 30vw; 
     color: black;
-    font-family: Helvetica;
-    font-size: 20px;
+    font-family: Tahoma;
+    font-size: 22px;
     text-align: center;
     padding:1.9%;
   }
 
   /* PRIMER GRAFICO */
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100%;
+  }
+
   .charts{
   max-width: 50%;
-  height: auto; /* Ajusta automáticamente la altura según el ancho */
-  margin-left: 20%;
+  height: auto; 
   }
   
   .foreground_container2 {
@@ -296,6 +279,7 @@ body.no-scroll, html.no-scroll {
 
 
   /* SEGUNDO GRAFICO*/
+
   .container-graf2 {
     margin-top: 6%;
   }
@@ -309,8 +293,8 @@ body.no-scroll, html.no-scroll {
   }
 
   .grafico2 {
-    max-width: 100%; /* Ajusta el tamaño máximo del gráfico */
-    height: auto; /* Ajusta automáticamente la altura según el ancho */
+    max-width: 100%; 
+    height: auto; 
     margin-top: 10%;
     display: flex;
     justify-content: center;
@@ -320,6 +304,7 @@ body.no-scroll, html.no-scroll {
  
 
 /* SECCIÓN DEL PAPA */
+
 .container-papa {
   width: 1536px;
   height: auto;
@@ -337,7 +322,7 @@ body.no-scroll, html.no-scroll {
   text-align: center;
   margin: 20px;
   color:white;
-  font-family: 'Rubik';
+  font-family: Tahoma;
   width: 100%;
   margin-top: 10%;
 }
@@ -363,28 +348,13 @@ body.no-scroll, html.no-scroll {
 }
 
 .fondo-fotos-papa img {
-  width: 100%; /* Ajusta el ancho de la imagen */
-  height: auto; /* Ajusta la altura automáticamente */
-  object-fit: cover; /* Ajusta el ajuste del objeto según sea necesario */
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
   position: absolute; 
   top: 0; 
   left: 0; 
 }
-
-.fondo-container-rojo { /* Para los container de texto de la sección del Papa */
-  height: 100vh;
-  width: 100%;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
-  
-.fondo-container-rojo img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
 
 .que-dijo {
   margin-top: 100px;
@@ -405,9 +375,6 @@ body.no-scroll, html.no-scroll {
 .texto2 {
   font-size: 20px;
   color: black;
-  /* align-self: center;
-  justify-self: center; */
-  /* background-color: greenyellow; */
   font-family: Helvetica;
   font-weight: 600;
   font-style: italic;
@@ -417,59 +384,22 @@ body.no-scroll, html.no-scroll {
   left: -17px;
 }
 
-.epi_foreground-papa { 
-  background-color: white;
-  border-radius: 25px; 
-  width: 30vw; 
-  color: black;
-  font-family: Helvetica;
-  font-size: 20px;
-  text-align: center;
-  padding:1.9%;
-}
-
-
 .foreground_container { /* Para el container de scroll Papa */
   display: flex; 
   flex-direction: column; 
   align-items: center; 
   justify-content: center; 
-  /* pointer-events: none; */
   margin-top: 10%; 
   margin-bottom: 10%;  
-  /* width: 1536px; */
   width: 100%;
-  /* background-color: aquamarine; */
   } 
-
-  .foreground_container-papa { /* Para el container de scroll Papa */
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    /* pointer-events: none; */
-    margin-top: 10%; 
-    margin-bottom: 10%;  
-    /* width: 1536px; */
-    width: 100%;
-    /* background-color: aquamarine; */
-    } 
   
-  .step_foreground { 
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    height: 100vh;
-    /* width:1536px; */
-    }
-
-  .step_foreground-papa { 
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    height: 100vh;
+.step_foreground { 
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  height: 100vh;
   }
-  
 
   .epi_foreground3 { 
     background-color:white;
@@ -481,3 +411,26 @@ body.no-scroll, html.no-scroll {
     text-align: center;
     padding:1.9%;
   }
+
+  .footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px 0; 
+    text-align: center; 
+    font-size: 20px;
+  }
+  
+  .footer-container {
+    margin: 0 auto; 
+  }
+  
+  .atribucion {
+    font-size: 20px;
+    margin-bottom: 10px; 
+  }
+  
+  .hipervinculos-footer {
+    display: block; 
+    margin-top: 10px; 
+  }
+
