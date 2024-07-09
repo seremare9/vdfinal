@@ -80,6 +80,7 @@ onMount(() => {
     };
 })
 
+
   // Efecto del cambio de fondo en el scroller del Papa
   let top1 = 0;
   let threshold1 = 0.5;
@@ -98,6 +99,14 @@ onMount(() => {
   backgroundImage = '/images/fondo-negro.png';
   }
 
+  // Variables para el scroller del Papa
+  let count3
+  let index3
+  let offset3
+  let progress3
+  let top3 = 0.1
+  let threshold3 = 0.5
+  let bottom3 = 0.9
 
 </script>
 
@@ -145,8 +154,7 @@ onMount(() => {
     <div class="texto">
       <p> Hasta hace menos de 15 años, la habilidad de las IA Generativas para reconocer imágenes, comprender textos y audio y entender lenguajes era muy limitada, y solían producir resultados que carecían de coherencia y precisión comparados con los estándares humanos. 
           Sin embargo, para el año 2023, el rendimiento de las IA Generativas alcanzó niveles comparables con el rendimiento humano.
-          Por este motivo, cada vez se vuelve más dificil distinguir contenido realizado por una IA de uno creado por una persona. <br>
-          Esto es especialmente notable en las imágenes creadas con inteligencia artificial.
+          Por este motivo, cada vez se vuelve más dificil distinguir contenido realizado por una IA de uno creado por una persona. Esto es especialmente notable en las imágenes creadas con inteligencia artificial.
       </p>
     </div>
 
@@ -160,8 +168,8 @@ onMount(() => {
     />
     {/if}
   
-    <!-- Scroller -->
-    <Scroller
+    <!-- Primer scroller: Introducción -->
+    <!-- <Scroller
       top={top}
       threshold={threshold}
       bottom={bottom}
@@ -191,18 +199,23 @@ onMount(() => {
         </div>
       </section>
     </div>
-    </Scroller> 
+    </Scroller>  -->
 
    
     <!-- GRAFICOS -->
+    <div>
+     <h2 class="subtitulo-graf1">
+       <b>Cantidad de usuarios (en millones) de las plataformas - 2023</b>
+     </h2>
+    </div>
     <Scroller
-      top={top2}
-      threshold={threshold2}
-      bottom={bottom2}
-      bind:count={count2}
-      bind:index={index2}
-      bind:offset={offset2}
-      bind:progress={progress2}
+    top={top2}
+    threshold={threshold2}
+    bottom={bottom2}
+    bind:count={count2}
+    bind:index={index2}
+    bind:offset={offset2}
+    bind:progress={progress2}
     >
     <div slot="background" class="image_container"> 
       <img src="/images/{charts[index2]}" alt="chart {index2}" class="charts"/>
@@ -245,6 +258,31 @@ onMount(() => {
 
     
     <!-- Grafico 2-->
+    <div class="generacion-imagenes">
+      <div class="container-graf2">
+        <h2 class="subtitulo2">
+          <b>Cantidad de imágenes generadas por día (en millones) 2023</b>
+        </h2>
+        <div class="grafico2">
+          <iframe title="" aria-label="Column Chart" id="datawrapper-chart-YvGA0" src="https://datawrapper.dwcdn.net/YvGA0/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="373" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+          </script>
+        </div>
+      </div>
+  <div class="texto"> 
+    <p>La cantidad de imágenes generadas con inteligencia artificial (IA) ha crecido exponencialmente en los últimos años. 
+    Cada día, millones de imágenes son creadas por diversas aplicaciones y plataformas que utilizan IA, reflejando el impresionante avance en esta tecnología. 
+    Desde el arte digital hasta la generación de imágenes para publicidad, marketing, entretenimiento, y hasta en la investigación científica, la capacidad de 
+    la IA para producir contenido visual de alta calidad y realismo es asombrosa.
+    </p>
+  </div>
+</div> 
+<!-- 
+
+
+
+
+
+
     <div class="container_graf2">
       <img class="grafico2" src="./public/images/grafico2.jpg" alt="grafico 2">
       <p class="texto"> La cantidad de imágenes generadas con inteligencia artificial (IA) ha crecido exponencialmente 
@@ -254,7 +292,7 @@ onMount(() => {
         hasta en la investigación científica, la capacidad de la IA para producir contenido visual de alta 
         calidad y realismo es asombrosa.
       </p>
-    </div>
+    </div> -->
 
     <!-- FIN GRAFICOS -->
 
@@ -271,17 +309,18 @@ onMount(() => {
 
     <!-- Scroller Papa -->
         <Scroller
-        top={top1}
-        threshold={threshold1}
-        bottom={bottom1}
-        bind:count={count1}
-        bind:index={index1}
-        bind:offset={offset1}
-        bind:progress={progress1}
+        top={top3}
+        threshold={threshold3}
+        bottom={bottom3}
+        bind:count={count3}
+        bind:index={index3}
+        bind:offset={offset3}
+        bind:progress={progress3}
       >
       <div slot="background" class="fondo-fotos-papa"> 
         <img src="/images/fondo-papa.png" alt="chart {index1}" class="charts"
         />
+        <img src="/images/fondo-papa.png" alt/>
       </div>
       <div slot="foreground" class="foreground_container">
         <section class="step_foreground">
@@ -296,7 +335,6 @@ onMount(() => {
         </section>
       </div>
       </Scroller>
-
       <div>
         <p class="texto">Según un análisis de The New York Times, han obtenido más visitas, “me gusta”  y comentarios en la red social X  
           que muchas otras imagenes generadas con IA. Desde entonces, Francisco se ha convertido en musa de la IA. Se  le ha 

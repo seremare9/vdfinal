@@ -1,4 +1,3 @@
-
 // Función para simular el efecto de typing 
 
 // Título
@@ -51,6 +50,30 @@ function typeNewText() {
 
     typeEffect(0);
 }
+
+// Quote del Papa
+function typeRespuesta() {
+    var text = document.getElementById('quote').textContent.trim();
+    document.getElementById('quote').textContent = '';
+
+    function typeEffect(i) {
+        if (i < text.length) {
+            document.getElementById('quote').textContent += text.charAt(i);
+            setTimeout(function() {
+                typeEffect(i + 1);
+            }, 100);
+        }
+    }
+
+    typeEffect(0);
+}
+
+
+
+
+
+
+
 
 typeMainTitle();
 
