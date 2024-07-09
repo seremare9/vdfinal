@@ -21,7 +21,6 @@
   let threshold = 0.5
   let bottom = 0.9
 
-
   /* Variables para el scroller de los graficos */
   let count2
   let index2 =0;
@@ -80,7 +79,6 @@ onMount(() => {
     };
 })
 
-
   // Efecto del cambio de fondo en el scroller del Papa
   let top1 = 0;
   let threshold1 = 0.5;
@@ -89,15 +87,6 @@ onMount(() => {
   let index1 = 0;
   let offset1 = 0;
   let progress1 = 0;
-
-  // let backgroundImage = '/images/fondo-negro.png';
-
-  // //Update background image when index changes
-  // $: if (index1 === 1) {
-  // backgroundImage = '/images/fondo-papa.png';
-  // } else {
-  // backgroundImage = '/images/fondo-negro.png';
-  // }
 
   // Variables para el scroller del Papa
   let count3
