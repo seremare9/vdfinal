@@ -284,12 +284,12 @@ onMount(() => {
       </div>
       <div slot="foreground" class="foreground_container">
         <section class="step_foreground">
-          <div class="epi_foreground3"> 
+          <div class="epi_foreground"> 
             <p>Estas imágenes, creadas con Midjourney, fueron compartidas en Reddit el 24 de Marzo de 2023. Tuvieron millones de vistas.</p>
           </div>
         </section>
         <section class="step_foreground">
-          <div class="epi_foreground3">
+          <div class="epi_foreground">
             <p>En redes sociales, se desató una competencia de retratar al Pontífice de 86 años en situaciones cada vez más extrañas.</p>
           </div>
         </section>
@@ -311,82 +311,50 @@ onMount(() => {
         <p class="texto2">"La Inteligencia Artificial puede ser un instrumento de<br>contaminación cognitiva y de alteración de la realidad"</p>
       </div> 
 
+    <!-- CONCLUSIÓN Y FOOTER -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     <!-- FIN CASO PAPA -->
-  
-    <!-- ¿QUÉ DIJO EL PAPA? -->
-     <!-- <div class="comentario">
-      <h4>¿Qué dijo el papa? </h4>
-      <p>El papa Francisco ha alertado de los malos usos de la IA, que puede ser un instrumento de “contaminación cognitiva” y “de alteración de la realidad 
-        a través de narrativas parcial o totalmente falsas que se creen, y se comparten, como si fueran verdaderas”. <br>Así ha citado el ejemplo de las 
-        fake news que hoy se sirve de deepfakes, es decir, de la creación y difusión de imágenes que parecen perfectamente verosímiles pero que son falsas. 
-        “También yo he sido objeto de ello”, revela. </p>
-        TWEETS APARECIENDO -->
-        <!-- <div class="container-tweets">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">ç
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt=""> -->
-        <!-- </div> -->
-     <!-- </div>  -->
-
-  
-  <!-- Segundo scroller -->
-  
-  <!-- <Scroller
-    top={top2}
-    threshold={threshold2}
-    bottom={bottom2}
-    bind:count={count2}
-    bind:index={index2}
-    bind:offset={offset2}
-    bind:progress={progress2}
+    <Scroller
+    top={top3}
+    threshold={threshold3}
+    bottom={bottom3}
+    bind:count={count3}
+    bind:index={index3}
+    bind:offset={offset3}
+    bind:progress={progress3}
   >
-    <div slot="background" class="image_container">
-      <img src="/images/{charts[index2]}" alt="chart {index2}" class="charts"
-      />
+  <div slot="background" class="fondo-fotos-papa"> 
+    <!-- <img src="/images/fondo-papa.png" alt="chart {index1}" class="charts"
+    />
+    <img src="/images/fondo-papa.png" alt/> -->
+  </div>
+  <div slot="foreground" class="foreground_container">
+    <section class="step_foreground">
+      <div class="epi_foreground"> 
+        <p>La IA Generativa ha abierto nuevas posibilidades en distintas áreas, promoviendo una mayor diversidad de voces y perspectivas.</p>
+      </div>
+    </section>
+    <section class="step_foreground">
+      <div class="epi_foreground">
+        <p>Sin embargo, esta tecnología también plantea importantes desafíos éticos. La capacidad de crear imágenes realistas con facilidad ha facilitado
+          la difusión de desinformación y el uso de <i>deepfakes</i>.</p>
+      </div>
+    </section>
+    <section class="step_foreground">
+      <div class="epi_foreground">
+        <p>La evolución de esta tecnología seguirá influyendo en la manera en que creamos y percibimos las imágenes en el futuro.</p>
+      </div>
+    </section>
+  </div>
+  </Scroller>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="atribucion"><b>Visualización de Datos - LTD</b><br>Serena Marelli y Josefina Jahde</p>
+      <a href="https://docs.google.com/document/d/1VI5lXAqdY-2Y88m-2VXsxfW_3PgHwCF_eDMNdLPtXZs/edit?usp=sharing" class="hipervinculos-footer">Fuentes</a>
+      <a href="https://github.com/seremare9/vdfinal" class="hipervinculos-footer">Ver código en GitHub</a>
     </div>
-    <div slot="foreground" class="foreground_container">
-      <section class="step_foreground">
-        <div class="epi_foreground">
-          <h3>Seccion {index2 + 1}</h3>
-          <p>Gráfico 1</p>
-        </div>
-      </section>
-      <section class="step_foreground">
-        <div class="epi_foreground">
-          <h3>Seccion {index2 + 1}</h3>
-          <p>Gráfico 1</p>
-        </div>
-      </section>
-      <section class="step_foreground">
-        <div class="epi_foreground">
-          <h3>Seccion {index2 + 1}</h3>
-          <p>Gráfico 1</p>
-        </div>
-      </section>
-    </div>
-  </Scroller> -->
+  </footer>
+
   </main>
 </body> 
 
