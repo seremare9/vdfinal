@@ -159,30 +159,7 @@ onMount(() => {
     </div>
 
    <!-- introduccion generacion de imaganes con IA --> 
-    {#if progress < 1}
-    <DebugScroller
-      index={index}
-      count={count}
-      offset={offset}
-      progress={progress}
-    />
-    {/if}
-  
-    <!-- Primer scroller: Introducción -->
-    <!-- <Scroller
-      top={top}
-      threshold={threshold}
-      bottom={bottom}
-      bind:count={count}
-      bind:index={index}
-      bind:offset={offset}
-      bind:progress={progress}
-    >
-    <div slot="background" class="fondo-container-rojo"> 
-      <img src="/images/fondo_container_chico.png" alt="chart {index2}" class="charts"
-      />
-    </div>
-    <div slot="foreground" class="foreground_container">
+    <div class="foreground_container">
       <section class="step_foreground">
         <div class="epi_foreground"> 
           <p>La creación de imágenes generadas por inteligencia artificial ha revolucionado el ámbito visual y artístico en los últimos años.</p>
@@ -199,7 +176,6 @@ onMount(() => {
         </div>
       </section>
     </div>
-    </Scroller>  -->
 
    
     <!-- GRAFICOS -->
@@ -256,7 +232,6 @@ onMount(() => {
     </div>
     </Scroller>
 
-    
     <!-- Grafico 2-->
     <div class="generacion-imagenes">
       <div class="container-graf2">
@@ -268,32 +243,14 @@ onMount(() => {
           </script>
         </div>
       </div>
-  <div class="texto"> 
-    <p>La cantidad de imágenes generadas con inteligencia artificial (IA) ha crecido exponencialmente en los últimos años. 
-    Cada día, millones de imágenes son creadas por diversas aplicaciones y plataformas que utilizan IA, reflejando el impresionante avance en esta tecnología. 
-    Desde el arte digital hasta la generación de imágenes para publicidad, marketing, entretenimiento, y hasta en la investigación científica, la capacidad de 
-    la IA para producir contenido visual de alta calidad y realismo es asombrosa.
-    </p>
-  </div>
-</div> 
-<!-- 
-
-
-
-
-
-
-    <div class="container_graf2">
-      <img class="grafico2" src="./public/images/grafico2.jpg" alt="grafico 2">
-      <p class="texto"> La cantidad de imágenes generadas con inteligencia artificial (IA) ha crecido exponencialmente 
-        en los últimos años. Cada día, millones de imágenes son creadas por diversas aplicaciones y 
-        plataformas que utilizan IA, reflejando el impresionante avance en esta tecnología. 
-        Desde el arte digital hasta la generación de imágenes para publicidad, marketing, entretenimiento, y 
-        hasta en la investigación científica, la capacidad de la IA para producir contenido visual de alta 
-        calidad y realismo es asombrosa.
-      </p>
-    </div> -->
-
+      <div class="texto"> 
+        <p>La cantidad de imágenes generadas con inteligencia artificial (IA) ha crecido exponencialmente en los últimos años. 
+        Cada día, millones de imágenes son creadas por diversas aplicaciones y plataformas que utilizan IA, reflejando el impresionante avance en esta tecnología. 
+        Desde el arte digital hasta la generación de imágenes para publicidad, marketing, entretenimiento, y hasta en la investigación científica, la capacidad de 
+        la IA para producir contenido visual de alta calidad y realismo es asombrosa.
+        </p>
+      </div>
+    </div> 
     <!-- FIN GRAFICOS -->
 
     <!-- CASO DEL PAPA -->
