@@ -127,13 +127,16 @@ onMount(() => {
     </div> 
     <!-- Fin de header -->
 
-    <!-- Aparece el recuadro del prompt y luego las imagenes que hicimos con IA -->
+    <!-- Aparece el recuadro del prompt  -->
     <div id="targetSection" class="intro target-section">
       <div class="image-container">
               <img src="public/images/prompt.png" id="promptImage" class="cuadroPrompt" alt="Prompt" style="visibility: hidden;">
               <p id="textoPrompt" class="texto-prompt" style="visibility: hidden;">Imagen realista de...</p> 
       </div>
     </div>
+    <!-- <div class="contenedor-gif-intro">
+      <img src="public/gifs/intro.gif" alt="imagenes generadas con adobe firefly">
+    </div> -->
 
     <div class="texto">
       <p>La Inteligencia Artificial Generativa (Gen AI) es una inteligencia artificial capaz de generar distintos tipos de contenido, como textos, imágenes y música, a partir de un input (prompt) del usuario.
