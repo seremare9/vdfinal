@@ -206,6 +206,15 @@ body.no-scroll, html.no-scroll {
     margin: auto;
   }
 
+  .gif {
+    margin-top: -33%;
+  }
+  
+  .gif img {
+    width: 100%;
+    height: auto;
+  }
+
   .container-grafico1 { /* Gráfico de líneas de Datawrapper */
     margin-top: 100px;
     margin-bottom: 100px;
